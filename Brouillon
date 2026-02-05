@@ -1,1 +1,9 @@
+Conception du Système et Base de Données
 
+Avant de coder, tu dois définir comment les données circulent. C'est le "cerveau" de ta caisse.
+
+    Modélisation SQL : Crée tes tables (Produits, Stocks, Utilisateurs/Adhérents, Transactions).
+
+    Logique de prix : Prévois une colonne prix_cotisant et prix_public dans ta table produits.
+
+    Gestion RFID : Décide si l'argent est stocké sur la carte (écriture) ou si la carte n'est qu'un identifiant lié à un solde sur le serveur (plus sécurisé).
