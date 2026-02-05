@@ -19,3 +19,10 @@
 * Portabilité (batterie) : terminal de paiement
 * Fiabilité des transactions
 * Sécurité des données
+
+## Composants
+* écran tactile 16 pouces (déjà commandé)
+* capteur RFID
+* clé carte
+* écran 7 pouces
+* module Bluetooth
