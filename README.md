@@ -1,5 +1,5 @@
 # 2526_Projet1AB_Khess
-Projet de 1ère année ENSEA sur une caisse enregistreuse pour la K-Fet.
+##Projet de 1ère année ENSEA sur une caisse enregistreuse pour la K-Fet.
 
 * ING Bryan-Sowanna
 * KRIMAT Naïm
