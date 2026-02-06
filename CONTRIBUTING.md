@@ -1,8 +1,6 @@
 
 # Contribution
-Merci de contribuer a ce projet.
-
-## Commits
+## Règles des commits
 Les messages de commit doivent respecter les Conventional Commits.
 
 ### Format recommande
