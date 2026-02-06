@@ -1,13 +1,6 @@
 # 2526_Projet1AB_Khess
-## Projet de 1ère année ENSEA sur une caisse enregistreuse pour la K-Fet.
-
-* ING Bryan-Sowanna [**@Ahhj93**](https://github.com/Ahhj93)
-* KRIMAT Naïm [**@NKRIMAT**](https://github.com/NKRIMAT)
-* LAPLANTE Margaux [**@Margaux-Lapl**](https://github.com/Margaux-Lapl)
-* LAGHOUANE Rayan [**@StrangeKobe**](https://github.com/StrangeKobe)
-* ZHANG Estelle [**@zhang-estelle**](https://github.com/zhang-estelle)
-* JOUNEAU Clément [**@ClementJ493**](https://github.com/ClementJ493)
-* BOUCHIKHI Rim [**@rim-05-mma**](https://github.com/rim-05-mma)
+> [!Note]
+> Projet de 1ère année ENSEA sur une caisse enregistreuse pour la K-Fet.
 
 ## Cahier des charges
 ### Caisse enregistreuse portable avec écran tactile
@@ -32,3 +25,9 @@
 * condensateurs 10 µF / 47 µF (sortie régulateur)
 * Connecteur GPIO 2×20
 * module Bluetooth
+
+## Membres du projet
+
+| <img src="https://github.com/Ahhj93.png" width="100" style="border-radius:50%;"> | <img src="https://github.com/NKRIMAT.png" width="100" style="border-radius:50%;"> | <img src="https://github.com/Margaux-Lapl.png" width="100" style="border-radius:50%;"> | <img src="https://github.com/StrangeKobe.png" width="100" style="border-radius:50%;"> | <img src="https://github.com/zhang-estelle.png" width="100" style="border-radius:50%;"> | <img src="https://github.com/ClementJ493.png" width="100" style="border-radius:50%;"> | <img src="https://github.com/rim-05-mma.png" width="100" style="border-radius:50%;"> |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| [@Ahhj93](https://github.com/Ahhj93)<br>Bryan-Sowanna Ing | [@NKRIMAT](https://github.com/NKRIMAT)<br>Naïm Krimat | [@Margaux-Lapl](https://github.com/Margaux-Lapl)<br>Margaux Laplante | [@StrangeKobe](https://github.com/StrangeKobe)<br>Rayan Laghoune | [@zhang-estelle](https://github.com/zhang-estelle)<br>Estelle Zhang | [@ClementJ493](https://github.com/ClementJ493)<br>Clément Jouneau | [@rim-05-mma](https://github.com/rim-05-mma)<br>Rim Bouchikhi |
