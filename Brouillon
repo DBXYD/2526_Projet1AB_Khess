@@ -1,9 +1,8 @@
-Conception du Système et Base de Données
+Brouillon pour Estelle : 
 
-Avant de coder, tu dois définir comment les données circulent. C'est le "cerveau" de ta caisse.
-
-    Modélisation SQL : Crée tes tables (Produits, Stocks, Utilisateurs/Adhérents, Transactions).
-
-    Logique de prix : Prévois une colonne prix_cotisant et prix_public dans ta table produits.
-
-    Gestion RFID : Décide si l'argent est stocké sur la carte (écriture) ou si la carte n'est qu'un identifiant lié à un solde sur le serveur (plus sécurisé).
+Le bloc noir derrière l'écran est une carte de controle LCD. 
+Elle sert d'intermédiaire entre la rasberry pi et l'écran.
+Deux sortie : 
+- un port HDMI relié a la rasberry pi (port HDMI sur la rasberry)
+- un port micro-USB pour l'alimetation (c'est la rasberry pi qui alimente l'écran, on doit aussi la reliée a la rasberry pi, port USB A sur la rasberry)
+Le choix recommandé : Raspberry Pi 4 Model B
