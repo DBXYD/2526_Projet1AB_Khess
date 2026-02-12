@@ -6,3 +6,7 @@ Deux sortie :
 - un port HDMI relié a la rasberry pi (port HDMI sur la rasberry)
 - un port micro-USB pour l'alimetation (c'est la rasberry pi qui alimente l'écran, on doit aussi la reliée a la rasberry pi, port USB A sur la rasberry)
 Le choix recommandé : Raspberry Pi 4 Model B
+
+Le cable de la caisse : il y a 4 pin.
+pin vert pour ouvrir la caisse 
+pin noir relié a la masse
