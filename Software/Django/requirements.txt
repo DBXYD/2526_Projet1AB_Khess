@@ -1,0 +1,2 @@
+django
+django_cas_ng
