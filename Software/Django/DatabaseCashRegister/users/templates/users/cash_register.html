@@ -1,0 +1,285 @@
+{% extends 'users/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <!-- Menu latéral  -->
+        <div class="col-md-2 sidebar">
+            <h4 class="text-center">Menu</h4>
+            {% for category in categories %}
+                <a href="#{{ category|lower }}" class="category-link">{{ category }}</a>
+            {% endfor %}
+        </div>
+
+        <!-- Contenu principal -->
+        <div class="col-md-7 content">
+            <!-- Tout les articles -->
+            <div id="tout" class="category-section">
+                <h2>Tout les articles</h2>
+                <div class="row">
+                    {% for article in article_items %}
+                        <div class="col-md-2 mb-4">
+                            <button class="btn btn-light w-100 shadow-sm rounded" style="height: 200px;">
+                                <div class="d-flex flex-column align-items-center">
+                                    <img src="{% static 'users/images/menu.png' %}" alt="{{ article.name }}" class="img-fluid mb-2" style="max-height: 100px;">
+                                    <span class="fw-bold">{{ article.name }}</span>
+                                    <span class="text-muted">{{ article.price }} €</span>
+                                    <span class="text-muted">{{ article.quantity }}</span>
+                                </div>
+                            </button>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Menus -->
+            <div id="menu" class="category-section">
+                <h2>Menus</h2>
+                <div class="row">
+                    {% for menu in menu_items %}
+                        <div class="col-md-2 mb-4">
+                            <button class="btn btn-light w-100 shadow-sm rounded" style="height: 200px;">
+                                <div class="d-flex flex-column align-items-center">
+                                    <img src="{% static 'users/images/menu.png' %}" alt="{{ article.name }}" class="img-fluid mb-2" style="max-height: 100px;">
+                                    <span class="fw-bold">{{ article.name }}</span>
+                                    <span class="text-muted">{{ article.price }} €</span>
+                                    <span class="text-muted">{{ article.quantity }}</span>
+                                </div>
+                            </button>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- sandwich -->
+            <div id="sandwich" class="category-section">
+                <h2>Sandwich</h2>
+                <div class="row">
+                    {% for article in article_items %}
+                        {% if article.type == 'sandwich' %}
+                            <div class="col-md-2 mb-4">
+                                <button class="btn btn-light w-100 shadow-sm rounded" style="height: 200px;">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <img src="{% static 'users/images/menu.png' %}" alt="{{ article.name }}" class="img-fluid mb-2" style="max-height: 100px;">
+                                        <span class="fw-bold">{{ article.name }}</span>
+                                        <span class="text-muted">{{ article.price }} €</span>
+                                        <span class="text-muted">{{ article.quantity }}</span>
+                                    </div>
+                                </button>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Snack -->
+            <div id="snack" class="category-section">
+                <h2>Snack</h2>
+                <div class="row">
+                    {% for article in article_items %}
+                        {% if article.type == 'snack' %}
+                            <div class="col-md-2 mb-4">
+                                <button class="btn btn-light w-100 shadow-sm rounded" style="height: 200px;">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <img src="{% static 'users/images/menu.png' %}" alt="{{ article.name }}" class="img-fluid mb-2" style="max-height: 100px;">
+                                        <span class="fw-bold">{{ article.name }}</span>
+                                        <span class="text-muted">{{ article.price }} €</span>
+                                        <span class="text-muted">{{ article.quantity }}</span>
+                                    </div>
+                                </button>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Boisson -->
+            <div id="boisson" class="category-section">
+                <h2>Boissons</h2>
+                <div class="row">
+                    {% for article in article_items %}
+                        {% if article.type == 'boisson' %}
+                            <div class="col-md-2 mb-4">
+                                <button class="btn btn-light w-100 shadow-sm rounded" style="height: 200px;">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <img src="{% static 'users/images/menu.png' %}" alt="{{ article.name }}" class="img-fluid mb-2" style="max-height: 100px;">
+                                        <span class="fw-bold">{{ article.name }}</span>
+                                        <span class="text-muted">{{ article.price }} €</span>
+                                        <span class="text-muted">{{ article.quantity }}</span>
+                                    </div>
+                                </button>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    <!-- Design listening commande -->
+    <div class="col-md-3 order-summary">
+        <h4>Commande</h4>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th class="text-center">Qté</th>
+                    <th class="text-end">Prix</th>
+                    <th class="text-end">Action</th>
+                </tr>
+            </thead>
+            <tbody id="order-list">
+                <!-- Les lignes de commande seront ajoutées dynamiquement ici -->
+            </tbody>
+        </table>
+        <div class="d-flex justify-content-between align-items-center mt-3">
+            <h5>Total :</h5>
+            <h5 id="total-price">0 €</h5>
+        </div>
+        <button class="btn btn-success w-100 mt-3" id="validate-order">Valider</button>
+    </div>
+</div>
+<!-- style de la liste de commande  -->
+<style> 
+    .content {
+        margin-left: 11%; /* Décale légèrement vers la gauche */
+        padding-left: 0px; /* Supprime le padding gauche */
+    }
+    
+    .order-summary {
+        border-left: 1px solid #ddd;
+        padding-left: 15px;
+        height: 100vh;
+        overflow-y: auto;
+        position: sticky;
+        top: 0;
+        background-color: #f8f9fa;
+    }
+
+    #order-list tr td {
+        vertical-align: middle;
+    }
+
+    #order-list .remove-item {
+        color: red;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+    const csrfToken = '{{ csrf_token }}';
+</script>
+
+<!-- Script pour gérer la logique de l'espace commande -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const orderList = document.getElementById('order-list');
+        const totalPriceElement = document.getElementById('total-price');
+        let totalPrice = 0;
+
+        // Fonction pour ajouter un article à la commande
+        function addToOrder(name, price) {
+            const existingRow = [...orderList.children].find(row => row.dataset.name === name);
+            if (existingRow) {
+                // Si l'article existe déjà, on augmente la quantité
+                const quantityCell = existingRow.querySelector('.quantity');
+                const priceCell = existingRow.querySelector('.price');
+                const quantity = parseInt(quantityCell.textContent) + 1;
+                quantityCell.textContent = quantity;
+                priceCell.textContent = (quantity * price).toFixed(2) + ' €';
+            } else {
+                // Sinon, on ajoute une nouvelle ligne
+                const row = document.createElement('tr');
+                row.dataset.name = name;
+                row.innerHTML = `
+                    <td>${name}</td>
+                    <td class="text-center quantity">1</td>
+                    <td class="text-end price">${price.toFixed(2)} €</td>
+                    <td class="text-end">
+                        <span class="remove-item">&times;</span>
+                    </td>
+                `;
+                orderList.appendChild(row);
+
+                // Ajout de l'événement pour supprimer l'article
+                row.querySelector('.remove-item').addEventListener('click', function () {
+                    removeFromOrder(row, price);
+                });
+            }
+
+            // Met à jour le prix total
+            totalPrice += price;
+            updateTotalPrice();
+        }
+
+        // Fonction pour supprimer un article de la commande
+        function removeFromOrder(row, price) {
+            const quantityCell = row.querySelector('.quantity');
+            const quantity = parseInt(quantityCell.textContent);
+
+            if (quantity > 1) {
+                // Si la quantité est supérieure à 1, on la réduit
+                quantityCell.textContent = quantity - 1;
+                const priceCell = row.querySelector('.price');
+                priceCell.textContent = ((quantity - 1) * price).toFixed(2) + ' €';
+            } else {
+                // Sinon, on supprime la ligne
+                row.remove();
+            }
+
+            // Met à jour le prix total
+            totalPrice -= price;
+            updateTotalPrice();
+        }
+        // Fonction pour mettre à jour le prix total
+        function updateTotalPrice() {
+            totalPriceElement.textContent = totalPrice.toFixed(2) + ' €';
+        }
+
+        // Ajout d'un événement sur les boutons des articles
+        document.querySelectorAll('.category-section button').forEach(button => {
+            button.addEventListener('click', function () {
+                const name = this.querySelector('.fw-bold').textContent;
+                const price = parseFloat(this.querySelector('.text-muted').textContent.replace('€', '').trim());
+                addToOrder(name, price);
+            });
+        });
+
+        // Validation de la commande
+        document.getElementById('validate-order').addEventListener('click', function () {
+            // Récupérer le prix total
+            const totalPrice = parseFloat(document.getElementById('total-price').textContent.replace('€', '').trim());
+
+            // Envoyer une requête POST à la vue Django
+            fetch('/send-command/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': '{{ csrf_token }}', // Assurez-vous que le token CSRF est inclus
+                },
+                body: JSON.stringify({
+                    total_price: totalPrice, // Envoyer le total de la commande
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    alert('Commande envoyée par Bluetooth : ' + data.response);
+                    // Réinitialiser la commande après validation
+                    document.getElementById('order-list').innerHTML = '';
+                    document.getElementById('total-price').textContent = '0 €';
+                } else {
+                    alert('Erreur : ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Erreur lors de l\'envoi de la commande :', error);
+            });
+
+            alert('Commande validée ! Total : ' + totalPrice.toFixed(2) + ' €');
+            // Réinitialise la commande
+            orderList.innerHTML = '';
+            totalPrice = 0;
+            updateTotalPrice();
+        });
+    });
+</script>
+{% endblock content %}

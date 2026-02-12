@@ -1,0 +1,151 @@
+{% extends 'users/base.html' %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <!-- Menu latéral  -->
+        <div class="col-md-2 sidebar">
+            <h4 class="text-center">Menu</h4>
+            {% for category in categories %}
+                <a href="#{{ category|lower }}" class="category-link">{{ category }}</a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <div class="col-md-10 content">
+        <!-- Accueil -->
+        <div id="accueil" class="category-section">
+            <h2>Accueil</h2>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5>Solde actuel : <strong>{{ user_data.sold }} €</strong></h5>
+                </div>
+            </div>
+            <h4>Dernières transactions</h4>
+            <ul class="list-group">
+                {% for transaction in transactions %}
+                    <li class="list-group-item">
+                        {{ transaction.created_at|date:"d/m/Y H:i" }} - {{ transaction.price }} €
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <!-- Transaction -->
+        <div id="transaction" class="category-section" style="display: none;">
+            <h2>Transaction</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Montant</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for transaction in transactions %}
+                        <tr>
+                            <td>{{ transaction.created_at|date:"d/m/Y H:i" }}</td>
+                            <td>{{ transaction.price }} €</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Statistique -->
+        <div id="statistique" class="category-section" style="display: none;">
+            <h2>Statistique</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>Top 3 Produits</h5>
+                            <ul>
+                                {% for product in top_products %}
+                                    <li>{{ product.name }} : {{ product.count }} consommations</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>Total Crédité</h5>
+                            <p>{{ total_credited }} €</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>Total Dépensé</h5>
+                            <p>{{ total_spent }} €</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Admin -->
+        <div id="administration" class="category-section" style="display: none;">
+            <h2>Gestion</h2>
+            <form method="POST" action="{% url 'update_balance' %}">
+                {% csrf_token %}
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>id Ensea</th>
+                            <th>Prénom</th>
+                            <th>Nom</th>
+                            <th>classe</th>
+                            <th>Statut</th>
+                            <th>Solde</th>
+                            <th>Sélectionner</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for user in users %}
+                            <tr>
+                                <td>{{ user.user.username }}</td>
+                                <td>{{ user.first_name }}</td>
+                                <td>{{ user_data.last_name }}</td>
+                                <td>{{ user_data.class_name}}</td>
+                                <td>{{ user_data.status }}</td>
+                                <td>{{ user_data.sold }} €</td>
+                                <td>
+                                    <input type="checkbox" name="selected_users" value="{{ user.user.username }}">
+                                </td>
+                            </tr>
+                        {% empty %}
+                            <tr>
+                                <td colspan="7" class="text-center">Aucun utilisateur trouvé.</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <!-- Montant à ajouter aux utilisateurs -->
+                <div class="d-flex justify-content-end align-items-center mt-4">
+                        <input type="hidden" name="active_section" value="administration"> <!--inclut un champ caché qui indique la section active :-->
+                        <input type="number" name="amount" class="form-control me-2" placeholder="Montant" required>
+                        <button type="submit" name="action" value="add" class="btn btn-success me-2">Ajouter</button>
+                        <button type="submit" name="action" value="subtract" class="btn btn-danger">Retirer</button>
+                </div>
+                {% if messages %}
+                <div class="alert-container" style="margin-top: 20px;">
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {% endif %}
+            </form>              
+        </div>
+
+        <!-- Paramètres -->
+        <div id="about" class="category-section" style="display: none;">
+            <h2>À propos</h2>
+            <p>Bienvenue sur notre application de gestion. Cette plateforme permet de gérer les utilisateurs, les transactions et les statistiques de manière efficace.</p>
+        </div>
+    </div>
+</div>
+{% endblock content %}
