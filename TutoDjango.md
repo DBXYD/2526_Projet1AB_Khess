@@ -1,4 +1,4 @@
-# Tuto utilisation Django
+# 🛒 Projet Caisse Enregistreuse - Tuto Django
 
 > **Projet Ingénieur** : Système de gestion de commandes et de base de données.
 
@@ -8,13 +8,62 @@ Ce projet permet de gérer une caisse enregistreuse via une interface web. Il ut
 
 ## 🛠️ Installation et Configuration
 
-Pour faire fonctionner le projet sur votre machine (Linux/Ubuntu), suivez scrupuleusement ces étapes.
+Pour faire fonctionner le projet sur votre machine (Linux/Ubuntu), suivez ces étapes dans votre terminal de VS code.
 
-### 1. Préparation de l'environnement
-GitHub ne sauvegarde pas l'environnement virtuel. Vous devez le créer vous-même :
+### 1. Préparation de l'environnement virtuel
 ```bash
-# Créer l'environnement
+# Crée le dossier de l'environnement virtuel nommé 'venv'
 python3 -m venv venv
 
-# Activer l'environnement
+# Active l'environnement (indispensable avant chaque séance de travail)
+# Vous devriez voir (venv) apparaître à gauche de votre curseur
 source venv/bin/activate
+```
+
+### 2. Installation de Django et des modules
+Une fois l'environnement activé, installez les bibliothèques Python indispensables :
+```bash
+# Installe le framework web principal
+pip install django
+
+# Installe le module pour l'authentification centralisée de l'école
+pip install django-cas-ng
+```
+
+### 3. Lancement du serveur de développement
+Accédez au dossier contenant le fichier manage.py et lancez le moteur du site :
+```bash
+# Se déplacer dans le dossier racine du projet
+cd DatabaseCashRegister
+
+# Démarre le serveur local
+python3 manage.py runserver
+```
+Le site est maintenant accessible sur votre navigateur à l'adresse : http://127.0.0.1:8000/
+
+### 🗄️ Visualiser la Base de Données sur VS Code
+Pour explorer les tables (produits, ventes, utilisateurs) sans quitter votre éditeur de code :
+1. Allez dans l'onglet Extensions de VS Code (icône carrée à gauche).
+2. Recherchez et installez les extensions : SQLite et SQLite Viewer.
+3. Une fois installées, vous pourrez ouvrir le fichier db.sqlite3 pour voir les données sous forme de tableaux clairs.
+
+### 🔐 Créer ou Modifier un compte Administrateur
+Si vous avez une erreur 403 Forbidden ou si votre compte n'a pas les droits, vous pouvez forcer les privilèges "Staff" (Directeur) via la console Python de Django.
+1. Entrez dans le mode "Shell" (console interactive)
+```bash
+python3 manage.py shell
+```
+2. Copiez et collez ces lignes de code une par une :
+```bash
+from django.contrib.auth.models import User
+u = User.objects.get(username='ton_nom_utilisateur_ensea')
+u.is_staff = True
+u.is_superuser = True
+u.save()
+exit()
+```
+
+
+
+
+
