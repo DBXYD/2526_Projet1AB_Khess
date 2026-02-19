@@ -1,4 +1,4 @@
-# 🛒 Projet Caisse Enregistreuse (Django)
+# Tuto utilisation Django
 
 > **Projet Ingénieur** : Système de gestion de commandes et de base de données.
 
