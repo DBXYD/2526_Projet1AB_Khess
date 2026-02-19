@@ -24,3 +24,11 @@ cd DatabaseCashRegister
 python3 manage.py runserver
 
 Pour voir la base de donée sur Vs code : installerr SQlite et SQlite viewver.
+Pour se crée un compte admin : 
+python3 manage.py shell
+from django.contrib.auth.models import User
+u = User.objects.get(username='ton_nom_d'utilisateur_ensea')
+u.is_staff = True
+u.is_superuser = True
+u.save()
+exit()
