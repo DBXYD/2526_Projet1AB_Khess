@@ -10,3 +10,7 @@ Le choix recommandé : Raspberry Pi 4 Model B
 Le cable de la caisse : il y a 4 pin.
 pin vert pour ouvrir la caisse 
 pin noir relié a la masse
+
+ce que le prof a dit : 
+nos donnée sous forme de liste, il faut mieux les organiser, on peut utiliser dbdiagramme en ligne. 
+Lorsque qqn essaye de ce connecté, le serveur cherche si il est dans user_custom, si il n'y est pas il y a error, il faut que si il n'y ai pas qu'il le crée. 
