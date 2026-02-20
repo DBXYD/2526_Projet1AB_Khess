@@ -2210,6 +2210,113 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Mechanical:MountingHole_Pad"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "H"
+				(at 0 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole_Pad"
+				(at 0 4.445 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Mounting Hole with connection"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*Pad*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MountingHole_Pad_0_1"
+				(circle
+					(center 0 1.27)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "MountingHole_Pad_1_1"
+				(pin input line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Transistor_FET:Q_NMOS_GDS"
 			(pin_names
 				(offset 0)
@@ -2976,7 +3083,7 @@
 	)
 	(rectangle
 		(start 21.59 52.07)
-		(end 154.94 96.52)
+		(end 115.57 96.52)
 		(stroke
 			(width 0)
 			(type default)
@@ -2998,6 +3105,18 @@
 		)
 		(uuid f54b84cc-2322-4b3f-9509-034544e7b95f)
 	)
+	(rectangle
+		(start 119.38 52.07)
+		(end 154.94 96.52)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid f8d0f1d6-ae54-43bf-82ab-24545907bbad)
+	)
 	(text "Connectors"
 		(exclude_from_sim no)
 		(at 165.608 20.066 0)
@@ -3017,6 +3136,17 @@
 			)
 		)
 		(uuid "5ff686e6-2419-4adf-98da-e48ca8d3c2f6")
+	)
+	(text "Munting holes\n"
+		(exclude_from_sim no)
+		(at 120.65 54.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "73d5576c-ea22-4a07-b8b2-bf20df841c51")
 	)
 	(text "Cash drawer drive"
 		(exclude_from_sim no)
@@ -3039,7 +3169,7 @@
 		(uuid "fe437544-eef1-40f5-8fa6-3a7c0ac3920a")
 	)
 	(junction
-		(at 86.36 88.9)
+		(at 71.12 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "10440620-a213-4f2e-90b6-7a295caf4af4")
@@ -3057,13 +3187,19 @@
 		(uuid "14434e0e-66d6-4f96-8c0d-0cdaabc5b261")
 	)
 	(junction
+		(at 125.73 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "380ad20f-8df5-47bb-a03d-1002ee2f5b59")
+	)
+	(junction
 		(at 113.03 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "52f76f74-abae-430b-a88a-15a52d083ee4")
 	)
 	(junction
-		(at 78.74 80.01)
+		(at 63.5 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "556698e8-d823-4b8b-b02d-f572daa6e82c")
@@ -3081,13 +3217,25 @@
 		(uuid "6d42d125-751d-4d09-8ae4-3a38cd9e468b")
 	)
 	(junction
-		(at 86.36 72.39)
+		(at 125.73 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8346dc6a-136d-4503-8692-c01ddd86eaf8")
+	)
+	(junction
+		(at 125.73 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a01d374e-91ef-40b2-afd1-4bc49950b0df")
+	)
+	(junction
+		(at 71.12 72.39)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a06ec216-f022-4729-8824-56d0815325be")
 	)
 	(junction
-		(at 86.36 62.23)
+		(at 71.12 62.23)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "af1f136b-360e-4dc4-a25d-83fe427619fd")
@@ -3164,7 +3312,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 72.39) (xy 86.36 72.39)
+			(xy 55.88 72.39) (xy 71.12 72.39)
 		)
 		(stroke
 			(width 0)
@@ -3174,7 +3322,7 @@
 	)
 	(wire
 		(pts
-			(xy 77.47 80.01) (xy 78.74 80.01)
+			(xy 62.23 80.01) (xy 63.5 80.01)
 		)
 		(stroke
 			(width 0)
@@ -3184,7 +3332,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 88.9) (xy 86.36 88.9)
+			(xy 63.5 88.9) (xy 71.12 88.9)
 		)
 		(stroke
 			(width 0)
@@ -3204,6 +3352,16 @@
 	)
 	(wire
 		(pts
+			(xy 125.73 66.04) (xy 125.73 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b3684da-3adc-4dbc-b892-6fb868491977")
+	)
+	(wire
+		(pts
 			(xy 67.31 30.48) (xy 71.12 30.48)
 		)
 		(stroke
@@ -3214,7 +3372,17 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 80.01) (xy 71.12 80.01)
+			(xy 128.27 66.04) (xy 125.73 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4746e6af-e2b6-4b6c-936c-13c26afcfef5")
+	)
+	(wire
+		(pts
+			(xy 57.15 80.01) (xy 55.88 80.01)
 		)
 		(stroke
 			(width 0)
@@ -3234,7 +3402,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 62.23) (xy 86.36 62.23)
+			(xy 55.88 62.23) (xy 71.12 62.23)
 		)
 		(stroke
 			(width 0)
@@ -3244,7 +3412,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 83.82) (xy 78.74 80.01)
+			(xy 63.5 83.82) (xy 63.5 80.01)
 		)
 		(stroke
 			(width 0)
@@ -3314,13 +3482,33 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 72.39) (xy 88.9 72.39)
+			(xy 71.12 72.39) (xy 73.66 72.39)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "91a453e2-75e7-47a8-bc87-3a66c59e4ceb")
+	)
+	(wire
+		(pts
+			(xy 128.27 76.2) (xy 125.73 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "96532c97-a854-4a0a-b691-0100e873341f")
+	)
+	(wire
+		(pts
+			(xy 125.73 71.12) (xy 128.27 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b84ed59-f263-4d85-8ddc-119c7a036058")
 	)
 	(wire
 		(pts
@@ -3344,6 +3532,26 @@
 	)
 	(wire
 		(pts
+			(xy 125.73 81.28) (xy 125.73 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6206694-67e8-47dd-be53-681371be3f87")
+	)
+	(wire
+		(pts
+			(xy 128.27 81.28) (xy 125.73 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "caa10a16-1889-4a70-8636-f18e845c03ab")
+	)
+	(wire
+		(pts
 			(xy 30.48 27.94) (xy 30.48 30.48)
 		)
 		(stroke
@@ -3364,7 +3572,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 71.12) (xy 86.36 72.39)
+			(xy 71.12 71.12) (xy 71.12 72.39)
 		)
 		(stroke
 			(width 0)
@@ -3394,7 +3602,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 71.12) (xy 88.9 72.39)
+			(xy 73.66 71.12) (xy 73.66 72.39)
 		)
 		(stroke
 			(width 0)
@@ -3414,7 +3622,17 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 72.39) (xy 86.36 74.93)
+			(xy 125.73 76.2) (xy 125.73 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e431a8ab-22cc-4109-ac61-c8418d9188a7")
+	)
+	(wire
+		(pts
+			(xy 71.12 72.39) (xy 71.12 74.93)
 		)
 		(stroke
 			(width 0)
@@ -3434,7 +3652,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 59.69) (xy 86.36 62.23)
+			(xy 71.12 59.69) (xy 71.12 62.23)
 		)
 		(stroke
 			(width 0)
@@ -3444,7 +3662,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 85.09) (xy 86.36 88.9)
+			(xy 71.12 85.09) (xy 71.12 88.9)
 		)
 		(stroke
 			(width 0)
@@ -3454,7 +3672,7 @@
 	)
 	(global_label "CASH_DRAWER_DRIVE"
 		(shape input)
-		(at 71.12 72.39 180)
+		(at 55.88 72.39 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3464,7 +3682,7 @@
 		)
 		(uuid "029406a9-c852-4ea4-baa4-55578d4e348e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 48.4196 72.39 0)
+			(at 33.1796 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3586,7 +3804,7 @@
 	)
 	(global_label "GPIO_CONTROL"
 		(shape input)
-		(at 71.12 80.01 180)
+		(at 55.88 80.01 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3596,7 +3814,7 @@
 		)
 		(uuid "7ec51403-f083-499b-b6c8-5937a8d54fa3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 54.1647 80.01 0)
+			(at 38.9247 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3652,7 +3870,7 @@
 	)
 	(global_label "CASH_DRAWER_VCC"
 		(shape input)
-		(at 71.12 62.23 180)
+		(at 55.88 62.23 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3662,7 +3880,7 @@
 		)
 		(uuid "f73cdba8-d892-4b40-b064-d3e6e8975780")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 50.1734 62.23 0)
+			(at 34.9334 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3740,6 +3958,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 130.81 81.28 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0f707dd7-a3f1-4f7d-9bd5-cecde97abf4b")
+		(property "Reference" "H4"
+			(at 134.62 80.01 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 134.62 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_Pad"
+			(at 130.81 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 130.81 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 130.81 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cbef76ed-6d48-47d9-bde0-bc90ff530e33")
+		)
+		(instances
+			(project "PCB_Khess"
+				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
+					(reference "H4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:PWR_FLAG")
 		(at 113.03 31.75 0)
 		(unit 1)
@@ -3807,7 +4092,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_FET:Q_NMOS_GDS")
-		(at 83.82 80.01 0)
+		(at 68.58 80.01 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3816,7 +4101,7 @@
 		(fields_autoplaced yes)
 		(uuid "194e0c01-9d6c-499c-908b-0849ca75520d")
 		(property "Reference" "Q1"
-			(at 90.17 78.7399 0)
+			(at 74.93 78.7399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3825,7 +4110,7 @@
 			)
 		)
 		(property "Value" "BUK9637-100E,118"
-			(at 90.17 81.2799 0)
+			(at 74.93 81.2799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3833,8 +4118,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 88.9 77.47 0)
+		(property "Footprint" "Package_TO_SOT_SMD:TO-263-2"
+			(at 73.66 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3843,7 +4128,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 83.82 80.01 0)
+			(at 68.58 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3852,7 +4137,7 @@
 			)
 		)
 		(property "Description" "N-MOSFET transistor, gate/drain/source"
-			(at 83.82 80.01 0)
+			(at 68.58 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3880,7 +4165,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 78.74 86.36 0)
+		(at 63.5 86.36 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3888,7 +4173,7 @@
 		(dnp no)
 		(uuid "1ab14907-cb71-405b-a382-6fbe1a11b104")
 		(property "Reference" "R2"
-			(at 76.2 85.344 0)
+			(at 60.96 85.344 0)
 			(effects
 				(font
 					(size 1.016 1.016)
@@ -3896,15 +4181,15 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 75.438 87.63 0)
+			(at 60.198 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 78.74 86.36 0)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 63.5 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3913,7 +4198,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 78.74 86.36 0)
+			(at 63.5 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3922,7 +4207,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 78.74 86.36 0)
+			(at 63.5 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3973,7 +4258,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_RJ:RJ12_Amphenol_54601-x06_Horizontal"
 			(at 201.93 33.02 0)
 			(effects
 				(font
@@ -4032,7 +4317,7 @@
 	)
 	(symbol
 		(lib_id "power:+12V")
-		(at 86.36 59.69 0)
+		(at 71.12 59.69 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4040,7 +4325,7 @@
 		(dnp no)
 		(uuid "1ec55fe1-ea5e-4043-9375-498defc0a684")
 		(property "Reference" "#PWR07"
-			(at 86.36 63.5 0)
+			(at 71.12 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4049,7 +4334,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 86.36 54.61 0)
+			(at 71.12 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4057,7 +4342,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 86.36 59.69 0)
+			(at 71.12 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4066,7 +4351,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 59.69 0)
+			(at 71.12 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4075,7 +4360,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 86.36 59.69 0)
+			(at 71.12 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4123,7 +4408,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 196.85 69.85 0)
 			(effects
 				(font
@@ -4191,7 +4476,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-5.0-H_1x02_P5.00mm_Horizontal"
 			(at 245.11 29.21 0)
 			(effects
 				(font
@@ -4599,7 +4884,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_USB:USB3_A_Molex_48406-0001_Horizontal_Stacked"
 			(at 242.57 62.23 0)
 			(effects
 				(font
@@ -4660,6 +4945,73 @@
 			(project ""
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 130.81 71.12 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7d225c59-2628-477b-bddf-e4a6f5f30888")
+		(property "Reference" "H2"
+			(at 134.62 69.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 134.62 72.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_Pad"
+			(at 130.81 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 130.81 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 130.81 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "aa989806-a569-441a-9976-719d2a1ce9ff")
+		)
+		(instances
+			(project "PCB_Khess"
+				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
+					(reference "H2")
 					(unit 1)
 				)
 			)
@@ -4757,7 +5109,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
 			(at 35.56 30.48 0)
 			(effects
 				(font
@@ -4794,6 +5146,72 @@
 			(project ""
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "L1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 125.73 81.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "83b9b4ed-80f9-4056-be92-b4dc307c4eae")
+		(property "Reference" "#PWR021"
+			(at 125.73 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 125.73 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 125.73 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 125.73 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 125.73 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f7b804db-780b-4fea-8c67-87d1f867a04f")
+		)
+		(instances
+			(project "PCB_Khess"
+				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -4966,7 +5384,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 40.64 35.56 0)
 			(effects
 				(font
@@ -5010,7 +5428,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 74.93 80.01 90)
+		(at 59.69 80.01 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5019,7 +5437,7 @@
 		(fields_autoplaced yes)
 		(uuid "b85308ac-9bc2-4519-9db5-6af3f110b47c")
 		(property "Reference" "R1"
-			(at 74.93 74.93 90)
+			(at 59.69 74.93 90)
 			(effects
 				(font
 					(size 1.016 1.016)
@@ -5027,15 +5445,15 @@
 			)
 		)
 		(property "Value" "220"
-			(at 74.93 77.47 90)
+			(at 59.69 77.47 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 74.93 80.01 0)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 59.69 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5044,7 +5462,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 74.93 80.01 0)
+			(at 59.69 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5053,7 +5471,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 74.93 80.01 0)
+			(at 59.69 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5170,7 +5588,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 30.48 35.56 0)
 			(effects
 				(font
@@ -5214,7 +5632,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 86.36 88.9 0)
+		(at 71.12 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5223,7 +5641,7 @@
 		(fields_autoplaced yes)
 		(uuid "d4f82851-a134-4a3b-8aaa-2ea8374da9be")
 		(property "Reference" "#PWR03"
-			(at 86.36 95.25 0)
+			(at 71.12 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5232,7 +5650,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 86.36 93.98 0)
+			(at 71.12 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5240,7 +5658,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 86.36 88.9 0)
+			(at 71.12 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5249,7 +5667,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 88.9 0)
+			(at 71.12 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5258,7 +5676,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 86.36 88.9 0)
+			(at 71.12 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5273,6 +5691,73 @@
 			(project "PCB_Khess"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 130.81 66.04 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d6c1e07e-0475-4144-ac33-547c18af2170")
+		(property "Reference" "H1"
+			(at 134.62 64.77 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 134.62 67.31 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_Pad"
+			(at 130.81 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 130.81 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 130.81 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7c173eb1-0209-4f58-a458-3ecc662108f1")
+		)
+		(instances
+			(project "PCB_Khess"
+				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
+					(reference "H1")
 					(unit 1)
 				)
 			)
@@ -5478,17 +5963,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:D_AAK")
-		(at 86.36 66.04 270)
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 130.81 76.2 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "fedf7da7-411d-4f48-b8b0-fde542fb9669")
-		(property "Reference" "D1"
-			(at 90.17 65.9764 90)
+		(uuid "fa64b75b-c9b4-44dc-b736-9b6f8e89c038")
+		(property "Reference" "H3"
+			(at 134.62 74.93 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5496,8 +5981,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "DST10100S"
-			(at 90.17 68.5164 90)
+		(property "Value" "MountingHole_Pad"
+			(at 134.62 77.47 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5505,8 +5990,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 86.36 66.04 0)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_Pad"
+			(at 130.81 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5515,7 +6000,74 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 86.36 66.04 0)
+			(at 130.81 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 130.81 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "647aa8eb-0a0b-4720-abf5-f806df8b5f46")
+		)
+		(instances
+			(project "PCB_Khess"
+				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
+					(reference "H3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_AAK")
+		(at 71.12 66.04 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fedf7da7-411d-4f48-b8b0-fde542fb9669")
+		(property "Reference" "D1"
+			(at 74.93 65.9764 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DST10100S"
+			(at 74.93 68.5164 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TO-277A"
+			(at 71.12 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 71.12 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5524,7 +6076,7 @@
 			)
 		)
 		(property "Description" "Diode, anode on pins 1 and 2"
-			(at 86.36 66.04 0)
+			(at 71.12 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
