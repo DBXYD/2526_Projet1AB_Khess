@@ -89,7 +89,7 @@ exit()
 
 1. **Nommer l'image** : Renommez votre fichier image exactement comme le nom du produit dans l'interface Administration (ex: `coca cola.png`). Attention aux espaces et aux minuscules !
 2. **Ajouter le fichier** : Déposez votre image dans le dossier VS Code suivant : `users/static/users/images/`
-3. **Modifier le code** : Dans votre fichier HTML `cash_register.html`, remplacez la ligne `<img>` par :
+3. **Modifier le code** : Dans votre fichier HTML `cash_register.html`, remplacez les lignes `<img>` par :
    `<img src="{% static 'users/images/' %}{{ article.name }}.png" alt="{{ article.name }}" class="img-fluid mb-2" style="max-height: 100px;">`
 4. **Actualiser** : Enregistrez votre fichier (**CTRL + S**) puis rafraîchissez le navigateur avec **CTRL + F5** pour forcer le chargement des nouvelles images.
 
