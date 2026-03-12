@@ -41,6 +41,19 @@ python3 manage.py runserver
 ```
 Le site est maintenant accessible sur votre navigateur à l'adresse : http://127.0.0.1:8000/
 
+### 🧭 Navigation sur le site
+
+Pour accéder aux différentes pages, vous devez ajouter le chemin correspondant à la fin de l'URL `http://127.0.0.1:8000/`. Vous pouvez retrouver ces chemins dans le fichier urls.py sous la variable urlpatterns.
+
+Voici les accès principaux pour ce projet :
+
+| Page | Chemin à ajouter | URL complète |
+| :--- | :--- | :--- |
+| **Accueil** | `/` | http://127.0.0.1:8000/ |
+| **Administration** | `admin/` | http://127.0.0.1:8000/admin/ |
+| **Caisse** | `cash_register_page/` | http://127.0.0.1:8000/cash_register_page/ |
+| **Présentation** | `présentation/` | http://127.0.0.1:8000/présentation/ |
+
 ### 🗄️ Visualiser la Base de Données sur VS Code
 Pour explorer les tables (produits, ventes, utilisateurs) sans quitter votre éditeur de code :
 1. Allez dans l'onglet Extensions de VS Code (icône carrée à gauche).
