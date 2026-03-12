@@ -85,7 +85,13 @@ u.is_superuser = True
 u.save()
 exit()
 ```
+### 🖼️ Changer l'image d'un produit
 
+1. **Nommer l'image** : Renommez votre fichier exactement comme le nom du produit (ex: `coca cola.png`).
+2. **Ajouter le fichier** : Déposez-le dans `users/static/users/images/`.
+3. **Modifier le code** : Dans votre fichier HTML, remplacez la ligne `<img>` par :
+   `<img src="{% static 'users/images/' %}{{ article.name }}.png" alt="{{ article.name }}" class="img-fluid mb-2" style="max-height: 100px;">`
+4. **Actualiser** : Sauvegardez (**CTRL+S**) et rafraîchissez le navigateur (**CTRL+F5**).
 
 
 
