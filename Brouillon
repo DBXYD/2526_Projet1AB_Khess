@@ -32,3 +32,6 @@ u.is_staff = True
 u.is_superuser = True
 u.save()
 exit()
+
+lien pour nous aider, projet des bachelors : 
+https://github.com/DBXYD/ENSEA_B2_Web
