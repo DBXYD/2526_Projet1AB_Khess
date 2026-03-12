@@ -54,6 +54,16 @@ Voici les accès principaux pour ce projet :
 | **Caisse** | `cash_register_page/` | http://127.0.0.1:8000/cash_register_page/ |
 | **Présentation** | `présentation/` | http://127.0.0.1:8000/présentation/ |
 
+### 🛠️ Résolution du problème "DoesNotExist" (Page d'accueil vide)
+
+Si l'adresse http://127.0.0.1:8000/admin/ fonctionne mais que la page d'accueil http://127.0.0.1:8000/ affiche une erreur, c'est parce que votre utilisateur n'est pas encore enregistré dans la table users_custom.
+
+Voici comment régler ça :
+1. Connectez-vous sur l'interface d'administration : http://127.0.0.1:8000/admin/.
+2. Dans la section Users_Custom, cliquez sur Add (Ajouter).
+3. Remplissez les informations en veillant à ce que le nom d'utilisateur corresponde exactement à celui avec lequel vous essayez de vous connecter.
+4. Enregistrez, puis retournez sur la page d'accueil.
+
 ### 🗄️ Visualiser la Base de Données sur VS Code
 Pour explorer les tables (produits, ventes, utilisateurs) sans quitter votre éditeur de code :
 1. Allez dans l'onglet Extensions de VS Code (icône carrée à gauche).
@@ -75,7 +85,15 @@ u.is_superuser = True
 u.save()
 exit()
 ```
+### 🖼️ Changer l'image d'un produit
 
+1. **Nommer l'image** : Renommez votre fichier image exactement comme le nom du produit dans l'interface Administration (ex: `coca cola.png`). Attention aux espaces et aux minuscules !
+2. **Ajouter le fichier** : Déposez votre image dans le dossier VS Code suivant : `users/static/users/images/`
+3. **Modifier le code** : Dans votre fichier HTML `cash_register.html`, remplacez les lignes `<img>` par :
+   `<img src="{% static 'users/images/' %}{{ article.name }}.png" alt="{{ article.name }}" class="img-fluid mb-2" style="max-height: 100px;">`
+4. **Actualiser** : Enregistrez votre fichier (**CTRL + S**) puis rafraîchissez le navigateur avec **CTRL + F5** pour forcer le chargement des nouvelles images.
+
+Si vos images sont au format .jpg, remplacez simplement .png par .jpg à la fin de la ligne de code ci-dessus. Toutes vos photos devront alors avoir le même format.
 
 
 
