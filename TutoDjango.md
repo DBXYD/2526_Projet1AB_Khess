@@ -54,6 +54,16 @@ Voici les accès principaux pour ce projet :
 | **Caisse** | `cash_register_page/` | http://127.0.0.1:8000/cash_register_page/ |
 | **Présentation** | `présentation/` | http://127.0.0.1:8000/présentation/ |
 
+### 🛠️ Résolution du problème "DoesNotExist" (Page d'accueil vide)
+
+Si l'adresse http://127.0.0.1:8000/admin/ fonctionne mais que la page d'accueil http://127.0.0.1:8000/ affiche une erreur, c'est parce que votre utilisateur n'est pas encore enregistré dans la table users_custom.
+
+Voici comment régler ça :
+1. Connectez-vous sur l'interface d'administration : http://127.0.0.1:8000/admin/.
+2. Dans la section Users_Custom, cliquez sur Add (Ajouter).
+3. Remplissez les informations en veillant à ce que le nom d'utilisateur corresponde exactement à celui avec lequel vous essayez de vous connecter.
+4. Enregistrez, puis retournez sur la page d'accueil.
+
 ### 🗄️ Visualiser la Base de Données sur VS Code
 Pour explorer les tables (produits, ventes, utilisateurs) sans quitter votre éditeur de code :
 1. Allez dans l'onglet Extensions de VS Code (icône carrée à gauche).
