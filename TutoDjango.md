@@ -87,11 +87,13 @@ exit()
 ```
 ### 🖼️ Changer l'image d'un produit
 
-1. **Nommer l'image** : Renommez votre fichier exactement comme le nom du produit (ex: `coca cola.png`).
-2. **Ajouter le fichier** : Déposez-le dans `users/static/users/images/`.
-3. **Modifier le code** : Dans votre fichier HTML, remplacez la ligne `<img>` par :
+1. **Nommer l'image** : Renommez votre fichier image exactement comme le nom du produit dans l'interface Administration (ex: `coca cola.png`). Attention aux espaces et aux minuscules !
+2. **Ajouter le fichier** : Déposez votre image dans le dossier VS Code suivant : `users/static/users/images/`
+3. **Modifier le code** : Dans votre fichier HTML `cash_register.html`, remplacez la ligne `<img>` par :
    `<img src="{% static 'users/images/' %}{{ article.name }}.png" alt="{{ article.name }}" class="img-fluid mb-2" style="max-height: 100px;">`
-4. **Actualiser** : Sauvegardez (**CTRL+S**) et rafraîchissez le navigateur (**CTRL+F5**).
+4. **Actualiser** : Enregistrez votre fichier (**CTRL + S**) puis rafraîchissez le navigateur avec **CTRL + F5** pour forcer le chargement des nouvelles images.
+
+Si vos images sont au format .jpg, remplacez simplement .png par .jpg à la fin de la ligne de code ci-dessus. Toutes vos photos devront alors avoir le même format.
 
 
 
