@@ -147,17 +147,73 @@ Copie ce bloc à la suite des autres :
 ```
 Sauvegardez (CTRL+S) et redémarrez le serveur.
 
+### 💳 Implémenter une double tarification (Cotisant vs Non-Cotisant)
 
+1. models.py (La Base)
+C'est ici que l'on définit les deux colonnes de prix.
+```bash
+class Article(models.Model):
+    name = models.CharField(max_length=255)
+    quantity = models.IntegerField(default=0)
+    TYPE_CHOICES = [('le midi', 'Le Midi'), ('boisson', 'Boisson'), ('snack', 'Snack'),('viennoiseries', 'Viennoiseries')]
+    type = models.CharField(max_length=50, choices=TYPE_CHOICES, default='snack')
+    # Les deux nouveaux champs de prix
+    price_cotisant = models.FloatField(default=0)
+    price_non_cotisant = models.FloatField(default=0)
+```
+2. admin.py (L'interface de gestion)
+```bash
+@admin.register(Article)
+class ArticleAdmin(admin.ModelAdmin):
+    list_display = ('name', 'quantity', 'type', 'price_cotisant', 'price_non_cotisant')
+    list_filter = ('type',)
+```
 
+3. views.py (La Logique de sélection)
 
+```bash
+## Récupération des articles :
+    article_items = []
+    for article in article_data:
+        # Condition pour choisir le prix
+        if user_data.status == 'Cotisant':
+            prix_final = article.price_cotisant
+        else:
+            prix_final = article.price_non_cotisant
+            
+        article_items.append({
+            'name': article.name, 
+            'quantity': article.quantity, 
+            'type': article.type, 
+            'price': prix_final
+        })
+```
 
+4. Les commandes Terminal (Indispensables)
+```bash
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+```
+### 🖥️ Afficher deux tarifs (C & NC) sur l'interface Web 
 
+1. Dans views.py
+On change juste ce qu'on envoie dans le dictionnaire pour inclure les deux variables.
+```bash
+article_items.append({
+      'name': article.name,
+      'type': article.type,
+      'price_c': article.price_cotisant,     
+      'price_nc': article.price_non_cotisant
+```
 
+2. Dans cash_register.html
+```bash
+<span class="text-muted" style="font-size: 0.8em;">Cotisant : {{ article.price_c }} €</span>
+<span class="text-muted" style="font-size: 0.8em;">Non Cotisant : {{ article.price_nc }} €</span>
+```
 
-
-
-
-
+   
 
 
 
