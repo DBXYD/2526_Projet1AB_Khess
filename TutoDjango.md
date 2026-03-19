@@ -195,10 +195,25 @@ python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
 ```
+### 🖥️ Afficher deux tarifs (C & NC) sur l'interface Web 
 
+1. Dans views.py
+On change juste ce qu'on envoie dans le dictionnaire pour inclure les deux variables.
+```bash
+article_items.append({
+      'name': article.name,
+      'type': article.type,
+      'price_c': article.price_cotisant,     
+      'price_nc': article.price_non_cotisant
+```
 
+2. Dans cash_register.html
+```bash
+<span class="text-muted" style="font-size: 0.8em;">Cotisant : {{ article.price_c }} €</span>
+<span class="text-muted" style="font-size: 0.8em;">Non Cotisant : {{ article.price_nc }} €</span>
+```
 
-
+   
 
 
 
