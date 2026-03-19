@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP SI4435DDY-T1-GE3
+D SI4435DDY-T1-GE3, P-channel MOSFET Transistor 8.1A 30V, 8-Pin SOIC
+K
+F https://www.vishay.com/docs/68841/si4435ddy.pdf
+$ENDCMP
+#
+#End Doc Library
