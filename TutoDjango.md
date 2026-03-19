@@ -95,6 +95,79 @@ exit()
 
 Si vos images sont au format .jpg, remplacez simplement .png par .jpg à la fin de la ligne de code ci-dessus. Toutes vos photos devront alors avoir le même format.
 
+### 📂 Ajouter une nouvelle catégorie de produits
+
+Pour ajouter un nouvel onglet (ex: Viennoiseries) et afficher les produits correspondants, il faut suivre ces étapes suivantes :
+
+1. Modifier le Modèle (models.py)
+ Ajoutez la catégorie dans la base de données.
+
+```bash
+TYPE_CHOICES = [
+    ('sandwich', 'Sandwich'),
+    ('boisson', 'Boisson'),
+    ('snack', 'Snack'),
+    ('viennoiseries', 'Viennoiseries'), # <-- Nouvelle ligne
+]
+```
+
+2. Mettre à jour la Vue (views.py)
+Mise à jour de la liste pour le menu latéral.
+```bash
+def cash_register_page(request):
+    articles = Article.objects.all()
+    categories = ['Tout', 'Menu', 'Sandwich', 'Snack', 'Boisson', 'Viennoiseries'] 
+    return render(request, 'users/cash_register.html', {
+        'article_items': articles, 
+        'categories': categories
+    })
+]
+```
+3.Créer la section dans le HTML (cash_register.html)
+Copie ce bloc à la suite des autres : 
+```bash
+<div id="viennoiseries" class="category-section">
+    <h2 class="mt-4">Viennoiseries</h2>
+    <div class="row">
+        {% for article in article_items %}
+            {% if article.type == 'viennoiseries' %}
+                <div class="col-md-2 mb-4">
+                    <button class="btn btn-light w-100 shadow-sm rounded" style="height: 200px;">
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="{% static 'users/images/' %}{{ article.name }}.png" class="img-fluid mb-2" style="max-height: 100px;">
+                            <span class="fw-bold">{{ article.name }}</span>
+                            <span class="text-muted">{{ article.price }} €</span>
+                        </div>
+                    </button>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+```
+Sauvegardez (CTRL+S) et redémarrez le serveur.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
