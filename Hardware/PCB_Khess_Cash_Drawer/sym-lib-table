@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "MOV-10D561K")(type "KiCad")(uri "${KIPRJMOD}/Symbol_and_Footprint/MOV-10D561K/MOV-10D561K.kicad_sym")(options "")(descr ""))
+  (lib (name "PSK-15E-12")(type "KiCad")(uri "${KIPRJMOD}/Symbol_and_Footprint/PSK-15E-12/PSK-15E-12.kicad_sym")(options "")(descr ""))
+)
