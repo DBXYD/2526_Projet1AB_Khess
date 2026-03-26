@@ -213,7 +213,7 @@ article_items.append({
 <span class="text-muted" style="font-size: 0.8em;">Non Cotisant : {{ article.price_nc }} €</span>
 ```
 
-📘 Tuto : Corriger l'erreur "NaN" après l'ajout du double prix
+### 🛠️ Corriger l'erreur "NaN" après l'ajout du double prix
 
 Le problème vient du fait que ton JavaScript récupérait le prix en lisant le texte à l'intérieur du bouton. Comme il y a maintenant deux prix affichés (Cotisant et Non Cotisant), le script mélange tout.
 
@@ -252,6 +252,39 @@ document.querySelectorAll('.article-btn').forEach(button => {
        alert("Erreur : Le prix de cet article n'est pas bien défini.");
 }
 ```
+
+### Ajouter et Afficher une Nouvelle Catégorie (Viennoiseries)
+
+Lorsque tu ajoutes une catégorie comme "Viennoiseries" dans ton projet, il ne suffit pas de créer l'onglet ; il faut dire à Django comment filtrer les articles pour qu'ils apparaissent au bon endroit.
+Pour éviter les erreurs de majuscules ou de pluriels (ex: "Viennoiserie" vs "viennoiseries"), on utilise le filtre |lower.
+Dans ton fichier cash_register.html, copie colle dans la catégorie vienoiserie : 
+
+```bash
+<div id="viennoiserie" class="category-section">
+                <h2>Viennoiseries</h2>
+                <div class="row">
+                    {% for article in article_items %}
+                        {% if article.type|lower == 'viennoiserie' or article.type|lower == 'viennoiseries' %}
+                             <div class="col-md-2 mb-4">
+                                 <button class="btn btn-light w-100 shadow-sm rounded article-btn" 
+                                         style="height: 200px;"
+                                         data-name="{{ article.name }}"
+                                        data-price="{% if user_data.status|lower == 'cotisant' %}{{ article.price_c }}{% else %}{{ article.price_nc }}{% endif %}">
+                                     <div class="d-flex flex-column align-items-center">
+                                             <img src="{% static 'users/images/' %}{{ article.name }}.png" alt="{{ article.name }}" class="img-fluid mb-2" style="max-height: 100px;">
+                                             <span class="fw-bold">{{ article.name }}</span>
+                                             <span class="text-muted" style="font-size: 0.8em;">Cotisant : {{ article.price_c }} €</span>
+                                            <span class="text-muted" style="font-size: 0.8em;">Non Cotisant : {{ article.price_nc }} €</span>
+                                     </div>
+                                </button>
+                            </div>
+                         {% endif %}
+                    {% endfor %}
+                 </div>
+            </div>
+```
+
+
 
    
 
