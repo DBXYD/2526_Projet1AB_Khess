@@ -213,6 +213,79 @@ article_items.append({
 <span class="text-muted" style="font-size: 0.8em;">Non Cotisant : {{ article.price_nc }} €</span>
 ```
 
+### 🛠️ Corriger l'erreur "NaN" après l'ajout du double prix
+
+Le problème vient du fait que ton JavaScript récupérait le prix en lisant le texte à l'intérieur du bouton. Comme il y a maintenant deux prix affichés (Cotisant et Non Cotisant), le script mélange tout.
+
+1.Préparer le bouton dans le HTML
+Dans ton fichier cash_register.html, modifie la balise <button> de chaque section (Tout, Snack, Boisson, etc.) comme ceci :
+
+```bash
+<button class="btn btn-light w-100 shadow-sm rounded article-btn" 
+       style="height: 200px;"
+       data-name="{{ article.name }}"
+       data-price="{% if user_data.status == 'cotisant' %}{{ article.price_c }}{% else %}{{ article.price_nc }}{% endif %}">
+   <div class="d-flex flex-column align-items-center">
+       <img src="{% static 'users/images/' %}{{ article.name }}.png" alt="{{ article.name }}" class="img-fluid mb-2" style="max-height: 100px;">
+       <span class="fw-bold">{{ article.name }}</span>
+        
+       <span class="text-muted" style="font-size: 0.8em;">Cotisant : {{ article.price_c }} €</span>
+       <span class="text-muted" style="font-size: 0.8em;">Non Cotisant : {{ article.price_nc }} €</span>
+   </div>
+</button>
+```
+2. Modifier le JavaScript (La lecture du prix) :
+Il faut maintenant dire à ton script de ne plus lire le texte affiché, mais de lire l'attribut data-price que nous venons de créer.
+Cherche la partie <script> en bas de ton fichier et remplace le bloc qui gère le clic par celui-ci :
+
+```bash
+document.querySelectorAll('.article-btn').forEach(button => {
+    button.addEventListener('click', function () {
+    // NEW: On récupère les données "data-name" et "data-price" du bouton
+    const name = this.getAttribute('data-name');
+    const price = parseFloat(this.getAttribute('data-price'));
+
+// On vérifie que le prix est bien un chiffre (pour éviter le NaN)
+    if (!isNaN(price)) {
+       addToOrder(name, price);
+    } else {
+       alert("Erreur : Le prix de cet article n'est pas bien défini.");
+}
+```
+
+### Ajouter et Afficher une Nouvelle Catégorie (Viennoiseries)
+
+Lorsque tu ajoutes une catégorie comme "Viennoiseries" dans ton projet, il ne suffit pas de créer l'onglet ; il faut dire à Django comment filtrer les articles pour qu'ils apparaissent au bon endroit.
+Pour éviter les erreurs de majuscules ou de pluriels (ex: "Viennoiserie" vs "viennoiseries"), on utilise le filtre |lower.
+Dans ton fichier cash_register.html, copie colle dans la catégorie vienoiserie : 
+
+```bash
+<div id="viennoiserie" class="category-section">
+                <h2>Viennoiseries</h2>
+                <div class="row">
+                    {% for article in article_items %}
+                        {% if article.type|lower == 'viennoiserie' or article.type|lower == 'viennoiseries' %}
+                             <div class="col-md-2 mb-4">
+                                 <button class="btn btn-light w-100 shadow-sm rounded article-btn" 
+                                         style="height: 200px;"
+                                         data-name="{{ article.name }}"
+                                        data-price="{% if user_data.status|lower == 'cotisant' %}{{ article.price_c }}{% else %}{{ article.price_nc }}{% endif %}">
+                                     <div class="d-flex flex-column align-items-center">
+                                             <img src="{% static 'users/images/' %}{{ article.name }}.png" alt="{{ article.name }}" class="img-fluid mb-2" style="max-height: 100px;">
+                                             <span class="fw-bold">{{ article.name }}</span>
+                                             <span class="text-muted" style="font-size: 0.8em;">Cotisant : {{ article.price_c }} €</span>
+                                            <span class="text-muted" style="font-size: 0.8em;">Non Cotisant : {{ article.price_nc }} €</span>
+                                     </div>
+                                </button>
+                            </div>
+                         {% endif %}
+                    {% endfor %}
+                 </div>
+            </div>
+```
+
+
+
    
 
 
