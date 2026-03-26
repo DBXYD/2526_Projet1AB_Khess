@@ -4626,7 +4626,7 @@
 			(uuid "be8eb31d-0d16-4d1e-b108-db4fc06f953f")
 		)
 		(instances
-			(project "PCB_Khess"
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "#PWR012")
 					(unit 1)
@@ -4693,7 +4693,7 @@
 			(uuid "cbef76ed-6d48-47d9-bde0-bc90ff530e33")
 		)
 		(instances
-			(project "PCB_Khess"
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "H4")
 					(unit 1)
@@ -4766,7 +4766,7 @@
 			(uuid "270e0227-23c1-4eab-a8e4-6cceaa01af4a")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "Q1")
 					(unit 1)
@@ -4833,7 +4833,7 @@
 			(uuid "c2850f09-0472-4e07-9337-406510c5825a")
 		)
 		(instances
-			(project "PCB_Khess"
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "R2")
 					(unit 1)
@@ -4903,7 +4903,7 @@
 			(uuid "b021a665-16c8-4feb-b7ef-7cf69e163db3")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "D2")
 					(unit 1)
@@ -4988,7 +4988,7 @@
 			(uuid "9317beba-631c-43a3-84e4-e733170da3dc")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "J3")
 					(unit 1)
@@ -5053,7 +5053,7 @@
 			(uuid "73ea87d7-1b18-456e-9adf-304c7b5d1c12")
 		)
 		(instances
-			(project "PCB_Khess"
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "#PWR07")
 					(unit 1)
@@ -5121,7 +5121,7 @@
 			(uuid "68d60211-338a-4de4-aa87-ce9118315a29")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "J1")
 					(unit 1)
@@ -5187,7 +5187,7 @@
 			(uuid "905a390b-d6a5-4919-b96a-5928849f6501")
 		)
 		(instances
-			(project "PCB_Khess"
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "#PWR02")
 					(unit 1)
@@ -5412,7 +5412,7 @@
 			(uuid "5cc8f499-bf18-47e8-aded-65ee9f5c537c")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "PS2")
 					(unit 1)
@@ -5478,7 +5478,7 @@
 			(uuid "bfd3de7b-9bce-4b96-9688-8fad1079ff43")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "#FLG01")
 					(unit 1)
@@ -5545,7 +5545,7 @@
 			(uuid "aa989806-a569-441a-9976-719d2a1ce9ff")
 		)
 		(instances
-			(project "PCB_Khess"
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "H2")
 					(unit 1)
@@ -5611,7 +5611,7 @@
 			(uuid "36862722-044d-4f62-bda6-5806fd359e75")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "#PWR06")
 					(unit 1)
@@ -5679,7 +5679,7 @@
 			(uuid "8ec01f79-1b05-46fb-8fc4-c10b9f166e3e")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "L1")
 					(unit 1)
@@ -5745,7 +5745,7 @@
 			(uuid "f7b804db-780b-4fea-8c67-87d1f867a04f")
 		)
 		(instances
-			(project "PCB_Khess"
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "#PWR021")
 					(unit 1)
@@ -5814,7 +5814,7 @@
 			(uuid "9f71f8e8-d1c7-446f-8385-dc8ae2e1d6a8")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "C4")
 					(unit 1)
@@ -5887,7 +5887,7 @@
 			(uuid "a4baaf0d-1bb9-4be2-8598-540d693ab26b")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "U1")
 					(unit 1)
@@ -6020,7 +6020,7 @@
 			(uuid "2d5e7c1f-a15f-4220-b2e6-5800c70dc3ea")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "#PWR01")
 					(unit 1)
@@ -6088,7 +6088,7 @@
 			(uuid "26af9a45-6bed-45d1-8225-0e490d6c8f38")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "R3")
 					(unit 1)
@@ -6156,7 +6156,7 @@
 			(uuid "9baf6c03-ac7d-47a2-a1f6-96a209d941da")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "F1")
 					(unit 1)
@@ -6183,7 +6183,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4.7u"
+		(property "Value" "4u7"
 			(at 43.18 36.8362 0)
 			(effects
 				(font
@@ -6226,7 +6226,7 @@
 			(uuid "c4e7ed8e-666a-4123-ad53-762e00c64420")
 		)
 		(instances
-			(project "PCB_Khess"
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "C2")
 					(unit 1)
@@ -6366,7 +6366,7 @@
 			(uuid "82cc2312-cc3b-4f77-9d28-37a86b3630ea")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "J2")
 					(unit 1)
@@ -6547,7 +6547,7 @@
 			(uuid "181ae360-f315-40c0-b366-44e7fdfeedfe")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "RV1")
 					(unit 1)
@@ -6615,7 +6615,7 @@
 			(uuid "f5db7e41-acb6-490e-9401-91aef3d24662")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "R1")
 					(unit 1)
@@ -6685,7 +6685,7 @@
 			(uuid "fe004879-11da-4ed5-91f0-8bb9450e3e1b")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "C1")
 					(unit 1)
@@ -6751,7 +6751,7 @@
 			(uuid "483bdc24-d615-489b-96de-c2efaf54253b")
 		)
 		(instances
-			(project "PCB_Khess"
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "#PWR03")
 					(unit 1)
@@ -6818,7 +6818,7 @@
 			(uuid "7c173eb1-0209-4f58-a458-3ecc662108f1")
 		)
 		(instances
-			(project "PCB_Khess"
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "H1")
 					(unit 1)
@@ -6884,7 +6884,7 @@
 			(uuid "50e19bc0-f45a-42fe-ba70-9ec729ff6b97")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "#PWR04")
 					(unit 1)
@@ -6951,7 +6951,7 @@
 			(uuid "75d64c48-e358-4cc9-b443-0e36e1d930a8")
 		)
 		(instances
-			(project "PCB_Khess"
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "#PWR013")
 					(unit 1)
@@ -7086,7 +7086,7 @@
 			(uuid "d1b513b9-dfe7-4e30-88ba-644f235b3fff")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "C5")
 					(unit 1)
@@ -7153,7 +7153,7 @@
 			(uuid "647aa8eb-0a0b-4720-abf5-f806df8b5f46")
 		)
 		(instances
-			(project "PCB_Khess"
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "H3")
 					(unit 1)
@@ -7292,7 +7292,7 @@
 			(uuid "789c2331-8813-4c0d-8baa-a973a96baf90")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "D1")
 					(unit 1)

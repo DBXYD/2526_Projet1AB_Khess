@@ -5,7 +5,7 @@
 	(uuid "c775ec96-c184-4b0d-accb-e7f99e0cfe00")
 	(paper "A4")
 	(lib_symbols
-		(symbol "Comparator:LM393"
+		(symbol "Amplifier_Operational:MCP6001-OT"
 			(pin_names
 				(offset 0.127)
 			)
@@ -13,22 +13,43 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U"
-				(at 3.81 3.81 0)
+				(at -1.27 6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" "LM393"
-				(at 6.35 -3.81 0)
+			(property "Value" "MCP6001-OT"
+				(at -1.27 3.81 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+				(at -2.54 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://ww1.microchip.com/downloads/en/DeviceDoc/MCP6001-1R-1U-2-4-1-MHz-Low-Power-Op-Amp-DS20001733L.pdf"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "1MHz, Low-Power Op Amp, SOT-23-5"
 				(at 0 0 0)
 				(effects
 					(font
@@ -37,7 +58,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm393.pdf"
+			(property "ki_keywords" "single opamp"
 				(at 0 0 0)
 				(effects
 					(font
@@ -46,7 +67,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Low-Power, Low-Offset Voltage, Dual Comparators, DIP-8/SOIC-8/TO-99-8"
+			(property "ki_fp_filters" "SOT?23*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -55,33 +76,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "cmp open collector"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* SOP*5.28x5.23mm*P1.27mm* VSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "LM393_1_1"
+			(symbol "MCP6001-OT_0_1"
 				(polyline
 					(pts
 						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
@@ -94,19 +89,44 @@
 						(type background)
 					)
 				)
-				(polyline
-					(pts
-						(xy 3.302 -0.508) (xy 2.794 -0.508) (xy 3.302 0) (xy 2.794 0.508) (xy 2.286 0) (xy 2.794 -0.508)
-						(xy 2.286 -0.508)
+				(pin power_in line
+					(at -2.54 7.62 270)
+					(length 3.81)
+					(name "V+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
 					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
 					)
 				)
+				(pin power_in line
+					(at -2.54 -7.62 90)
+					(length 3.81)
+					(name "V-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "MCP6001-OT_1_1"
 				(pin input line
 					(at -7.62 2.54 0)
 					(length 2.54)
@@ -135,7 +155,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -143,7 +163,7 @@
 						)
 					)
 				)
-				(pin open_collector line
+				(pin output line
 					(at 7.62 0 180)
 					(length 2.54)
 					(name "~"
@@ -154,125 +174,6 @@
 						)
 					)
 					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "LM393_2_1"
-				(polyline
-					(pts
-						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.302 -0.508) (xy 2.794 -0.508) (xy 3.302 0) (xy 2.794 0.508) (xy 2.286 0) (xy 2.794 -0.508)
-						(xy 2.286 -0.508)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin input line
-					(at -7.62 2.54 0)
-					(length 2.54)
-					(name "+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 -2.54 0)
-					(length 2.54)
-					(name "-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin open_collector line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "LM393_3_1"
-				(pin power_in line
-					(at -2.54 7.62 270)
-					(length 3.81)
-					(name "V+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -2.54 -7.62 90)
-					(length 3.81)
-					(name "V-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6137,7 +6038,7 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 146.05) (xy 172.72 146.05)
+			(xy 161.29 146.05) (xy 173.99 146.05)
 		)
 		(stroke
 			(width 0)
@@ -6457,7 +6358,7 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 154.94) (xy 161.29 154.94)
+			(xy 173.99 157.48) (xy 172.72 157.48)
 		)
 		(stroke
 			(width 0)
@@ -6987,7 +6888,7 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 146.05) (xy 172.72 154.94)
+			(xy 173.99 146.05) (xy 173.99 157.48)
 		)
 		(stroke
 			(width 0)
@@ -8795,7 +8696,7 @@
 	)
 	(global_label "Batterie_Faible_GPIO"
 		(shape input)
-		(at 161.29 154.94 180)
+		(at 172.72 157.48 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8805,7 +8706,7 @@
 		)
 		(uuid "848e50fd-c526-493f-b9a9-633ad053469a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 138.7105 154.94 0)
+			(at 150.1405 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9401,7 +9302,7 @@
 			(uuid "1abb1714-b6d1-4fc3-8ceb-9a07eec30e1a")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR07")
 					(unit 1)
@@ -9468,7 +9369,7 @@
 			(uuid "6256527c-816f-44af-8ef2-31c7733d4d57")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR09")
 					(unit 1)
@@ -9545,7 +9446,7 @@
 			(uuid "7fe8cbdd-f593-41eb-84d9-d1e91f397d24")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "D2")
 					(unit 1)
@@ -9610,7 +9511,7 @@
 			(uuid "72af2d9f-e3a7-40de-b549-05840e671d67")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR043")
 					(unit 1)
@@ -9686,7 +9587,7 @@
 			(uuid "5611cbe3-8fdc-48c4-915b-12e740faf3c2")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "D4")
 					(unit 1)
@@ -9756,7 +9657,7 @@
 			(uuid "e2a8540f-a726-4b81-b474-938adf34ac9d")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "R5")
 					(unit 1)
@@ -9825,7 +9726,7 @@
 			(uuid "4cb71ae2-fa20-4b4e-8b2b-556929db0b9f")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "J2")
 					(unit 1)
@@ -9892,7 +9793,7 @@
 			(uuid "cbef76ed-6d48-47d9-bde0-bc90ff530e33")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "H4")
 					(unit 1)
@@ -10025,7 +9926,7 @@
 			(uuid "54a4781d-3ae5-47ba-a6b4-140d64505735")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR032")
 					(unit 1)
@@ -10092,7 +9993,7 @@
 			(uuid "2c465fe0-feaf-4e1f-b768-16350b1b716c")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR011")
 					(unit 1)
@@ -10159,7 +10060,7 @@
 			(uuid "8f79d060-0f1e-4572-8802-29fc145582a4")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR028")
 					(unit 1)
@@ -10226,7 +10127,7 @@
 			(uuid "ff12af29-173e-4444-becf-ec03ed90c0cf")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR05")
 					(unit 1)
@@ -10305,7 +10206,7 @@
 			(uuid "665a6a56-a7ff-4e9e-bdfd-9f9b7ea9a097")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "U2")
 					(unit 1)
@@ -10372,7 +10273,7 @@
 			(uuid "868de175-1114-4e71-b230-01095ea8fb1e")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR024")
 					(unit 1)
@@ -10509,7 +10410,7 @@
 			(uuid "9f78a8d3-7b38-493b-82d4-02d0f8ee380a")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "C7")
 					(unit 1)
@@ -10576,7 +10477,7 @@
 			(uuid "236d4498-0565-41da-be37-007de15133c7")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR04")
 					(unit 1)
@@ -10643,7 +10544,7 @@
 			(uuid "29e71930-c755-481c-8d0f-605435b429c4")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR08")
 					(unit 1)
@@ -10775,7 +10676,7 @@
 			(uuid "3792c2d1-56b0-4493-90c8-bb6ed9860bf3")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR016")
 					(unit 1)
@@ -11024,7 +10925,7 @@
 			(uuid "93a74e02-3c94-4a7d-802e-1a39dffc9d0b")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "J1")
 					(unit 1)
@@ -11095,7 +10996,7 @@
 			(uuid "542c4748-e986-4e15-9c20-64ec5ec6f3be")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "J7")
 					(unit 1)
@@ -11160,7 +11061,7 @@
 			(uuid "389d115f-9f88-4b3f-b945-cd1d29d70ac9")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR026")
 					(unit 1)
@@ -11230,7 +11131,7 @@
 			(uuid "a0c933b6-0677-4ac5-9839-f78de1f81be4")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "C1")
 					(unit 1)
@@ -11297,7 +11198,7 @@
 			(uuid "a819866f-c85a-469b-8556-19b05417645b")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "R10")
 					(unit 1)
@@ -11363,7 +11264,7 @@
 			(uuid "4fa63994-5ded-4be8-90f8-0a3f7becc6d4")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR036")
 					(unit 1)
@@ -11429,7 +11330,7 @@
 			(uuid "ce3ac7c5-a964-447c-830c-5972702eb621")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR014")
 					(unit 1)
@@ -11495,7 +11396,7 @@
 			(uuid "0595de89-de33-4fc2-ba62-2fbe3fb3c8cf")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR01")
 					(unit 1)
@@ -11564,7 +11465,7 @@
 			(uuid "fff2495d-f5f1-4a07-af96-db7dc4a566f8")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "C4")
 					(unit 1)
@@ -11632,7 +11533,7 @@
 			(uuid "7e4217ea-6ad4-4c48-8f05-83ecd8ebe0bc")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "C8")
 					(unit 1)
@@ -11698,7 +11599,7 @@
 			(uuid "18e84168-e665-47bc-9efa-3793b9050643")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR017")
 					(unit 1)
@@ -11768,7 +11669,7 @@
 			(uuid "7219125b-7136-477f-89a4-5f741f1f0cb5")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "R4")
 					(unit 1)
@@ -11838,7 +11739,7 @@
 			(uuid "8bc8d32d-2fe2-46f5-8638-2ef9513db91c")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "R13")
 					(unit 1)
@@ -11903,7 +11804,7 @@
 			(uuid "d6e0a3b6-8ab8-4d1e-8e90-b8eedb698060")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR044")
 					(unit 1)
@@ -11969,7 +11870,7 @@
 			(uuid "82909273-927b-42ec-9d33-cc52d7bfd5f6")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR031")
 					(unit 1)
@@ -12036,7 +11937,7 @@
 			(uuid "9b0050ef-dc4c-4b2e-95ca-054cf92a7420")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR010")
 					(unit 1)
@@ -12103,7 +12004,7 @@
 			(uuid "3070cced-f8cc-4b93-80bb-e38e12ebe545")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR021")
 					(unit 1)
@@ -12236,7 +12137,7 @@
 			(uuid "ab910443-4e11-4394-ac1b-3ac2e84055e1")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "R15")
 					(unit 1)
@@ -12306,9 +12207,87 @@
 			(uuid "695fc753-cc03-4c6c-97d1-9d06adcf4c80")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:MCP6001-OT")
+		(at 153.67 146.05 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7aad056c-27e4-42fb-a5b9-b51d2d8dc31e")
+		(property "Reference" "U1"
+			(at 166.37 139.6298 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MCP6001-OT"
+			(at 166.37 142.1698 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+			(at 151.13 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://ww1.microchip.com/downloads/en/DeviceDoc/MCP6001-1R-1U-2-4-1-MHz-Low-Power-Op-Amp-DS20001733L.pdf"
+			(at 153.67 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "1MHz, Low-Power Op Amp, SOT-23-5"
+			(at 153.67 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "b29edc43-e0b2-404b-8822-b6172e1b6bc3")
+		)
+		(pin "1"
+			(uuid "c9763223-8cae-4ada-9194-caeae08a15c5")
+		)
+		(pin "4"
+			(uuid "2d9ce9a6-09d5-4ea2-ac2b-137e9cb5d4dc")
+		)
+		(pin "3"
+			(uuid "8fcccfc8-1716-4c5d-88e6-ecd42b36380c")
+		)
+		(pin "2"
+			(uuid "7b98aaef-1677-4b56-abd7-236d937ce969")
+		)
+		(instances
+			(project "PCB_Khess_Module_Payment"
+				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
+					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -12440,7 +12419,7 @@
 			(uuid "aa989806-a569-441a-9976-719d2a1ce9ff")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "H2")
 					(unit 1)
@@ -12598,7 +12577,7 @@
 			(uuid "cefa6a42-9c5d-4fac-a6e3-06912acace4d")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "J6")
 					(unit 1)
@@ -12667,7 +12646,7 @@
 			(uuid "4d69e6fc-364d-4387-9493-db37778ee0f8")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "R1")
 					(unit 1)
@@ -12733,7 +12712,7 @@
 			(uuid "4c530ad7-521a-4e0d-b79d-34a743c57f47")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR013")
 					(unit 1)
@@ -12799,7 +12778,7 @@
 			(uuid "f7b804db-780b-4fea-8c67-87d1f867a04f")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR027")
 					(unit 1)
@@ -12869,7 +12848,7 @@
 			(uuid "a8275aa5-0cd1-44e7-a7bc-3c5ef2384405")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "C2")
 					(unit 1)
@@ -12938,7 +12917,7 @@
 			(uuid "902aa7d4-ff30-40f8-ade9-17e6cf67e74d")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "R21")
 					(unit 1)
@@ -13074,9 +13053,75 @@
 			(uuid "e0349853-65e6-495d-88b7-577e4bd5584c")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 151.13 138.43 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "997e93dc-ae52-4715-b5e6-01e485c2e5d2")
+		(property "Reference" "#PWR039"
+			(at 151.13 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 151.13 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 151.13 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 151.13 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 151.13 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9de441c7-489d-4f9b-a9c2-1d52257df6e8")
+		)
+		(instances
+			(project "PCB_Khess_Module_Payment"
+				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
+					(reference "#PWR039")
 					(unit 1)
 				)
 			)
@@ -13141,7 +13186,7 @@
 			(uuid "93d99b9e-b3fb-4b89-8eae-f37b57fcb3c6")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "R19")
 					(unit 1)
@@ -13279,7 +13324,7 @@
 			(uuid "65af42ec-2a75-4145-a2fd-f883a8f99e9a")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "IC1")
 					(unit 1)
@@ -13346,7 +13391,7 @@
 			(uuid "97e518db-8555-4c99-a071-1510a4471f9e")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR022")
 					(unit 1)
@@ -13412,7 +13457,7 @@
 			(uuid "7d93fa66-54ee-4bd6-a759-340ee5786722")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR03")
 					(unit 1)
@@ -13479,7 +13524,7 @@
 			(uuid "4cd923a3-44f8-4137-8c3c-3e12159f82c0")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "D1")
 					(unit 1)
@@ -13546,7 +13591,7 @@
 			(uuid "11f4d99f-9373-4d58-a38a-e0953e31513b")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR020")
 					(unit 1)
@@ -13613,7 +13658,7 @@
 			(uuid "f34ed252-6e01-421f-8a1e-cc8cee5c8da6")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "R14")
 					(unit 1)
@@ -13680,7 +13725,7 @@
 			(uuid "2ec6124e-aa53-4663-bcaa-f2d443627a22")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR012")
 					(unit 1)
@@ -13747,7 +13792,7 @@
 			(uuid "4624839b-6565-4435-a53b-d41fcabf80e6")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR02")
 					(unit 1)
@@ -13815,7 +13860,7 @@
 			(uuid "a2f56855-3ee7-4483-9eed-99de0a0f87c9")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "R2")
 					(unit 1)
@@ -13891,7 +13936,7 @@
 			(uuid "d8d4712b-9208-4d45-83ec-1af72a1cbe80")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "D3")
 					(unit 1)
@@ -13956,7 +14001,7 @@
 			(uuid "eada208c-eb36-446f-be67-da44eadbe89a")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR040")
 					(unit 1)
@@ -14023,7 +14068,7 @@
 			(uuid "0724fb15-7cb0-4ba7-8338-4997f07b49b6")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR019")
 					(unit 1)
@@ -14109,7 +14154,7 @@
 			(uuid "7e046150-3f5d-45fc-901a-eb7fbb0cd41a")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "D6")
 					(unit 1)
@@ -14321,7 +14366,7 @@
 			(uuid "0e2c7f22-26f7-4391-94a1-52feabe0162a")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "C6")
 					(unit 1)
@@ -14387,7 +14432,7 @@
 			(uuid "025b0ec5-dc70-4d23-8d6f-7934806e50a2")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR015")
 					(unit 1)
@@ -14453,7 +14498,7 @@
 			(uuid "9b0de7fa-110e-4b09-8d62-21e542987cca")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR06")
 					(unit 1)
@@ -14518,7 +14563,7 @@
 			(uuid "289e2b50-089d-47a6-a351-5456d7c7e778")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR035")
 					(unit 1)
@@ -14584,7 +14629,7 @@
 			(uuid "b102281b-63e0-4a30-b1bf-0ce1eecccf52")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR034")
 					(unit 1)
@@ -14654,7 +14699,7 @@
 			(uuid "4a15b88f-9813-4eee-a4ba-a89d64f0b038")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "C3")
 					(unit 1)
@@ -14723,76 +14768,9 @@
 			(uuid "5ad2f5cf-1f7e-449b-ace3-9f43eec95c53")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
-				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
-					(reference "R12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 134.62 133.35 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d3f77756-4bfd-4b60-871e-80fbba1b213f")
-		(property "Reference" "#PWR045"
-			(at 128.27 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 130.81 133.3499 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 134.62 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 134.62 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 134.62 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ca3bad83-fcaf-4863-a367-2cf96449b416")
-		)
-		(instances
 			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
-					(reference "#PWR045")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -14857,7 +14835,7 @@
 			(uuid "f9d93665-b3be-44fa-877d-2ec30f3e3f12")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR025")
 					(unit 1)
@@ -14990,9 +14968,75 @@
 			(uuid "7c173eb1-0209-4f58-a458-3ecc662108f1")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 151.13 153.67 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d6e1237d-f1d0-4480-bc72-4549ebeb76a3")
+		(property "Reference" "#PWR042"
+			(at 151.13 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 151.13 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 151.13 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 151.13 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 151.13 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "244d5b67-56b2-4487-a5ec-b930795bf1de")
+		)
+		(instances
+			(project "PCB_Khess_Module_Payment"
+				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
+					(reference "#PWR042")
 					(unit 1)
 				)
 			)
@@ -15065,177 +15109,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Comparator:LM393")
-		(at 142.24 130.81 90)
-		(unit 3)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "df492efd-bf4e-46fd-b73f-e831a724c175")
-		(property "Reference" "U4"
-			(at 142.24 128.27 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LM393"
-			(at 142.24 130.81 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 142.24 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm393.pdf"
-			(at 142.24 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Low-Power, Low-Offset Voltage, Dual Comparators, DIP-8/SOIC-8/TO-99-8"
-			(at 142.24 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "c1283a1f-5ba4-4927-9725-010e33dfd09c")
-		)
-		(pin "3"
-			(uuid "5fcfe2d8-50c3-4b35-8fe2-e3c119ebfae5")
-		)
-		(pin "5"
-			(uuid "fb8bc9d8-5d8f-4fa2-ab20-9089022bbd91")
-		)
-		(pin "6"
-			(uuid "ecac5702-50c6-455f-b3f9-2562596caaee")
-		)
-		(pin "7"
-			(uuid "787f46f8-1a2e-45d6-8fc4-c97c91bbf752")
-		)
-		(pin "4"
-			(uuid "fa9a1431-c780-48ac-96a6-9d131e71d797")
-		)
-		(pin "8"
-			(uuid "d6bf6a0c-4f01-4296-be91-951c67d78b23")
-		)
-		(pin "1"
-			(uuid "23dd1f0b-9bc2-4d62-8075-d4a957a1ce06")
-		)
-		(instances
-			(project ""
-				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
-					(reference "U4")
-					(unit 3)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Comparator:LM393")
-		(at 153.67 146.05 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e09f6501-b1ea-4766-986d-915015c772b5")
-		(property "Reference" "U4"
-			(at 159.004 140.208 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LM393"
-			(at 159.004 142.748 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 153.67 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm393.pdf"
-			(at 153.67 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Low-Power, Low-Offset Voltage, Dual Comparators, DIP-8/SOIC-8/TO-99-8"
-			(at 153.67 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "4"
-			(uuid "1cdbc5b3-ce6e-4cb3-bb04-19da8409510d")
-		)
-		(pin "6"
-			(uuid "eb4e3448-598f-46b9-bd4e-643f07d443f0")
-		)
-		(pin "1"
-			(uuid "6037c1b6-f33d-4f3c-948e-e9d9f27cd081")
-		)
-		(pin "3"
-			(uuid "d922aa92-c0f5-48a6-a2a7-7ffe2828d123")
-		)
-		(pin "7"
-			(uuid "beb1c0c7-3a08-4c93-8ee8-2690aedaa87b")
-		)
-		(pin "2"
-			(uuid "30cc2e71-0b6d-4882-a062-eb2461b9d5a7")
-		)
-		(pin "8"
-			(uuid "0f93cf34-7f60-46a2-9a5e-0b6cad9f015e")
-		)
-		(pin "5"
-			(uuid "1da2f682-439c-47b2-95c3-de2ddb0ff6b2")
-		)
-		(instances
-			(project ""
-				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
-					(reference "U4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 44.45 110.49 90)
 		(unit 1)
@@ -15294,7 +15167,7 @@
 			(uuid "76d82e51-55ef-4ec7-80a4-aa18198278a0")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "R3")
 					(unit 1)
@@ -15361,7 +15234,7 @@
 			(uuid "1da73beb-5bc2-4761-aaff-8a18e564609c")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "R20")
 					(unit 1)
@@ -15471,7 +15344,7 @@
 			(uuid "3d304370-4aa8-4fab-ac7a-261120f113ca")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "U3")
 					(unit 1)
@@ -15542,76 +15415,9 @@
 			(uuid "7d5a444a-5a48-4934-8bbf-285375946320")
 		)
 		(instances
-			(project ""
-				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
-					(reference "R7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 149.86 133.35 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e790c752-562b-46cc-93a6-e349d6e48b6a")
-		(property "Reference" "#PWR039"
-			(at 146.05 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 153.67 133.3499 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 149.86 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 149.86 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 149.86 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9a748f19-59ac-4858-a18c-ae21c7638f10")
-		)
-		(instances
 			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
-					(reference "#PWR039")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -15685,7 +15491,7 @@
 			(uuid "3b7a21e1-3a21-429c-ab38-46d8f1c229ba")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "J4")
 					(unit 1)
@@ -15842,7 +15648,7 @@
 			(uuid "35c03aa0-dd06-430d-9405-9283701fb6be")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "J3")
 					(unit 1)
@@ -15908,7 +15714,7 @@
 			(uuid "02f013fa-a6ff-42cc-8722-1fc927df4df4")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#FLG05")
 					(unit 1)
@@ -15974,7 +15780,7 @@
 			(uuid "784fda20-c265-4e9e-b79e-606bc3e2f538")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR033")
 					(unit 1)
@@ -16041,7 +15847,7 @@
 			(uuid "33f08dff-c157-4d70-b825-42158a659801")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#FLG03")
 					(unit 1)
@@ -16109,7 +15915,7 @@
 			(uuid "46a4da18-7636-4fa9-9adb-286a47c69523")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "R6")
 					(unit 1)
@@ -16176,7 +15982,7 @@
 			(uuid "1e7462dd-ce7a-41e0-a71b-f232219e6e43")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR029")
 					(unit 1)
@@ -16242,7 +16048,7 @@
 			(uuid "283a07cb-b62b-44f4-bb6e-61c6351beddf")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#FLG01")
 					(unit 1)
@@ -16309,7 +16115,7 @@
 			(uuid "0bb7ae09-a0a8-41fc-a58a-8125aaa57dbc")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "R11")
 					(unit 1)
@@ -16379,7 +16185,7 @@
 			(uuid "1fadf71c-7b65-471a-914d-9b07dc766542")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "C10")
 					(unit 1)
@@ -16444,7 +16250,7 @@
 			(uuid "43f5e19a-f602-468d-bc12-f40c9a1fe12e")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "#PWR041")
 					(unit 1)
@@ -16511,7 +16317,7 @@
 			(uuid "647aa8eb-0a0b-4720-abf5-f806df8b5f46")
 		)
 		(instances
-			(project "Pcb_caisse_raspberry"
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "H3")
 					(unit 1)
@@ -16649,7 +16455,7 @@
 			(uuid "114e3b10-c240-49de-9b40-b165810b92af")
 		)
 		(instances
-			(project ""
+			(project "PCB_Khess_Module_Payment"
 				(path "/c775ec96-c184-4b0d-accb-e7f99e0cfe00"
 					(reference "IC2")
 					(unit 1)
