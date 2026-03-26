@@ -253,7 +253,7 @@ document.querySelectorAll('.article-btn').forEach(button => {
 }
 ```
 
-### Ajouter et Afficher une Nouvelle Catégorie (Viennoiseries)
+### 🥐 Ajouter et Afficher une Nouvelle Catégorie (Viennoiseries)
 
 Lorsque tu ajoutes une catégorie comme "Viennoiseries" dans ton projet, il ne suffit pas de créer l'onglet ; il faut dire à Django comment filtrer les articles pour qu'ils apparaissent au bon endroit.
 Pour éviter les erreurs de majuscules ou de pluriels (ex: "Viennoiserie" vs "viennoiseries"), on utilise le filtre |lower.
