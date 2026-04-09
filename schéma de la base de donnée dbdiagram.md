@@ -91,5 +91,5 @@ Table Cash {
 
 ---
 ### Schéma Visuel
-![Mon Schéma de Base de Données](dbdiagram.png)
+![Mon Schéma de Base de Données](dbdiagram.pdf)
 
