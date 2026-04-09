@@ -89,3 +89,7 @@ Table Cash {
 
 7. Article ↔ MenuDetails : Un article peut appartenir à plusieurs menus car un même soda peut faire partie de la "Formule Snack" et de la "Formule Midi".
 
+---
+### Schéma Visuel
+![Mon Schéma de Base de Données](dbdiagram.pdf)
+
