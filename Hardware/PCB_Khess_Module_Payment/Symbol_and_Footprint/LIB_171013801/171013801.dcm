@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP 171013801
-D WPME-VDLM Variable Step Down LGA Module LGA-12 / 3.5-38Vin / 0.85-13Vout / 1.0A / 10 x 6 x 3.1mm / PFM/PWM
-K
-F https://www.we-online.com/catalog/datasheet/171013801.pdf
-$ENDCMP
-#
-#End Doc Library

@@ -515,6 +515,14 @@
       {
         "netclass": "Power",
         "pattern": "+3.3V_PI"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "+5V"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "+3.3V"
       }
     ]
   },
