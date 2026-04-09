@@ -2,4 +2,5 @@
   (version 7)
   (lib (name "MCP73844-840I_MS")(type "KiCad")(uri "${KIPRJMOD}/Symbol_and_Footprint/MCP73844-840I_MS/MCP73844-840I_MS.kicad_sym")(options "")(descr ""))
   (lib (name "SI4435DDY-T1-GE3")(type "KiCad")(uri "${KIPRJMOD}/Symbol_and_Footprint/SI4435DDY-T1-GE3/SI4435DDY-T1-GE3.kicad_sym")(options "")(descr ""))
+  (lib (name "LIB_171013801")(type "KiCad")(uri "${KIPRJMOD}/Symbol_and_Footprint/LIB_171013801/171013801.kicad_sym")(options "")(descr ""))
 )
