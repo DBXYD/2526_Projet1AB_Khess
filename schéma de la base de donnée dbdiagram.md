@@ -78,9 +78,14 @@ Table Cash {
 ## Les différents liens : 
 
 1. User ↔ users_custom : Un utilisateur ne peut avoir qu'un seul profil users_custom car son solde et son statut (cotisant ou non) doivent être uniques pour éviter les erreurs de compte.
-2. User ↔ Transaction : Un utilisateur peut faire plusieurs transactions car il peut venir acheter à la K-FET plusieurs fois par jour ou par an.
-3. Transaction ↔ TransactionDetails : Une seule transaction peut avoir plusieurs détails car un client peut acheter plusieurs articles différents en un seul passage en caisse.
-4.Article ↔ TransactionDetails : Un même article peut être relié à plusieurs lignes de détails car le même produit (ex: un café) est vendu à plein de clients différents.
-5.Menu ↔ MenuDetails : Un menu peut être lié à plusieurs articles (via les détails) car une "Formule Midi" est composée de plusieurs produits comme un plat, une boisson et un dessert.
-6.Article ↔ MenuDetails : Un article peut appartenir à plusieurs menus car un même soda peut faire partie de la "Formule Snack" et de la "Formule Midi".
+ 
+3. User ↔ Transaction : Un utilisateur peut faire plusieurs transactions car il peut venir acheter à la K-FET plusieurs fois par jour ou par an.
+
+4. Transaction ↔ TransactionDetails : Une seule transaction peut avoir plusieurs détails car un client peut acheter plusieurs articles différents en un seul passage en caisse.
+
+5. Article ↔ TransactionDetails : Un même article peut être relié à plusieurs lignes de détails car le même produit (ex: un café) est vendu à plein de clients différents.
+
+6. Menu ↔ MenuDetails : Un menu peut être lié à plusieurs articles (via les détails) car une "Formule Midi" est composée de plusieurs produits comme un plat, une boisson et un dessert.
+
+7. Article ↔ MenuDetails : Un article peut appartenir à plusieurs menus car un même soda peut faire partie de la "Formule Snack" et de la "Formule Midi".
 
