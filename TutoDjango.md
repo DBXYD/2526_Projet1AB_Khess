@@ -285,11 +285,24 @@ Dans ton fichier cash_register.html, copie colle dans la catégorie vienoiserie 
 ```
 
 
+### Creéer un nouveau profil
 
-   
+```bash
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    """
+    Très important pour le CAS ! 
+    Dès qu'un nouvel "User" se connecte pour la première fois via le système de l'école,
+    ce signal lui crée automatiquement son "UserCustom" (son profil avec le solde à 0).
+    """
+    if created:
+        UserCustom.objects.create(
+            user=instance,
+            first_name=instance.first_name or "Nouvel",
+            last_name=instance.last_name or "Utilisateur"
+        )
 
-
-
+```
 
 
 
