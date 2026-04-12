@@ -370,7 +370,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector_Generic_MountingPin:Conn_01x06_MountingPin"
+		(symbol "Connector_Generic:Conn_01x06"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -386,13 +386,12 @@
 					)
 				)
 			)
-			(property "Value" "Conn_01x06_MountingPin"
-				(at 1.27 -10.16 0)
+			(property "Value" "Conn_01x06"
+				(at 0 -10.16 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
 			(property "Footprint" ""
@@ -413,7 +412,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Generic connectable mounting pin connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
 				(at 0 0 0)
 				(effects
 					(font
@@ -431,7 +430,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "Connector*:*_1x??-1MP*"
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -440,7 +439,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "Conn_01x06_MountingPin_1_1"
+			(symbol "Conn_01x06_1_1"
 				(rectangle
 					(start -1.27 6.35)
 					(end 1.27 -8.89)
@@ -516,26 +515,6 @@
 					)
 					(fill
 						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.016 -9.652) (xy 1.016 -9.652)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(text "Mounting"
-					(at 0 -9.271 0)
-					(effects
-						(font
-							(size 0.381 0.381)
-						)
 					)
 				)
 				(pin passive line
@@ -639,24 +618,6 @@
 						)
 					)
 					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -12.7 90)
-					(length 3.048)
-					(name "MountPin"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "MP"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4029,7 +3990,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 30.48) (xy 43.18 30.48)
+			(xy 39.37 30.48) (xy 46.99 30.48)
 		)
 		(stroke
 			(width 0)
@@ -4129,23 +4090,13 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 30.48) (xy 59.69 30.48)
+			(xy 52.07 30.48) (xy 59.69 30.48)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "a6c0a816-33e3-4c19-ab0d-7daa2a78ea2a")
-	)
-	(wire
-		(pts
-			(xy 50.8 30.48) (xy 48.26 30.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a7105eaa-4333-4335-adb4-e0e929e7bd62")
 	)
 	(wire
 		(pts
@@ -4809,7 +4760,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 63.5 86.36 0)
 			(effects
 				(font
@@ -4916,91 +4867,6 @@
 			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic_MountingPin:Conn_01x06_MountingPin")
-		(at 255.27 68.58 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1e9c0480-7e2a-439c-9f97-d9abee9715db")
-		(property "Reference" "J3"
-			(at 257.81 68.9355 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "RJ11_Connector"
-			(at 257.81 71.4755 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_RJ:RJ12_Amphenol_54601-x06_Horizontal"
-			(at 255.27 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 255.27 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connectable mounting pin connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 255.27 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d694d865-887e-4306-a6bf-b8e590419cad")
-		)
-		(pin "3"
-			(uuid "57961a2e-1306-438a-bef8-ddc653fa3c11")
-		)
-		(pin "2"
-			(uuid "2a330e80-2b31-4ae7-a125-28a4dd55f256")
-		)
-		(pin "6"
-			(uuid "712c6fe8-a8b6-46d1-b202-1312e37afa34")
-		)
-		(pin "4"
-			(uuid "658ae6d8-5b31-41ab-b12e-816940eb6723")
-		)
-		(pin "5"
-			(uuid "81a62945-7c3f-403b-9def-7ccc10b22c1d")
-		)
-		(pin "MP"
-			(uuid "9317beba-631c-43a3-84e4-e733170da3dc")
-		)
-		(instances
-			(project "PCB_Khess_Cash_Drawer"
-				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
-					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -5134,72 +5000,6 @@
 			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 255.27 81.28 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3d32ccd9-9ed2-4b05-b0ca-6a6c2cbd7a32")
-		(property "Reference" "#PWR02"
-			(at 255.27 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 255.27 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 255.27 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 255.27 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 255.27 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "905a390b-d6a5-4919-b96a-5928849f6501")
-		)
-		(instances
-			(project "PCB_Khess_Cash_Drawer"
-				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
-					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -5431,6 +5231,88 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector_Generic:Conn_01x06")
+		(at 255.27 68.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "53d9146a-2a41-44d6-8e44-4b21fa417399")
+		(property "Reference" "J3"
+			(at 257.81 68.5799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "RJ11_Connector"
+			(at 257.81 71.1199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_RJ:RJ12_Amphenol_54601-x06_Horizontal"
+			(at 255.27 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 255.27 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 255.27 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a0f0ee21-fc3e-484d-8aaf-3ee11dae7e19")
+		)
+		(pin "3"
+			(uuid "1bb1271a-13f2-4669-b857-e3568ccf702c")
+		)
+		(pin "5"
+			(uuid "cf89ee7c-d027-415c-aee5-19ab8c1e1def")
+		)
+		(pin "6"
+			(uuid "f770d460-0536-4af2-83fe-f22c5e31ff5c")
+		)
+		(pin "2"
+			(uuid "b0ecbeb5-177d-47f4-a965-f5edc89c8b81")
+		)
+		(pin "4"
+			(uuid "7b707fe9-8472-4171-80fa-960258e42da6")
+		)
+		(instances
+			(project ""
+				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:PWR_FLAG")
 		(at 66.04 30.48 0)
 		(unit 1)
@@ -5631,7 +5513,7 @@
 	)
 	(symbol
 		(lib_id "Device:L_Small")
-		(at 45.72 30.48 90)
+		(at 49.53 30.48 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5640,23 +5522,23 @@
 		(fields_autoplaced yes)
 		(uuid "8238af97-462a-475e-a945-b142c3941a0e")
 		(property "Reference" "L1"
-			(at 45.72 25.4 90)
+			(at 49.53 25.4 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "5u"
-			(at 45.72 27.94 90)
+		(property "Value" "10u"
+			(at 49.53 27.94 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_10.4x10.4_H4.8"
-			(at 45.72 30.48 0)
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
+			(at 49.53 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5665,7 +5547,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 45.72 30.48 0)
+			(at 49.53 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5674,7 +5556,7 @@
 			)
 		)
 		(property "Description" "Inductor, small symbol"
-			(at 45.72 30.48 0)
+			(at 49.53 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6064,7 +5946,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P20.32mm_Horizontal"
 			(at 166.37 32.258 90)
 			(effects
 				(font
@@ -6073,7 +5955,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.vishay.com/docs/28730/ac_ac-at_ac-ni.pdf"
 			(at 166.37 30.48 0)
 			(effects
 				(font
@@ -6202,7 +6084,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_5x5.4"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 59.69 35.56 0)
 			(effects
 				(font
@@ -6339,7 +6221,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
 			(at 193.04 67.31 0)
 			(effects
 				(font
@@ -6591,7 +6473,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 59.69 80.01 0)
 			(effects
 				(font
@@ -6661,7 +6543,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_4x5.4"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 39.37 35.56 0)
 			(effects
 				(font
@@ -7062,7 +6944,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_4x5.4"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 230.8352 38.1 0)
 			(effects
 				(font
@@ -7099,74 +6981,6 @@
 			(project "PCB_Khess_Cash_Drawer"
 				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
 					(reference "C5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:L_Small")
-		(at 53.34 30.48 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f9ba3e3d-f868-439c-b788-96a311c5c3a0")
-		(property "Reference" "L2"
-			(at 53.34 25.4 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "5u"
-			(at 53.34 27.94 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Inductor_SMD:L_10.4x10.4_H4.8"
-			(at 53.34 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 53.34 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Inductor, small symbol"
-			(at 53.34 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "2e21f241-2968-4906-a380-2f2c0be50b65")
-		)
-		(pin "1"
-			(uuid "31762f05-519e-4e44-bebd-503eab6a98ac")
-		)
-		(instances
-			(project "PCB_Khess_Cash_Drawer"
-				(path "/e7800f41-69a9-4114-9938-e2f8d3e5043e"
-					(reference "L2")
 					(unit 1)
 				)
 			)
