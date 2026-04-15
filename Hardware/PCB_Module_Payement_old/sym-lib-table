@@ -1,5 +1,0 @@
-(sym_lib_table
-  (version 7)
-  (lib (name "Wurth_regulator_171013801")(type "KiCad")(uri "${KIPRJMOD}/Wurth_regulator_171013801.kicad_sym")(options "")(descr ""))
-  (lib (name "Maker_librairy")(type "KiCad")(uri "${KIPRJMOD}/Maker_librairy.kicad_sym")(options "")(descr ""))
-)
