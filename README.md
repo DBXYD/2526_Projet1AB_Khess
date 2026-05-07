@@ -28,9 +28,8 @@
 * module Bluetooth
 
 ## Modèle 3D de la caisse (liens onshape)
-* caisse : https://cad.onshape.com/documents/e5acc8259423c528748cb1df/w/d4c030d1bed6a1717dd07da1/e/349222c2229e5e79d43ec181
-* module de payement : https://cad.onshape.com/documents/614b57c893e655e9e1ddd857/w/b91a46c264fea6e65316fe3f/e/d34b464e0c34330ae2ced959
-
+* caisse : https://cad.onshape.com/documents/130fb2b6551d2083bdc09601/w/de445baa7e8a743f2d08bd5c/e/c2924dab3bdb2ac69360e5d6
+* module de payement : https://cad.onshape.com/documents/4dc830a0412bba7f47b33ed8/w/8311454ded09dd50ffee2863/e/942e29f2a726fc97f9c5b10e
 
 ## Membres du projet
 
