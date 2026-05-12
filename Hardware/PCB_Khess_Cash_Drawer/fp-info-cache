@@ -1,4 +1,4 @@
-27219017742349648
+27224344178961204
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -71805,6 +71805,13 @@ Yellow 5381 Series LED
 0
 2
 2
+MOV-10D561K
+VAR_MOV-10D561K
+
+
+0
+2
+2
 Module
 A20_OLINUXINO_LIME2
 A20 Olinuxino LIME2, 1.2GHz, 512-1024MB RAM, Micro-SD, NAND or eMMC, 1000Mbit Ethernet
@@ -75946,6 +75953,13 @@ Oscillator
 Oscillator_SeikoEpson_SG-8002DC
 8-lead dip package, row spacing 7.62 mm (300 mils)
 DIL DIP PDIP 2.54mm 7.62mm 300mil
+0
+4
+4
+PSK-15E-12
+CONV_PSK-15E-12
+
+
 0
 4
 4
@@ -107120,6 +107134,13 @@ igbt diode module
 0
 25
 25
+Turbocase
+Cutout_Pinheader_01x02_254
+Cutout for horizontal 2.54mm 5.08x2.54 pinheader
+
+0
+0
+0
 Valve
 Valve_ECC-83-1
 Valve ECC-83-1 round pins
