@@ -37,7 +37,7 @@
 * prise en main du projet
 * création des PCB
 * soudure des PCB
-* développement du site internet/ interface utilisateur
+* développement du site internet/ interface vendeur avec gestion des stocks, des commandes
 * modification 3D de la caisse en changeant les dimensions du socle soutenant la tablette
 * création 3D du module de payement
 
