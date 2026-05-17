@@ -36,6 +36,7 @@
 
 * prise en main du projet
 * création des PCB
+* soudure des PCB
 * développement du site internet/ interface utilisateur
 * modification 3D de la caisse en changeant les dimensions du socle soutenant la tablette
 * création 3D du module de payement
@@ -44,6 +45,7 @@
 
 * test du PCB
 * développement du code du module de payement
+* assemblage de l'ensemble
 
 ### Améliorations possibles
 
