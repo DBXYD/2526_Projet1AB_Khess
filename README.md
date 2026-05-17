@@ -31,6 +31,13 @@
 * caisse : https://cad.onshape.com/documents/130fb2b6551d2083bdc09601/w/de445baa7e8a743f2d08bd5c/e/c2924dab3bdb2ac69360e5d6
 * module de payement : https://cad.onshape.com/documents/4dc830a0412bba7f47b33ed8/w/8311454ded09dd50ffee2863/e/942e29f2a726fc97f9c5b10e
 
+## Avancée du projet
+### Ce qui a été réalisé
+
+### Ce qui n'a pas été réalisé
+
+### Améliorations possibles
+
 ## Membres du projet
 
 | <img src="https://images.weserv.nl/?url=github.com/Ahhj93.png&mask=circle" width="100"> | <img src="https://images.weserv.nl/?url=github.com/NKRIMAT.png&mask=circle" width="100"> | <img src="https://images.weserv.nl/?url=github.com/Margaux-Lapl.png&mask=circle" width="100"> | <img src="https://images.weserv.nl/?url=github.com/StrangeKobe.png&mask=circle" width="100"> | <img src="https://images.weserv.nl/?url=github.com/zhang-estelle.png&mask=circle" width="100"> | <img src="https://images.weserv.nl/?url=github.com/ClementJ493.png&mask=circle" width="100"> | <img src="https://images.weserv.nl/?url=github.com/rim-05-mma.png&mask=circle" width="100"> |
