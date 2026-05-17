@@ -40,7 +40,7 @@
 * modification 3D de la caisse en changeant les dimensions du socle soutenant la tablette
 * création 3D du module de payement
 
-### Ce qui n'a pas été réalisé
+### Ce qui n'a pas (encore) été réalisé
 
 * test du PCB
 * développement du code du module de payement
