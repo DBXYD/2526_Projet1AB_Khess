@@ -34,9 +34,21 @@
 ## Avancée du projet
 ### Ce qui a été réalisé
 
+* prise en main du projet
+* création des PCB
+* développement du site internet/ interface utilisateur
+* modification 3D de la caisse en changeant les dimensions du socle soutenant la tablette
+* création 3D du module de payement
+
 ### Ce qui n'a pas été réalisé
 
+* test du PCB
+* développement du code du module de payement
+
 ### Améliorations possibles
+
+* revoir le design de la caisse
+* améliorer le site internet
 
 ## Membres du projet
 
