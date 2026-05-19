@@ -2,7 +2,7 @@
 
 ## PCB_Khess_Cash_Drawer
 ### Schéma du PCB
-<img width="2339" height="1654" alt="PCB_Khess_Module_Payment" src="https://github.com/user-attachments/assets/99db8e44-c207-4e3a-a790-8853b9bca438" />
+<img width="2339" height="1654" alt="PCB_Khess_Cash_Drawer" src="https://github.com/user-attachments/assets/be1ca4f5-9761-4bd4-9f23-72c5da72b9ea" />
 
 ### Liste des composants du PCB
 
@@ -42,6 +42,9 @@
 ---
 
 ## PCB_Khess_Module_Payment
+### Schéma du PCB
+<img width="2339" height="1654" alt="PCB_Khess_Module_Payment" src="https://github.com/user-attachments/assets/60ac0079-c387-412a-a81d-a5ab895627f2" />
+
 ### Liste des composants du PCB
 
 * Raspberry Pi
