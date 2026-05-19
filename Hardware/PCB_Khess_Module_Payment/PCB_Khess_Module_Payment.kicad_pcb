@@ -7,6 +7,14 @@
 		(legacy_teardrops no)
 	)
 	(paper "A4")
+	(title_block
+		(title "PCB Khess Module Payment")
+		(date "2026-05-19")
+		(rev "1.0")
+		(company "ENSEA")
+		(comment 1 "Bryan-Sowanna Ing / Naïm Krimat / Margaux Laplante / Rayan Laghouane")
+		(comment 2 "Estelle Zhang / Clément Jouneau / Rim Bouchikhi")
+	)
 	(layers
 		(0 "F.Cu" signal)
 		(4 "In1.Cu" signal)
