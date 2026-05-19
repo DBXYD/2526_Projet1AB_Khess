@@ -5,8 +5,12 @@
 	(uuid "e7800f41-69a9-4114-9938-e2f8d3e5043e")
 	(paper "A4")
 	(title_block
-		(title "PCB K'Hess")
+		(title "PCB Khess_Cash_Drawer")
+		(date "2026-05-19")
 		(rev "1.0")
+		(company "ENSEA")
+		(comment 1 "Estelle Zhang / Clément Jouneau / Rim Bouchikhi")
+		(comment 2 "Bryan-Sowanna Ing / Naïm Kirmat / Margaux Laplante / Rayan Laghouane")
 	)
 	(lib_symbols
 		(symbol "Connector:Screw_Terminal_01x02"
