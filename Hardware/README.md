@@ -1,6 +1,9 @@
 # Hardware
 
 ## PCB_Khess_Cash_Drawer
+### Schéma du PCB
+<img width="2339" height="1654" alt="PCB_Khess_Module_Payment" src="https://github.com/user-attachments/assets/99db8e44-c207-4e3a-a790-8853b9bca438" />
+
 ### Liste des composants du PCB
 
 * Convertisseur 12V à 5V DC
