@@ -552,7 +552,7 @@
       "plot": "gerbers/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "PCB_Khess_Cash_Drawer.step",
       "svg": "",
       "vrml": ""
     },
