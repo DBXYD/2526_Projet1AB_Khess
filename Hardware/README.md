@@ -28,6 +28,15 @@
     * 1 Connecteur 01x03
     * 1 Connecteur RJ11, remplacée par 1 Connecteur 01x02
     * 1 Bornier à vis 01x02
+    * 1 Écran tactile
+
+### Liste des composants autres
+
+* Tiroir caisse avec connecteur standard RJ11, remplacée par des connecteurs simples
+* Câble d'alimentation
+* Raspberry Pi 5
+
+---
 
 ## PCB_Khess_Module_Payment
 ### Liste des composants du PCB
@@ -43,7 +52,20 @@
     * 1 Connecteur 01x08
     * 1 Condensateur 1uF
 
-* Screen
+* Écran
     * 1 Condensateur 1uF
     * 1 Connecteur 01x04
-    * 2 Résistance 4,7k Ohm
+    * 2 Résistances 4,7k Ohm
+
+* Clavier numérique
+    * 4 Résistances 10k Ohm
+    * 4 Résistances 330 Ohm
+    * 1 Connecteurs 01x08
+
+### Liste des composants autres
+
+* 1 Raspberry Zero 2W
+* 1 Écran tactile
+* 1 Clavier numérique
+* 1 Capteur RFID
+* 1 Shield pour gérer une batterie
