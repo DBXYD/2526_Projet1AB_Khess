@@ -24,7 +24,7 @@ Voir [Hardware/README.md](Hardware/README.md).
 
 ## Codes développés
 * code site internet : voir [Software/Django](Software/Django).
-* code test sur la caisse enregistreuse : voir [Software/Caisse](Software/Django).
+* code test sur la caisse enregistreuse : voir [Software/Caisse_enregistreuse-teste](Software/Caisse_enregistreuse-teste).
 
 ## Avancée du projet
 ### Ce qui a été réalisé
