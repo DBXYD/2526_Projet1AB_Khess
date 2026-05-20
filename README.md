@@ -23,7 +23,7 @@ Voir [Hardware/README.md](Hardware/README.md).
 * changement support tablette : https://cad.onshape.com/documents/76ad7ea018552db6a3f1dc99/w/96b32424fd40eb196727c949/e/cde944de5d408b099ab94c4d?renderMode=0&uiState=6a0e3c51ea0349263bbd5f3c
 
 ## Codes développés
-Voir [Software/README.md](Software/README.md).
+* code site internet : voir [Software/Django](Software/Django).
 
 ## Avancée du projet
 ### Ce qui a été réalisé
