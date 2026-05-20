@@ -30,11 +30,12 @@ Voir [Hardware/README.md](Hardware/README.md).
 * développement du site internet/ interface vendeur avec gestion des stocks, des commandes
 * modification 3D de la caisse en changeant les dimensions du socle soutenant la tablette
 * création 3D du module de payement
+* développement du code du module de payement
+* modification 3D de la caisse en changeant le support tablette se mettant sur le socle
 
 ### Ce qui n'a pas (encore) été réalisé
 
 * test du PCB
-* développement du code du module de payement
 * assemblage de l'ensemble
 
 ### Améliorations possibles
