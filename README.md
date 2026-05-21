@@ -9,7 +9,7 @@
 - [Composants](#composants)
 - [Choix techniques et justification](#choix-techniques-et-justification)
 - [Modèle 3D de la caisse](#mod%C3%A8le-3d-de-la-caisse)
-- [Codes développés](#codes-d%C3%A9velopp%C3%A9s)
+- [Partie Logicielle (Software)](#-partie-logicielle-software)
 - [Technologies utilisées](#technologies-utilis%C3%A9es)
 - [Avancée du projet](#avanc%C3%A9e-du-projet)
 	- [Ce qui a été réalisé](#ce-qui-a-%C3%A9t%C3%A9-r%C3%A9alis%C3%A9)
@@ -45,10 +45,24 @@ La modélisation 3D de ces différentes pièces à été réaliser avec le logic
 * [Caisse entière avec socle](3D/Caisse%20entière%20avec%20socle.stl) 
 * [Module paiement final](3D/Module%20payement%20final.stl)
 * [Support tablette final](3D/Support%20tablette%20final.stl)
+
   
-## Codes développés
-* code site internet : voir [Software/Django](Software/Django).
-* code de test pour la caisse enregistreuse : voir [Software/Caisse_enregistreuse-teste](Software/Caisse_enregistreuse-teste).
+## 💻 Partie Logicielle (Software)
+
+Cette section regroupe l'ensemble du code source de l'application web de la caisse connectée, développée avec le framework **Django** (Python).
+
+### 🚀 Accès au Code Source et Déploiement
+
+> ⚠️ **Note sur le dépôt :** Suite à des difficultés techniques lors de la synchronisation et de l'envoi du code sur le dépôt partagé de l'équipe, la version la plus récente et totalement à jour de l'application a été temporairement hébergée sur mon espace personnel.
+
+* 📁 **Code source à jour :** Vous pouvez consulter et récupérer l'intégralité du projet en [cliquant directement sur ce lien vers mon dépôt personnel](...).
+* 🛠️ **Guide d'installation :** Pour faire fonctionner le code facilement sur votre machine, j'ai rédigé un guide pas-à-pas. Ce tutoriel recense également l'ensemble des blocages et des problèmes techniques que j'ai rencontrés durant le développement ainsi que leurs solutions. [Consulter le tutoriel de configuration Django](...).
+
+### 📊 Architecture de la Base de Données
+
+Le système s'appuie sur une base de données relationnelle structurée pour gérer les profils des étudiants, leurs soldes (cotisants ou non), le catalogue de la K-FET et l'historique des ventes.
+
+* 🗺️ **Modèle Conceptuel :** Pour comprendre l'organisation de nos tables et les relations entre nos entités (cardinalités `1`, `*`, `0..1`), vous pouvez [accéder au schéma graphique interactif sur dbdiagram.io](...).
 
 ## Technologies utilisées
 
