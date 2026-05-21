@@ -83,7 +83,7 @@ Modélisation 3D:
 - La taille du support de tablette était trop petite ( impossibilité de passer les câbles HDMI et USB vers la caisse automatique ). 
 On a du imprimer plusieurs fois le support pour trouver la taille adéquate.
 - Les trous pour fixer le support de tablette à son support n'étaient pas au bonne endroit après l'impression, on a du percer avec une perceuse les trous pour fixer le support correctement. 
-- Problèmes usuelles d'impression 3D.
+- Problèmes usuels d'impression 3D.
 
 ### Améliorations possibles
 
