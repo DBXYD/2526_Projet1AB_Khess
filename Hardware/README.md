@@ -151,7 +151,7 @@ Le connecteur 01x08 qui permet la comminication via le bus SPI, facilite le remp
 
 L’écran tactile est connecté via une interface dédiée afin de simplifier le montage.
 
-Les résistances de pull-up de 4,7 kΩ servent de résistances de tirage pour les lignes de communication utilisées en I²C.
+Les résistances de pull-up de 4,7 kΩ servent de résistances de tirage pour les lignes de communication utilisées en I2C.
 
 Le condensateur de 1 µF stabilise l’alimentation de l’écran et réduit les parasites.
 
