@@ -36,10 +36,16 @@ Voir [Hardware/README.md](Hardware/README.md).
 ## Choix techniques et justification
 
 ## Modèle 3D de la caisse
+La caisse automatique est consituée de 3 éléments :
+- la caisse entière avec le socle (3D/Caisse%20entière%20avec%20socle.stl)
+- le module de paiement
+- le support pour la tablette
+  
+La modélisation 3D de ces différentes pièces à été réaliser avec le logiciel Oneshape, voici les liens correspondant : 
 * [Caisse entière avec socle](3D/Caisse%20entière%20avec%20socle.stl) 
 * [Module paiement final](3D/Module%20payement%20final.stl)
 * [Support tablette final](3D/Support%20tablette%20final.stl)
-
+  
 ## Codes développés
 * code site internet : voir [Software/Django](Software/Django).
 * code de test pour la caisse enregistreuse : voir [Software/Caisse_enregistreuse-teste](Software/Caisse_enregistreuse-teste).
