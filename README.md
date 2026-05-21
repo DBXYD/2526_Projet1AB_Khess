@@ -37,7 +37,7 @@ Voir [Hardware/README.md](Hardware/README.md).
 
 ## Modèle 3D de la caisse
 La caisse automatique est consituée de 3 éléments :
-- la caisse entière avec le socle (3D/Caisse%20entière%20avec%20socle.stl)
+- la caisse entière avec le socle
 - le module de paiement
 - le support pour la tablette
   
