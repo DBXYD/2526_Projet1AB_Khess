@@ -18,9 +18,9 @@ Voir [Hardware/README.md](Hardware/README.md).
 
 
 ## Modèle 3D de la caisse
-* caisse : voir [Caisse entière avec socle](Caisse%20entière%20avec%20socle.stl) 
-* module de paiement : voir [Module paiement final](Module%20paiement%20final.stl)
-* changement support tablette : voir [Support tablette final](Support%20tablette%20final.stl)
+* [Caisse entière avec socle](3D/Caisse%20entière%20avec%20socle.stl) 
+* [Module paiement final](3D/Module%20payement%20final.stl)
+* [Support tablette final](3D/Support%20tablette%20final.stl)
 
 ## Codes développés
 * code site internet : voir [Software/Django](Software/Django).
