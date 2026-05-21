@@ -2,6 +2,8 @@
 > [!Note]
 > Projet de 1ère année ENSEA sur une caisse enregistreuse pour la K-Fet.
 
+![](k'hess.png)
+
 ## Sommaire
 - [Cahier des charges](#cahier-des-charges)
 	- [Caisse enregistreuse portable avec écran tactile](#caisse-enregistreuse-portable-avec-écran-tactile)
