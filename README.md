@@ -17,10 +17,10 @@
 Voir [Hardware/README.md](Hardware/README.md).
 
 
-## Modèle 3D de la caisse (liens onshape)
-* caisse : Voir [/Caisse entière avec socle.stl](/Caisse entière avec socle.stl).
-* module de paiement : https://cad.onshape.com/documents/279f59e2f2ffc111bf11212e/w/8f97b6e779ccb8f32fd35210/e/959d8722d16775ab3e654e7e?renderMode=0&uiState=6a0e3c683f317a82c571ae84
-* changement support tablette : https://cad.onshape.com/documents/76ad7ea018552db6a3f1dc99/w/96b32424fd40eb196727c949/e/cde944de5d408b099ab94c4d?renderMode=0&uiState=6a0e3c51ea0349263bbd5f3c
+## Modèle 3D de la caisse
+* caisse : voir [Caisse entière avec socle](Caisse%20entière%20avec%20socle.stl) 
+* module de paiement : voir [Module paiement final](Module%20paiement%20final.stl)
+* changement support tablette : voir [Support tablette final](Support%20tablette%20final.stl)
 
 ## Codes développés
 * code site internet : voir [Software/Django](Software/Django).
