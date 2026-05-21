@@ -14,7 +14,7 @@
 - [Avancée du projet](#avanc%C3%A9e-du-projet)
 	- [Ce qui a été réalisé](#ce-qui-a-%C3%A9t%C3%A9-r%C3%A9alis%C3%A9)
 	- [Ce qui n'a pas (encore) été réalisé](#ce-qui-na-pas-encore-ete-r%C3%A9alis%C3%A9)
- 	- [Problèmes rencontrés et solutions trouvées](#problemes-rencontr%C3%A9s-et-solutions-trouv%C3%A9es)
+ 	- [Problèmes rencontrés et solutions trouvées](#probl%C3%A8mes-rencontr%C3%A9s-et-solutions-trouv%C3%A9es)
 	- [Améliorations possibles](#am%C3%A9liorations-possibles)
 - [Membres du projet](#membres-du-projet)
 - [Licence](#licence)
