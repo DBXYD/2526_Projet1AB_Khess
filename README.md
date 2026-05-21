@@ -31,6 +31,7 @@
 ## Composants
 Voir [Hardware/README.md](Hardware/README.md).
 
+## Choix techniques et justification
 
 ## Modèle 3D de la caisse
 * [Caisse entière avec socle](3D/Caisse%20entière%20avec%20socle.stl) 
@@ -67,6 +68,8 @@ Voir [Hardware/README.md](Hardware/README.md).
 
 * test du PCB
 * assemblage de l'ensemble
+
+### Problèmes rencontrés et solutions trouvées
 
 ### Améliorations possibles
 
