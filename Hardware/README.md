@@ -1,4 +1,16 @@
 # Hardware
+ 
+## Sommaire
+- [PCB_Khess_Cash_Drawer](#pcb_khess_cash_drawer)
+    - [Schéma](#sch%C3%A9ma)
+    - [Liste des composants du PCB](#liste-des-composants-du-pcb)
+    - [Liste des composants autres](#liste-des-composants-autres)
+    - [PCB](#pcb)
+- [PCB_Khess_Module_Payment](#pcb_khess_module_payment)
+    - [Schéma](#sch%C3%A9ma-1)
+    - [Liste des composants du PCB](#liste-des-composants-du-pcb-1)
+    - [Liste des composants autres](#liste-des-composants-autres-1)
+    - [PCB](#pcb-1)
 
 ## PCB_Khess_Cash_Drawer
 ### Schéma

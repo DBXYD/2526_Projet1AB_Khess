@@ -2,6 +2,21 @@
 > [!Note]
 > Projet de 1ère année ENSEA sur une caisse enregistreuse pour la K-Fet.
 
+## Sommaire
+- [Cahier des charges](#cahier-des-charges)
+	- [Caisse enregistreuse portable avec écran tactile](#caisse-enregistreuse-portable-avec-écran-tactile)
+	- [Contraintes](#contraintes)
+- [Composants](#composants)
+- [Modèle 3D de la caisse](#mod%C3%A8le-3d-de-la-caisse)
+- [Codes développés](#codes-d%C3%A9velopp%C3%A9s)
+- [Technologies utilisées](#technologies-utilis%C3%A9es)
+- [Avancée du projet](#avanc%C3%A9e-du-projet)
+	- [Ce qui a été réalisé](#ce-qui-a-%C3%A9t%C3%A9-r%C3%A9alis%C3%A9)
+	- [Ce qui n'a pas (encore) été réalisé](#ce-qui-na-pas-encore-ete-r%C3%A9alis%C3%A9)
+	- [Améliorations possibles](#am%C3%A9liorations-possibles)
+- [Membres du projet](#membres-du-projet)
+- [Licence](#licence)
+
 ## Cahier des charges
 ### Caisse enregistreuse portable avec écran tactile
 * Interface utilisateur intuitive
