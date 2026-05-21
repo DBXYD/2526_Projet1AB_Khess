@@ -26,6 +26,15 @@ Voir [Hardware/README.md](Hardware/README.md).
 * code site internet : voir [Software/Django](Software/Django).
 * code de test pour la caisse enregistreuse : voir [Software/Caisse_enregistreuse-teste](Software/Caisse_enregistreuse-teste).
 
+## Technologies utilisées
+
+- Python
+- Django
+- Raspberry Pi
+- KiCad
+- Onshape
+- Impression 3D
+  
 ## Avancée du projet
 ### Ce qui a été réalisé
 
@@ -38,15 +47,7 @@ Voir [Hardware/README.md](Hardware/README.md).
 * développement du code du module de payement
 * modification 3D de la caisse en changeant le support tablette se mettant sur le socle
 
-## Technologies utilisées
 
-- Python
-- Django
-- Raspberry Pi
-- KiCad
-- Onshape
-- Impression 3D
-  
 ### Ce qui n'a pas (encore) été réalisé
 
 * test du PCB
