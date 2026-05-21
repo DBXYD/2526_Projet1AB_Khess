@@ -56,13 +56,13 @@ Cette section regroupe l'ensemble du code source de l'application web de la cais
 > ⚠️ **Note sur le dépôt :** Suite à des difficultés techniques lors de la synchronisation et de l'envoi du code sur le dépôt partagé de l'équipe, la version la plus récente et totalement à jour de l'application a été temporairement hébergée sur mon espace personnel.
 
 * 📁 **Code source à jour :** Vous pouvez consulter et récupérer l'intégralité du projet en [cliquant directement sur ce lien vers mon dépôt personnel](https://github.com/zhang-estelle/DatabaseCashRegister).
-* 🛠️ **Guide d'installation :** Pour faire fonctionner le code facilement sur votre machine, j'ai rédigé un guide pas-à-pas. Ce tutoriel recense également l'ensemble des blocages et des problèmes techniques que j'ai rencontrés durant le développement ainsi que leurs solutions. [Consulter le tutoriel de configuration Django](...).
+* 🛠️ **Guide d'installation :** Pour faire fonctionner le code facilement sur votre machine, j'ai rédigé un guide pas-à-pas. Ce tutoriel recense également l'ensemble des blocages et des problèmes techniques que j'ai rencontrés durant le développement ainsi que leurs solutions. [Consulter le tutoriel de configuration Django](https://github.com/DBXYD/2526_Projet1AB_Khess/blob/master/TutoDjango.md).
 
 ### 📊 Architecture de la Base de Données
 
 Le système s'appuie sur une base de données relationnelle structurée pour gérer les profils des étudiants, leurs soldes (cotisants ou non), le catalogue de la K-FET et l'historique des ventes.
 
-* 🗺️ **Modèle Conceptuel :** Pour comprendre l'organisation de nos tables et les relations entre nos entités (cardinalités `1`, `*`, `0..1`), vous pouvez [accéder au schéma graphique interactif sur dbdiagram.io](...).
+* 🗺️ **Modèle Conceptuel :** Pour comprendre l'organisation de nos tables, vous pouvez [accéder au schéma graphique interactif sur dbdiagram.io](https://github.com/DBXYD/2526_Projet1AB_Khess/blob/master/dbdiagram.pdf).
 
 ## Technologies utilisées
 
