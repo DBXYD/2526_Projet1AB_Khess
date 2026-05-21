@@ -41,7 +41,7 @@ La caisse automatique est consituée de 3 éléments :
 - le module de paiement
 - le support pour la tablette
   
-La modélisation 3D de ces différentes pièces à été réaliser avec le logiciel Oneshape, voici les liens correspondant : 
+La modélisation 3D de ces différentes pièces à été réaliser avec le logiciel Onshape, voici les liens correspondant : 
 * [Caisse entière avec socle](3D/Caisse%20entière%20avec%20socle.stl) 
 * [Module paiement final](3D/Module%20payement%20final.stl)
 * [Support tablette final](3D/Support%20tablette%20final.stl)
