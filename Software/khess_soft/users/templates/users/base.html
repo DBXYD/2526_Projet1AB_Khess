@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Gestion Utilisateurs{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'users/css/bootstrap.css' %}">
+    <style>
+        body {
+            display: flex;
+            justify-content: column;
+            height: 100vh;
+            margin: 0;
+        }
+        .top-bar {
+            background-color: #45483d;
+            color: white;
+            display :flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .top-bar img{
+            height: 40px;
+        }
+        .sidebar{
+            background-color: #d69465;
+            width: 16.666%;
+            height: 100%;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            overflow-y: auto;
+            padding-top: 20px;
+        }
+        .content {
+            margin-left: 16.666%;
+            padding: 20px;
+            flex-grow: 1;
+            padding-top: 60px; /* to avoid overlap with the top bar */
+        }
+        .sidebar a{
+            padding: 10px 15px;
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #e9ecef;
+            color: #007bff;
+        }
+        .category-section .btn {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #f8f9fa;
+            transition: transform 0.2s ease-in-out;
+        }
+
+.category-section .btn:hover {
+    transform: scale(1.05);
+    background-color: #e9ecef;
+}
+    </style>
+</head>
+<body>
+    <!-- Bande supérieur  -->
+    <div class="top-bar">
+        <img src="{% static 'users/images/k-fet.png' %}" alt="Logo">
+        <span> Bienvenue, {{user}}</span>
+        <div class="dropdown">
+            <button class="btn btn-outline-light btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                Paramètres
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#" id="about-link">À propos</a></li>
+                <li><a class="dropdown-item" href="{% url 'cas_ng_logout' %}">Se déconnecter</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Menu latéral gauche  -->
+    <div class="sidebar">
+        <h4 class="text-center">Menu</h4>
+        {% for category in categories %}
+            <a href="#{{ category|lower }}" class="category-link">{{ category }}</a>
+        {% endfor %}
+    </div>
+    <!-- Contenue principal  -->
+    <div class="content">
+        {% block content %}
+        <h1 class="text-center">Gestion des utilisateurs</h1>
+        {% endblock content %}
+    </div>
+
+    <script src="{% static 'users/js/jquery.js' %}"></script>
+    <script src="{% static 'users/js/popper.js' %}"></script>
+    <script src="{% static 'users/js/bootstrap.js' %}"></script>
+    <script>
+        // Masquer toutes les sections sauf celle correspondant au lien cliqué
+        document.querySelectorAll('.category-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+    
+                // Masquer toutes les sections
+                document.querySelectorAll('.category-section').forEach(section => {
+                    section.style.display = 'none';
+                });
+    
+                // Afficher la section correspondante
+                const targetId = this.getAttribute('href').substring(1); // Récupère l'ID sans le #
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.style.display = 'block';
+                }
+            });
+        });
+    
+        // Afficher la section "Accueil" par défaut
+        document.querySelectorAll('.category-section').forEach(section => {
+            section.style.display = 'none';
+        });
+        document.getElementById('accueil').style.display = 'block';
+    </script>
+    <script>
+        // Gérer l'affichage de la section "À propos"
+        document.getElementById('about-link').addEventListener('click', function(e) {
+            e.preventDefault();
+    
+            // Masquer toutes les sections
+            document.querySelectorAll('.category-section').forEach(section => {
+                section.style.display = 'none';
+            });
+    
+            // Afficher la section "À propos"
+            const aboutSection = document.getElementById('about');
+            if (aboutSection) {
+                aboutSection.style.display = 'block';
+            }
+        });
+    </script>
+    <!-- bouton pour cocher -->
+    <script>
+        function toggleCheckboxes() {
+            // Récupère toutes les cases à cocher dans le tableau
+            const checkboxes = document.querySelectorAll('input[name="selected_users"]');
+            // Vérifie si toutes les cases sont cochées
+            const allChecked = Array.from(checkboxes).every(checkbox => checkbox.checked);
+            // Inverse l'état de chaque case
+            checkboxes.forEach(checkbox => checkbox.checked = !allChecked);
+        }
+    </script>
+    <!-- Section active pour modifier montant dans user_dashboard -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const params = new URLSearchParams(window.location.search);
+            const activeSection = params.get('active_section') || 'accueil';
+            document.querySelectorAll('.category-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            const targetSection = document.getElementById(activeSection);
+            if (targetSection) {
+                targetSection.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

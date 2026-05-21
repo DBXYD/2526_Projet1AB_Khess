@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash_Register</title>
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif; line-height: 1.6; background-color: #f9f9f9; color: #333;">
+    <!-- Barre de navigation -->
+    <div style="position: fixed; top: 0; left: 0; width: 100%; background-color: #333; color: white; display: flex; align-items: center; justify-content: space-between; padding: 10px 20px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); z-index: 1000;">
+        <div style="display: flex; align-items: center;">
+            <a href="#accueil" style="color: white; text-decoration: none; padding: 10px 15px; margin: 0 5px; border: 1px solid white; border-radius: 5px; transition: background-color 0.3s;">Accueil</a>
+            <div style="border-left: 1px solid white; height: 20px; margin: 0 10px;"></div>
+            <a href="#description" style="color: white; text-decoration: none; padding: 10px 15px; margin: 0 5px; border: 1px solid white; border-radius: 5px; transition: background-color 0.3s;">Description</a>
+        </div>
+        <div style="font-size: 20px; font-weight: bold;">Cash Register</div>
+        <div style="display: flex; align-items: center;">
+            <a href="#hardware" style="color: white; text-decoration: none; padding: 10px 15px; margin: 0 5px; border: 1px solid white; border-radius: 5px; transition: background-color 0.3s;">Hardware</a>
+            <div style="border-left: 1px solid white; height: 20px; margin: 0 10px;"></div>
+            <a href="#meca" style="color: white; text-decoration: none; padding: 10px 15px; margin: 0 5px; border: 1px solid white; border-radius: 5px; transition: background-color 0.3s;">Méca</a>
+            <div style="border-left: 1px solid white; height: 20px; margin: 0 10px;"></div>
+            <a href="#software" style="color: white; text-decoration: none; padding: 10px 15px; margin: 0 5px; border: 1px solid white; border-radius: 5px; transition: background-color 0.3s;">Software</a>
+        </div>
+    </div>
+
+    <!-- Section Accueil -->
+    <div id="accueil" style="padding: 100px 20px; margin-top: 70px; background-color: #f4f4f4;">
+        <h2 style="text-align: center; font-size: 28px; margin-bottom: 20px; color: #444;">Bienvenue !</h2>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
+            <!-- Zone Contexte -->
+            <div style="flex: 1; text-align: center; padding: 10px;">
+                <h3 style="margin: 0; font-size: 22px; color: #333;">Contexte</h3>
+                <hr style="width: 50%; margin: 10px auto; border: 1px solid #333;">
+                <p style="font-size: 16px; text-align: left; color: #555;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Dans le cadre de l'option Maker propos en deuxième année à l'Ensea, 
+                    j'ai entreprit la réalisation d'une caisse enregistreuse autonome. Grâce à ce projet, la K-FET pourra : encaisser des commandes, gérer leurs stocks, 
+                    faire la caisse, faire des statistiques sur leur vente, changer les articles, leurs prix et les menus. 
+                    <br>Il permet en plus aux étudiants de pouvoir accéder à leur solde et transactions. 
+                    <br>L'association n'aura plus qu'à créditer les utilisateurs !
+                </p>
+            </div>
+            <div style="flex: 1; text-align: center; padding: 10px;">
+                <img src="photo.jpg" alt="Photo centrale" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+            <div style="flex: 1; text-align: center; padding: 10px;">
+                <h3 style="margin: 0; font-size: 22px; color: #333;">Objectifs</h3>
+                <hr style="width: 50%; margin: 10px auto; border: 1px solid #333;">
+                <p style="font-size: 16px; text-align: left; color: #555;">
+                    Le projet est répartie est 3 parties la caisse qui doit:  
+                    <br>&nbsp;&nbsp;- Pouvoirprendre et stocker des commandes 
+                    <br>&nbsp;&nbsp;- Gérer les stocks
+                    <br>&nbsp;&nbsp;- Faire la caisse et les statistiques de vente
+                    <br>&nbsp;&nbsp;- Intéragir avec le module de paiement et la base de données
+                    <br>&nbsp;&nbsp;- Avoir une interface utilisateur simple et intuitive
+                    <br>&nbsp;&nbsp;- Pouvoir changer les articles, leurs prix et les menus
+                    <br>Le module de payement qui doit :
+                    <br>&nbsp;&nbsp;- scanner une carte étudiante
+                    <br>&nbsp;&nbsp;- Afficher des informations sur un écran OLED
+                    <br>&nbsp;&nbsp;- Transmettre des données via Bluetooth
+                    <br>&nbsp;&nbsp;- Intégrer un numpad pour les codes confidentiels 
+                    <br>&nbsp;&nbsp;- Fonctionner en autonomie
+                    <br>&nbsp;&nbsp;- L’ensemble devait être intégré dans un boîtier sur mesure, pratique et portable
+                    <br>L'interface utilisateur qui doit :
+                    <br>&nbsp;&nbsp;- Etre simple et intuitive
+                    <br>&nbsp;&nbsp;- Avoir un design agréable
+                    <br>&nbsp;&nbsp;- Dépendre du rôle de l'utilisateur (association ou étudiant)
+                </p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <h2 style="font-size: 24px; color: #444;">Un projet complet :</h2>
+            <hr style="width: 50%; margin: 10px auto; border: 1px solid #333;">
+            <p style="font-size: 16px; color: #555;">"Pour ce projet, vous aurez le détail de la mécanique avec la réalisation d'un boîtier de payement et 
+                de l'encastrement de la caisse sur mesure. Vous aurez également le détail du circuit électroniques pour gérer l’alimentation et la liaison 
+                des différents modules. Je développerai également toute la partie logicielle embarquée sur microcontrôleur ainsi que l'interface homme machine
+                avec interaction avec une base de donnée. Toutes ces parties seront actualisées au cours de l'année jusqu'à son aboutissement en octobre 2025.
+            </p>
+        </div>
+    </div>
+
+
+
+    <!-- Section description -->
+    <div id="description" style="padding: 100px 20px; background-color: #eaeaea;">
+        <h2 style="text-align: center; font-size: 28px; margin-bottom: 20px; color: #444;">Description du projet</h2>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
+            <!-- Zone Contexte -->
+            <div style="flex: 1; text-align: center; padding: 10px;">
+                <h3 style="margin: 0; font-size: 22px; color: #333;">Objectifs</h3>
+                <hr style="width: 50%; margin: 10px auto; border: 1px solid #333;">
+                <p style="font-size: 16px; text-align: left; color: #555;">
+                    La base de la caisse possédera un écran tactile et une caisse métallique sécurisée afin de pouvoir :
+                    <br>- Prendre les commandes :
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;Plusieurs catégories (Viennoiserie, Sandwich, snacks et boissons) avec  leurs menus et les tarifs Cotisants, 
+                    Non Cotisants.
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;Modifier les produits en vente;
+                    <br>- Faire la caisse :
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;Retrace les transactions
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;Donne le montant en espèce
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;Donne le montant payé par carte étudiante
+                    <br> Donner les stocks :
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;La caisse doit avoir accès à la base de donnée des stocks
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;Peut actualiser le nombre si on encaisse une commande ou lorsque l’on remplit les stocks
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;Grise l’article si plus disponible
+                </p>
+            </div>
+            <div style="flex: 1; text-align: center; padding: 10px;">
+                <h3 style="margin: 0; font-size: 22px; color: #333;">Objectifs</h3>
+                <hr style="width: 50%; margin: 10px auto; border: 1px solid #333;">
+                <p style="font-size: 16px; text-align: left; color: #555;">
+                    Un module de de payement sera relié à la base par Bluetooth afin de :
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;Lire les cartes étudiantes
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;Afficher le solde sur un petit écran
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;Demander la validation de la transaction
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;D’écrire sur la carte le nombre de transaction effectué.
+                </p>
+            </div>
+            <div style="flex: 1; text-align: center; padding: 10px;">
+                <h3 style="margin: 0; font-size: 22px; color: #333;">Objectifs</h3>
+                <hr style="width: 50%; margin: 10px auto; border: 1px solid #333;">
+                <p style="font-size: 16px; text-align: left; color: #555;">
+                    Une base de donnée reliée à la caisse comprenant :
+                    <br>- Une base User :
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;L’identifiant de la carte;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;L’identité de la personne;
+                    <br>&nbsp;&nbsp;- Son statut :
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;Cotisant
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;Non cotisant
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;Personnel de l’école
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;Le nombre de transaction réalisé
+                    <br>&nbsp;&nbsp;- Le solde
+                    <br>Une base transaction :
+                    <br>&nbsp;&nbsp;- L’identifiant de la carte
+                    <br>&nbsp;&nbsp;- La date
+                    <br>&nbsp;&nbsp;- Le montant
+                    <br>&nbsp;&nbsp;- Le numéro de transaction
+                    <br> Articles :
+                    <br>&nbsp;&nbsp;- Identifiant de l’article
+                    <br>&nbsp;&nbsp;- Nom de l’article
+                    <br>&nbsp;&nbsp;- Quantité
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="hardware" class="section">
+        <h2 style="text-align: center;">Hardware</h2>
+        <h3 style="text-align: left;"> Schéma fonctionnement :</h3>
+        <img src="schema.png" alt="Schéma fonctionnement" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+        <hr style="width: 50%; margin: 10px auto; border: 1px solid #333;">
+        <!-- Zone avec photo à gauche -->
+        <div style="display: flex; align-items: center; margin-top: 20px;">
+            <div style="flex: 1; text-align: center; padding: 10px;">
+                <img src="photo5.jpg" alt="Photo gauche" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+            </div>
+            <div style="flex: 2; padding: 10px;">
+                <h3>Division PCB</h3>
+                <hr style="width: 50%; margin: 10px 0; border: 1px solid #333;">
+                <p>J'ai divisé le schématique en 3 parties: STM, Modules, Alimentations. En effet, Cela permet à ce que le projet soit plus compréhensible.
+                </p>
+            </div>
+        </div>
+        <!-- Zone avec photo à droite -->
+        <div style="display: flex; align-items: center; margin-top: 20px;">
+            <div style="flex: 2; padding: 10px;">
+                <h3>Alimentation :</h3>
+                <hr style="width: 50%; margin: 10px 0; border: 1px solid #333;">
+                <p> Après avoir fais le bilan de mes modules et de leur besoin en alimentation j'ai pu décider du régulateur à utiliser et de quel type
+                    de batterie j'allais utiliser. La plus part de mes modules fonctionnent en 5V. J'ai donc décidé d'utiliser un régulateur de tension 5V Wurth
+                    pour alimenter mes modules. L'empreinte et le schéma a été réalisé à la main. Pour le régulateur 3V3, j'ai choisie celui que nous avions en stocker
+                    et qui répondait à nos besoins. 
+                    <br> Je vais utiliser un usb c pour communiquer avec la stm et pour alimenté la carte. Cette alimentation est déjà en 5V donc pas de régulateur, d'où
+                    l'interrupteur et les diodes schottky pour choisir l'alimentation. L'interrupteur peut donc servir à alumer ou éteindre le module de payement. 
+                    <br> J'ai placé des diodes sur la batterie et après le régulateur pour m'assurer que tout est bien alimenté.
+                    <br> Des condensateurs sont également placés pour lisser la tension et éviter les pics de tensions.
+                </p>
+            </div>
+            <div style="flex: 1; text-align: center; padding: 10px;">
+                <img src="photo6.jpg" alt="Photo droite" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+            </div>
+        </div>
+        <!-- Zone avec photo à gauche -->
+        <div style="display: flex; align-items: center; margin-top: 20px;">
+            <div style="flex: 1; text-align: center; padding: 10px;">
+                <img src="photo5.jpg" alt="Photo gauche" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+            </div>
+            <div style="flex: 2; padding: 10px;">
+                <h3>Modules</h3>
+                <hr style="width: 50%; margin: 10px 0; border: 1px solid #333;">
+                <p>
+                    Comme vu sur le schéma, j'ai répartie mes modules avec des connecteurs JST. Cela permet de ne pas avoir à souder les modules
+                    sur le PCB et de pouvoir les changer facilement.
+                    <br> Des condensateurs sont présents pour lisser la tension et éviter les pics de tensions.
+                </p>
+            </div>
+        </div>
+        <!-- Zone avec photo à droite -->
+        <div style="display: flex; align-items: center; margin-top: 20px;">
+            <div style="flex: 2; padding: 10px;">
+                <h3>STM :</h3>
+                <hr style="width: 50%; margin: 10px 0; border: 1px solid #333;">
+                <p> Dans cette page on a la STM relié à un stlink pour la programmer. La STM a été choisi pour avoir le bon nombre d'uart, pins spi et de I2C. 
+                    <br> J'ai mis l'usb C pour la communication avec la STM et pour alimenté la carte.
+                    <br> Des boutons utilisateurs sont présents pour faire des tests et pourraient être déporté pour par exemple le bluetooth ou autre. 
+                    <br> Un buzzer est présent pour indiquer qu'un payement a été effectué. 
+                    <br> Comme j'avais qu'une tentative j'ai placé tout les autres pins de la stm sur un connecteurs au cas où.
+                    <br> Evidemment des condensateurs et une bobine sont placés pour chacun des Vin et signaux adc pour lisser la tension et éviter les pics de tensions.
+                </p>
+            </div>
+            <div style="flex: 1; text-align: center; padding: 10px;">
+                <img src="photo6.jpg" alt="Photo droite" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+            </div>
+        </div>
+        <!-- Zone avec photo à gauche -->
+        <div style="display: flex; align-items: center; margin-top: 20px;">
+            <div style="flex: 1; text-align: center; padding: 10px;">
+                <img src="photo5.jpg" alt="Photo gauche" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+            </div>
+            <div style="flex: 2; padding: 10px;">
+                <h3>PCB :</h3>
+                <hr style="width: 50%; margin: 10px 0; border: 1px solid #333;">
+                <p>
+                   La forme du pcb est pensé avec la forme du module de payement et les contraintes de taille imposé. c'est un pcb 4 couches. 
+                   Les zones de tensions sont placés de manière à ce qu'elles ne se chevauchent pas. Les contraintes ont été posés en fonction du fournisseur de PCB.
+                </p>
+            </div>
+        </div> 
+        <!-- Zone de Conclusion -->
+        <div style="text-align: center; margin-top: 50px; padding: 20px; background-color: #f4f4f4; border-top: 2px solid #333;">
+            <h3 style="font-size: 24px; color: #444; margin-bottom: 10px;">Conclusion</h3>
+            <hr style="width: 50%; margin: 10px auto; border: 1px solid #333;">
+            <p style="font-size: 16px; color: #555; line-height: 1.8; max-width: 800px; margin: 0 auto;">
+                Cette partie du projet a été très enrichissante. Ce fut mon premier PCB réalisé seul. J'ai pu apprendre à bien prendre en main Kicad et à me poser les bonnes
+                questions avant de commencer la conception. J'ai également appris à bien choisir mes composants et à les placer de manière à ce qu'ils soient facilement accessibles.
+                <br> C'est un PCB deux faces ce qui était nouveau également pour moi. J'ai donc pu apprendre à bien réfléchir avant de souder ses composants notamment 
+                avec la pâte à braser.
+            </p>
+        </div>       
+        
+    </div>
+    
+    <div id="Méca" class="section">
+        <h2 style="text-align: center;">Comment tout les modules sont assemblés ?</h2>
+        <h3 style="text-align: left;">Commençons par le module de payement :</h3>
+        <img src="tkt.jpg" alt="Module entier" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+        <hr style="width: 50%; margin: 10px auto; border: 1px solid #333;">
+        <!-- Zone avec photo à gauche -->
+        <div style="display: flex; align-items: center; margin-top: 20px;">
+            <div style="flex: 1; text-align: center; padding: 10px;">
+                <img src="photo5.jpg" alt="Photo gauche" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+            </div>
+            <div style="flex: 2; padding: 10px;">
+                <h3>Les Variables</h3>
+                <hr style="width: 50%; margin: 10px 0; border: 1px solid #333;">
+                <p>Comme vous pouvez le voir, j'ai utilisé de nombreuses variables pour le projet. Cela est pratique lorsque quelqu'un reprend le projet ou 
+                    lorsque l'on veut ajuster les dimensions de l'objet souhaité.
+                </p>
+            </div>
+        </div>
+        <!-- Zone avec photo à droite -->
+        <div style="display: flex; align-items: center; margin-top: 20px;">
+            <div style="flex: 2; padding: 10px;">
+                <h3>Ouverture</h3>
+                <hr style="width: 50%; margin: 10px 0; border: 1px solid #333;">
+                <p>Pour que ce soit plus simple pour relier les modules entre eux et dans le cas où on aurait besoin de changer un module, j'ai crée une ouverture 
+                    qui se vis avec le module avec des inserts en laiton. Cela permet de ne pas avoir à démonter tout le module de payement pour changer un module.
+                    <br> J'ai également mis des encoches pour que l'on puisse passer les câbles entre les modules. Notamment à l'arrière du module pour recharger 
+                    la batterie sans l'enlever.
+                </p>
+            </div>
+            <div style="flex: 1; text-align: center; padding: 10px;">
+                <img src="photo6.jpg" alt="Photo droite" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+            </div>
+        </div>
+        <!-- Zone avec photo à gauche -->
+        <div style="display: flex; align-items: center; margin-top: 20px;">
+            <div style="flex: 1; text-align: center; padding: 10px;">
+                <img src="photo20.jpg" alt="Photo gauche" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+            </div>
+            <div style="flex: 2; padding: 10px;">
+                <h3>Logo RFID</h3>
+                <hr style="width: 50%; margin: 10px 0; border: 1px solid #333;">
+                <p>
+                    Pour indiquer où placer sa carte étudiante, j'ai mis un logo RFID qui vient d'un logo libre de droit. 
+                </p>
+            </div>
+        </div>
+        <h3 style="text-align: left;">Passons à la caisse :</h3>
+        <img src="tkt2.jpg" alt="caisse entier" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+        <hr style="width: 50%; margin: 10px auto; border: 1px solid #333;">
+        <!-- Zone avec photo à gauche -->
+        <div style="display: flex; align-items: center; margin-top: 20px;">
+            <div style="flex: 1; text-align: center; padding: 10px;">
+                <img src="photo5.jpg" alt="Photo gauche" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+            </div>
+            <div style="flex: 2; padding: 10px;">
+                <h3>Les Variables</h3>
+                <hr style="width: 50%; margin: 10px 0; border: 1px solid #333;">
+                <p>Comme vous pouvez le voir, j'ai de nouveau utilisé de nombreuses variables pour le projet. Cela m'a en particulier était utile lorsque les dimensions indiqué 
+                   d'un module ne correspondent pas.
+                </p>
+            </div>
+        </div>
+        <!-- Zone avec photo à droite -->
+        <div style="display: flex; align-items: center; margin-top: 20px;">
+            <div style="flex: 2; padding: 10px;">
+                <h3>Caisse en bois</h3>
+                <hr style="width: 50%; margin: 10px 0; border: 1px solid #333;">
+                <p>La caisse est encastrer dans un module en bois pour facilité l'assemblage des modules entre eux et pour que la caisse soit plus esthétique. 
+                    <br> Ci contre les plan 2D des découpes réalisés à la découpeuse laser. L'assemblage est fait avec de la colle à bois et des vis pour le cache devant
+                    la caisse métallique.
+                </p>
+            </div>
+            <div style="flex: 1; text-align: center; padding: 10px;">
+                <img src="photo6.jpg" alt="Photo droite" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+            </div>
+        </div>
+        <!-- Zone avec photo à gauche -->
+        <div style="display: flex; align-items: center; margin-top: 20px;">
+            <div style="flex: 1; text-align: center; padding: 10px;">
+                <img src="photo20.jpg" alt="Photo gauche" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+            </div>
+            <div style="flex: 2; padding: 10px;">
+                <h3>support caisse</h3>
+                <hr style="width: 50%; margin: 10px 0; border: 1px solid #333;">
+                <p>
+                    Lors de la découpe pour la caisse, j'ai cru que que l'outil pouvait faire des renfoncements. Malheureusement, ce n'était pas le cas et j'ai donc eu 
+                    des trous où je devais mettre les supports de caisse en caoutchouc. J'ai donc imprimé un support de caisse en 3D pour que la caisse soit bien maintenue.
+                </p>
+            </div>
+        </div>
+        <!-- Zone avec photo à droite -->
+        <div style="display: flex; align-items: center; margin-top: 20px;">
+            <div style="flex: 2; padding: 10px;">
+                <h3>Liaison Ecran - caisse</h3>
+                <hr style="width: 50%; margin: 10px 0; border: 1px solid #333;">
+                <p>
+                     Cette partie fut assez complexe car elle doit être assez robuste (pour soutenir l'écran et son module) et doit être fixer à la caisse 
+                     tout en permettant de faire passer les câbles et encastrer la rasberry pi. Pour ça j'ai donc décidé d'utiliser des vis M3: 4 côté utilisateur pour 
+                     les contraintes et 2 à l'opposé pour la fixation à la caisse. 
+                     <br>Sur les faces où est fixé la rasberry pi, j'ai mis des trous pour l'aération et des trous
+                     pour mettre des vis m2 pour fixer la rasberry pi. Entre la pi et le module, il y a des cylindres creux pour y mettre des inserts, cela permet de ne pas coller
+                     la pi à la paroie afin de passer des câbles si besoin. 
+                     <br> La fixation au module de l'écran est réalisé par des vis m3 où les écrous sont encastrer pendant l'impression. 
+                </p>
+            </div>
+            <div style="flex: 1; text-align: center; padding: 10px;">
+                <img src="photo6.jpg" alt="Photo droite" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+            </div>
+        </div>
+        <!-- Zone avec photo à gauche -->
+        <div style="display: flex; align-items: center; margin-top: 20px;">
+            <div style="flex: 1; text-align: center; padding: 10px;">
+                <img src="photo20.jpg" alt="Photo gauche" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+            </div>
+            <div style="flex: 2; padding: 10px;">
+                <h3>Support écran</h3>
+                <hr style="width: 50%; margin: 10px 0; border: 1px solid #333;">
+                <p>
+                    Le support de l'écran est également imprimé en 3D. Il est fixé à la caisse par des vis M3. On y retrouve des cylindre pour pouvoir poser l'écran dessous.
+                    Il y a une zone sans cylindre car il y a la carte électronique de l'écran. De la même manière, un creux sur le côté est obligatoire au vus de la position des connecteurs sur 
+                    le côté. J'ai essayé de faire au plus compacte mais il faudra vérifier que les câbles ne se détériorent pas au vus de leur courbure.
+                    <br>Il y a également des trous pour des inserts afin de fixer le cache de l'écran.
+                </p>
+            </div>
+        </div>
+        <!-- Zone avec photo à droite -->
+        <div style="display: flex; align-items: center; margin-top: 20px;">
+            <div style="flex: 2; padding: 10px;">
+                <h3>Cache Ecran</h3>
+                <hr style="width: 50%; margin: 10px 0; border: 1px solid #333;">
+                <p>
+                    Pour plus d'esthétique, j'ai décidé de faire un cache pour l'écran découpé et gravé à la laser. Il est fixé par des vis M1 sur les inserts.
+                </p>
+            </div>
+            <div style="flex: 1; text-align: center; padding: 10px;">
+                <img src="photo6.jpg" alt="Photo droite" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+            </div>
+        </div>
+        <!-- Zone de Conclusion -->
+        <div style="text-align: center; margin-top: 50px; padding: 20px; background-color: #f4f4f4; border-top: 2px solid #333;">
+            <h3 style="font-size: 24px; color: #444; margin-bottom: 10px;">Conclusion</h3>
+            <hr style="width: 50%; margin: 10px auto; border: 1px solid #333;">
+            <p style="font-size: 16px; color: #555; line-height: 1.8; max-width: 800px; margin: 0 auto;">
+                Cette partie du projet a été tout aussi enrichissante. J'ai appris à concevoir des pièces mécaniques adaptées aux besoins spécifiques du projet,
+                à utiliser des outils de découpe laser et d'impression 3D, et à intégrer différents modules matériels de manière efficace. J'ai développé 
+                de nombreuses compétences en CAO notamment avec l'usage de variables, de dossier pour répartir les sketches, extrusions etc.. tout cela en réfléchissant
+                avec l'outil que l'on va utiliser pour concevoir la pièce. Par exemple avec l'impression 3d, j'ai réfléchis à comment imprimer la pièce, faire des pauses au bon moment,
+                jouer avec les tolérences ce qui impliquen de faire des tests d'impression etc.. La prochaine étape est d'intéresser aux matériaux afin de concevoir
+                les objetcs de la manière optimale. 
+            </p>
+        </div>  
+    </div>
+
+    <div id="software" class="section">
+        <h2 style="text-align: center;">Software</h2>
+        <h3 style="text-align: left;"> Schéma fonctionnement :</h3>
+        <img src="schema.png" alt="Schéma fonctionnement" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+        <!-- Zone avec photo à gauche -->
+        <div style="display: flex; align-items: center; margin-top: 20px;">
+            <div style="flex: 1; text-align: center; padding: 10px;">
+                <img src="photo7.jpg" alt="Photo gauche" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+            </div>
+            <div style="flex: 2; padding: 10px;">
+                <h3>Site utilisateur :</h3>
+                <hr style="width: 50%; margin: 10px 0; border: 1px solid #333;">
+                <p>
+                    Ce site sera accesible par n'importe quel étudiant grâce au CAS de l'ensea. Cela permettra de créer un compte et de pouvoir consulter son solde, ses transactions etc.. 
+                    Les étudiants avec les droits ont un accés un menu en plus qui leur permet de gérer les utilisateurs: (ajouter/retirer du solde). 
+                    Un bouton paramètre permet de se déconnecter, de changer le code confidentiel et d'en apprendre plus sur le fonctionnement du payement.
+                </p>
+            </div>
+        </div>
+        <!-- Zone avec photo à droite -->
+        <div style="display: flex; align-items: flex-start; margin-top: 20px;">
+            <!-- Texte et titre -->
+            <div style="flex: 2; padding: 10px;">
+                <h3 style="margin: 0;">Site qui sert d'interface homme machine pour la caisse</h3>
+                <hr style="width: 50%; margin: 10px 0; border: 1px solid #333;">
+                <p style="margin-top: 10px;"> Lorsque que quelqu'un de la KFEt se connexte, il pourra prendre des commandes. Les commandes s'affichent sur la zone à droite. 
+                    On peut réduire ou supprimer un article en cas d'erreur. Le résultat s'affiche en bas et on peut envoyer la commande. Tant que le montant n'est pas payé ou que
+                l'on annule pas celle-ci, la commande reste affiché.
+            </p>
+            </div>
+            <!-- Image -->
+            <div style="flex: 1; text-align: center; padding: 10px;">
+                <img src="users/images/menu.png" alt="Photo droite" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+            </div>
+        </div>
+        <!-- Zone avec photo à gauche -->
+        <div style="display: flex; align-items: center; margin-top: 20px;">
+            <div style="flex: 1; text-align: center; padding: 10px;">
+                <img src="photo7.jpg" alt="Photo gauche" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+            </div>
+            <div style="flex: 2; padding: 10px;">
+                <h3>Fonctionnement STM :</h3>
+                <hr style="width: 50%; margin: 10px 0; border: 1px solid #333;">
+                <p>
+                    La STM est relié à la pi par bluetooth.  
+                    <br> La STM envoie les commandes à la base de donnée et reçoit les informations sur les utilisateurs et la commande. 
+                    <br> Les modules permettent d'afficher les informations sur l'écran et de scanner la carte étudiante.
+                    <br> Avec le numpad, on peut valider ou non un achat et rentrer son id si on a perdu sa carte étudiante.
+                </p>
+            </div>
+        </div>
+        <!-- Zone de Conclusion -->
+        <div style="text-align: center; margin-top: 50px; padding: 20px; background-color: #f4f4f4; border-top: 2px solid #333;">
+        <h3 style="font-size: 24px; color: #444; margin-bottom: 10px;">Conclusion</h3>
+        <hr style="width: 50%; margin: 10px auto; border: 1px solid #333;">
+        <p style="font-size: 16px; color: #555; line-height: 1.8; max-width: 800px; margin: 0 auto;">
+            Le software est la partie la plus complexe du projet. En effet, il faut gérer la base de donnée, la sécurité, la communication entre les modules 
+            avec le bon timing pour éviter les erreurs. Pour l'instant, comme j'ai un problème avec la carte électronique, j'utilise une nucleo donc je ne peux pas tout faire Fonctionner.
+            <br> En ce qui concerne le site sur la pi. J'ai pu lancer un fichier configuré comme application qui lance le site. La prochaine étape est d'envoyer tout le serveur afin 
+            de lancer le site dès que la pi s'allume.
+            <br> Malgré cela, j'ai beaucoup appris en html et en gestion de base de donnée. Ce fut très intéressant. Tout le détail du code est sur mon github
+        </p>
+    </div>  
+    </div>
+</body>
+</html>

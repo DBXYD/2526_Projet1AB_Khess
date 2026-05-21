@@ -1,0 +1,112 @@
+Metadata-Version: 2.4
+Name: django-cas-ng
+Version: 5.1.0
+Summary: Django CAS 1.0/2.0/3.0 client authentication library, support Django 4.2+ and Python 3.10+
+Home-page: https://djangocas.dev
+Download-URL: https://github.com/django-cas-ng/django-cas-ng/releases
+Author: Ming Chen
+Author-email: ming@djangocas.dev
+License: BSD
+Keywords: django,cas,cas2,cas3,client,sso,single sign-on,Central Authentication Service,authentication,auth
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 4.2
+Classifier: Framework :: Django :: 5.1
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Python: >=3.10
+License-File: LICENSE.txt
+Requires-Dist: Django>=4.2
+Requires-Dist: python-cas>=1.6.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+django-cas-ng
+=============
+.. image:: https://img.shields.io/pypi/v/django-cas-ng.svg
+    :target: https://pypi.org/project/django-cas-ng/
+.. image:: https://img.shields.io/pypi/pyversions/django-cas-ng.svg
+    :target: https://pypi.org/project/django-cas-ng/
+.. image:: https://codecov.io/gh/django-cas-ng/django-cas-ng/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/django-cas-ng/django-cas-ng
+.. image:: https://static.deepsource.io/deepsource-badge-light-mini.svg
+    :target: https://deepsource.io/gh/django-cas-ng/django-cas-ng/?ref=repository-badge
+
+`django-cas-ng`_ is Django CAS (Central Authentication Service) 1.0/2.0/3.0 client
+library to support SSO (Single Sign On) and Single Logout (SLO).
+
+It supports Django 4.2+ and Python 3.10+!
+
+**NOTE:**
+
+Since there is no more further CAS protocol development,
+Code in this repo is stable and in maintain mode, accept PR for bugfix and minor enhancement.
+
+Document
+--------
+
+Checkout document at https://djangocas.dev/docs/latest/
+
+Quick links:
+
+* `CAS 101`_: Introduction to CAS protocol.
+* `Example integration`_: A step by step guide on how to integrate this library.
+* `Installation`_
+* `Configuration`_
+
+Features
+--------
+
+- Supports **CAS** versions 1.0, 2.0 and 3.0
+- Support Single Logout (needs CAS server support)
+- Supports Token auth schemes
+- Can fetch Proxy Granting Ticket
+- Supports Django 4.2+
+- Supports using a `User custom model`_
+- Supports Python 3.10+
+- Supports typing hints in public API.
+
+To support django 1.x and Python 2.x, please use `3.6.0`.
+
+Contributing
+------------
+
+New contributors are always welcome! Check out `Contribution`_ to get involved.
+
+
+Change Log
+----------
+
+This project adheres to Semantic Versioning. Checkout all the `Changelog`_.
+
+
+.. _django-cas-ng: https://djangocas.dev
+.. _django-cas: https://bitbucket.org/cpcc/django-cas
+.. _User custom model: https://docs.djangoproject.com/en/3.0/topics/auth/customizing/
+.. _CAS 101: https://djangocas.dev/blog/cas-101-introduction-to-cas-central-authentication-service/
+.. _Example integration: https://djangocas.dev/blog/django-cas-ng-example-project/
+.. _Contribution: https://djangocas.dev/docs/latest/contribution.html
+.. _Changelog: https://djangocas.dev/docs/latest/changelog.html
+.. _Installation: https://djangocas.dev/docs/latest/install.html
+.. _Configuration: https://djangocas.dev/docs/latest/configuration.html
