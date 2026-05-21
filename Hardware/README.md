@@ -132,6 +132,44 @@ La résistance de 220 Ω limite le courant de commande du MOSFET tandis que la r
 * 1 Capteur RFID
 * 1 Shield pour gérer une batterie
 
+## Justification des choix techniques
+
+### Raspberry Pi Zero 2W
+
+Le Raspberry Pi Zero 2W a été choisi comme unité centrale du module de paiement pour plusieurs raisons :
+- faible consommation énergétique ;
+- connectivité Wi-Fi intégrée ;
+- puissance suffisante pour gérer l’interface utilisateur et les périphériques.
+
+### Interface RFID
+
+Le module RFID permet l’identification sans contact des utilisateurs.
+
+Le connecteur 01x08 qui permet la comminication via le bus SPI, facilite le remplacement ou la maintenance du module RFID. Le condensateur de 1 µF améliore la stabilité de son alimentation et limite les perturbations lors des communications.
+
+### Interface écran
+
+L’écran tactile est connecté via une interface dédiée afin de simplifier le montage.
+
+Les résistances de pull-up de 4,7 kΩ servent de résistances de tirage pour les lignes de communication utilisées en I²C.
+
+Le condensateur de 1 µF stabilise l’alimentation de l’écran et réduit les parasites.
+
+### Clavier numérique
+
+Le clavier numérique permet une interaction simple avec l’utilisateur et sert dans le cas où l'utilisateur ne possède pas sa carte.
+
+Les résistances de 10 kΩ sont utilisées comme résistances de rappel afin d’éviter les états flottants sur les entrées numériques.
+
+Les résistances de 330 Ω limitent le courant dans certaines lignes d’interface et protègent les GPIO du Raspberry Pi.
+
+### Protection et fiabilité
+
+La diode TVS protège les circuits contre les surtensions et les décharges électrostatiques.
+
+Le condensateur de 100 nF placé près du Raspberry Pi assure un découplage haute fréquence.
+Les LED servent d’indicateurs visuels.
+
 ### PCB
 ![](/Hardware/PCB_Khess_Module_Payment/PCB_Khess_Module_Payment_F.png)
 ![](/Hardware/PCB_Khess_Module_Payment/PCB_Khess_Module_Payment_In1.png)
