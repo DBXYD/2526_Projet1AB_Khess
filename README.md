@@ -12,7 +12,6 @@
 - [Choix techniques et justification](#choix-techniques-et-justification)
 - [Modèle 3D de la caisse](#mod%C3%A8le-3d-de-la-caisse)
 - [Partie Logicielle (Software)](#-partie-logicielle-software)
-- [Ouverture de la caisse depuis la Raspberry Pi 4](#-ouverture-de-la-caisse-depuis-la-raspberry-pi-4)
 - [Technologies utilisées](#technologies-utilis%C3%A9es)
 - [Avancée du projet](#avanc%C3%A9e-du-projet)
 	- [Ce qui a été réalisé](#ce-qui-a-%C3%A9t%C3%A9-r%C3%A9alis%C3%A9)
@@ -66,17 +65,6 @@ Cette section regroupe l'ensemble du code source de l'application web de la cais
 Le système s'appuie sur une base de données relationnelle structurée pour gérer les profils des étudiants, leurs soldes (cotisants ou non), le catalogue de la K-FET et l'historique des ventes.
 
 * 🗺️ **Modèle Conceptuel :** Pour comprendre l'organisation de nos tables, vous pouvez [accéder au schéma graphique dbdiagram](https://github.com/DBXYD/2526_Projet1AB_Khess/blob/master/dbdiagram.pdf).
-
-## 🧾 Ouverture de la caisse depuis la Raspberry Pi 4
-
-L’ouverture de la caisse se fait via l’imprimante ticket (et non directement par les GPIO de la Raspberry Pi) :
-
-1. La caisse est branchée au port tiroir de l’imprimante (RJ11/RJ12).
-2. La Raspberry Pi 4 est connectée à l’imprimante (USB, série ou réseau).
-3. L’application envoie une commande d’ouverture de tiroir (type ESC/POS) à l’imprimante.
-4. L’imprimante envoie une impulsion électrique au tiroir, qui s’ouvre automatiquement.
-
-En résumé : la Raspberry Pi envoie l’ordre, l’imprimante envoie l’impulsion, et la caisse s’ouvre.
 
 ## Technologies utilisées
 

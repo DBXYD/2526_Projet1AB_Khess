@@ -5,6 +5,7 @@
     - [Schéma](#sch%C3%A9ma)
     - [Liste des composants du PCB](#liste-des-composants-du-pcb)
     - [Liste des composants autres](#liste-des-composants-autres)
+    - [Ouverture du tiroir caisse (Raspberry Pi 4)](#ouverture-du-tiroir-caisse-raspberry-pi-4)
     - [PCB](#pcb)
 - [PCB_Khess_Module_Payment](#pcb_khess_module_payment)
     - [Schéma](#sch%C3%A9ma-1)
@@ -91,6 +92,18 @@ La diode **DST10100S** agit comme diode de roue libre afin d’absorber les surt
 
 La résistance de 220 Ω limite le courant de commande du MOSFET tandis que la résistance de 10 kΩ garantit son extinction au démarrage.
 
+### Ouverture du tiroir caisse (Raspberry Pi 4)
+
+L’ouverture de la caisse se fait directement par la chaîne matérielle du PCB :
+
+1. La **Raspberry Pi 4** envoie un signal de commande sur un **GPIO** ;
+2. Le GPIO pilote la grille du **MOSFET** sur le PCB ;
+3. Le MOSFET commute l’alimentation **12V** de l’électroaimant du tiroir ;
+4. Le tiroir caisse s’ouvre pendant l’impulsion.
+
+Nous n’avions pas de port **RJ11** disponible sur notre montage.  
+Nous avons donc remplacé les connecteurs RJ11 par des **pinheaders**.
+
 ### PCB
 ![](/Hardware/PCB_Khess_Cash_Drawer/PCB_Khess_Cash_Drawer_F.png)
 ![](/Hardware/PCB_Khess_Cash_Drawer/PCB_Khess_Cash_Drawer_B.png)
@@ -175,4 +188,3 @@ Les LED servent d’indicateurs visuels.
 ![](/Hardware/PCB_Khess_Module_Payment/PCB_Khess_Module_Payment_In1.png)
 ![](/Hardware/PCB_Khess_Module_Payment/PCB_Khess_Module_Payment_In2.png)
 ![](/Hardware/PCB_Khess_Module_Payment/PCB_Khess_Module_Payment_B.png)
-
