@@ -1,6 +1,7 @@
 # 🔧 Hardware
  
 ## 📋 Sommaire
+- [🔎 Schéma d'architecture](#schema-architecture)
 - [🧾 PCB_Khess_Cash_Drawer](#pcb_khess_cash_drawer)
     - [🗺️ Schéma](#sch%C3%A9ma)
     - [🔩 Liste des composants du PCB](#liste-des-composants-du-pcb)
@@ -12,6 +13,34 @@
     - [🔩 Liste des composants du PCB](#liste-des-composants-du-pcb-1)
     - [📦 Liste des composants autres](#liste-des-composants-autres-1)
     - [🧩 PCB](#pcb-1)
+
+<a id="schema-architecture"></a>
+## 🔎 Schéma d'architecture
+
+Voici une représentation Mermaid du schéma :
+
+```mermaid
+flowchart LR
+    subgraph Caisse_principale[ Caisse principale ]
+        A230(230V AC) --> A12(12V DC)
+        A12 --> A5(5V DC)
+        A5 --> RPi4[Raspberry Pi 4]
+        A12 --> CmdT[Commande tiroir]
+        CmdT --> Tiroir[Tiroir caisse]
+        RPi4 -->|HDMI| Ecran[Ecran]
+        RPi4 -->|GPIO| CmdT
+        RPi4 -->|WiFi| Serveur[Serveur]
+    end
+
+    subgraph Module_paiement[ Module de paiement ]
+        Shield[Shield + gestion batterie] --> RPi0[Raspberry Pi Zero 2W]
+        RPi0 -->|HDMI| Ecran2[Ecran]
+        RPi0 -->|SPI| RFID[Capteur RFID]
+        RPi0 --> Clavier[Clavier]
+    end
+
+    RPi4 -->|Bluetooth| RPi0
+```
 
 <a id="pcb_khess_cash_drawer"></a>
 ## 🧾 PCB_Khess_Cash_Drawer
