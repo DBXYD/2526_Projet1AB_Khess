@@ -84,7 +84,7 @@ Le système s'appuie sur une base de données relationnelle structurée pour gé
 <a id="ce-qui-a-été-réalisé"></a>
 
 ### Journal de bord
-Voir [journal_de_bord.md](journal_de_bord.md).
+Voir [Journal de bord.md](Journaldebord.md).
 
 ### ✅ Ce qui a été réalisé
 
