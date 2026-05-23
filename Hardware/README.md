@@ -94,7 +94,7 @@ La résistance de 220 Ω limite le courant de commande du MOSFET tandis que la r
 
 ### Ouverture du tiroir caisse (Raspberry Pi 4)
 
-L’ouverture du tiroir caisse se fait directement par la chaîne matérielle du PCB :
+L’ouverture du tiroir caisse se fait via le PCB :
 
 1. La **Raspberry Pi 4** envoie un signal de commande sur un **GPIO** ;
 2. Le GPIO pilote la grille du **MOSFET** sur le PCB ;
