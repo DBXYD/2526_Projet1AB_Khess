@@ -1,18 +1,21 @@
 # 🔧 Hardware
+[![PCB Version](https://img.shields.io/badge/PCB-v1.0-green.svg)](#versions)
+[![KiCad](https://img.shields.io/badge/KiCad-9.x-blue?logo=kicad)](#outils)
  
 ## 📋 Sommaire
-- [🔎 Schéma d'architecture](#schema-architecture)
-- [🧾 PCB_Khess_Cash_Drawer](#pcb_khess_cash_drawer)
-    - [🗺️ Schéma](#sch%C3%A9ma)
-    - [🔩 Liste des composants du PCB](#liste-des-composants-du-pcb)
-    - [📦 Liste des composants autres](#liste-des-composants-autres)
-    - [🚪 Ouverture du tiroir caisse (Raspberry Pi 4)](#ouverture-du-tiroir-caisse-raspberry-pi-4)
-    - [🧩 PCB](#pcb)
-- [🧾 PCB_Khess_Module_Payment](#pcb_khess_module_payment)
-    - [🗺️ Schéma](#sch%C3%A9ma-1)
-    - [🔩 Liste des composants du PCB](#liste-des-composants-du-pcb-1)
-    - [📦 Liste des composants autres](#liste-des-composants-autres-1)
-    - [🧩 PCB](#pcb-1)
+- [Schéma d'architecture](#schema-architecture)
+- [PCB_Khess_Cash_Drawer](#pcb_khess_cash_drawer)
+    - [Schéma](#sch%C3%A9ma)
+    - [Liste des composants du PCB](#liste-des-composants-du-pcb)
+    - [Liste des composants autres](#liste-des-composants-autres)
+    - [Ouverture du tiroir caisse (Raspberry Pi 4)](#ouverture-du-tiroir-caisse-raspberry-pi-4)
+    - [PCB](#pcb)
+- [PCB_Khess_Module_Payment](#pcb_khess_module_payment)
+    - [Schéma](#sch%C3%A9ma-1)
+    - [Liste des composants du PCB](#liste-des-composants-du-pcb-1)
+    - [Liste des composants autres](#liste-des-composants-autres-1)
+    - [Justification des choix techniques](#justification-des-choix-techniques-1)
+    - [PCB](#pcb-1)
 
 <a id="schema-architecture"></a>
 ## 🔎 Schéma d'architecture
@@ -205,22 +208,23 @@ Nous avons donc remplacé les connecteurs RJ11 par des **pinheaders**.
 * 1 Capteur RFID
 * 1 Shield pour gérer une batterie
 
-## ⚙️ Justification des choix techniques
+<a id="justification-des-choix-techniques-1"></a>
+### ⚙️ Justification des choix techniques
 
-### 🖥️ Raspberry Pi Zero 2W
+#### 🖥️ Raspberry Pi Zero 2W
 
 Le Raspberry Pi Zero 2W a été choisi comme unité centrale du module de paiement pour plusieurs raisons :
 - faible consommation énergétique ;
 - connectivité Wi-Fi intégrée ;
 - puissance suffisante pour gérer l’interface utilisateur et les périphériques.
 
-### 🛰️ Interface RFID
+#### 🛰️ Interface RFID
 
 Le module RFID permet l’identification sans contact des utilisateurs.
 
 Le connecteur 01x08 qui permet la comminication via le bus SPI, facilite le remplacement ou la maintenance du module RFID. Le condensateur de 1 µF améliore la stabilité de son alimentation et limite les perturbations lors des communications.
 
-### 🖱️ Interface écran
+#### 🖱️ Interface écran
 
 L’écran tactile est connecté via une interface dédiée afin de simplifier le montage.
 
@@ -228,7 +232,7 @@ Les résistances de pull-up de 4,7 kΩ servent de résistances de tirage pour le
 
 Le condensateur de 1 µF stabilise l’alimentation de l’écran et réduit les parasites.
 
-### 🔢 Clavier numérique
+#### 🔢 Clavier numérique
 
 Le clavier numérique permet une interaction simple avec l’utilisateur et sert dans le cas où l'utilisateur ne possède pas sa carte.
 
@@ -236,7 +240,7 @@ Les résistances de 10 kΩ sont utilisées comme résistances de rappel afin d�
 
 Les résistances de 330 Ω limitent le courant dans certaines lignes d’interface et protègent les GPIO du Raspberry Pi.
 
-### 🛡️ Protection et fiabilité
+#### 🛡️ Protection et fiabilité
 
 La diode TVS protège les circuits contre les surtensions et les décharges électrostatiques.
 
