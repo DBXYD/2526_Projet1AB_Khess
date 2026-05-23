@@ -1,6 +1,11 @@
 ### Journal de bord
 
 ## 1e séance - 05/02/2026
+* Présentation du projet et des objectifs attendus
+* Choix du projet : K'Hess
+* Création et prise en main de Github
+* Prise en main du projet
+* Discussion et état des lieux sur le projet 
 
 ## 2e séance - 12/02/2026
 
