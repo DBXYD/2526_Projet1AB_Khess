@@ -64,6 +64,8 @@ Cette section regroupe l'ensemble du code source de l'application web de la cais
 
 Le système s'appuie sur une base de données relationnelle structurée pour gérer les profils des étudiants, leurs soldes (cotisants ou non), le catalogue de la K-FET et l'historique des ventes.
 
+* 🗺️ **Modèle Conceptuel :** Pour comprendre l'organisation de nos tables, vous pouvez [accéder au schéma graphique dbdiagram](https://github.com/DBXYD/2526_Projet1AB_Khess/blob/master/dbdiagram.pdf).
+
 ## Technologies utilisées
 
 - Python
