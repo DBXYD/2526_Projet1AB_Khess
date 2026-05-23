@@ -82,6 +82,10 @@ Le système s'appuie sur une base de données relationnelle structurée pour gé
 <a id="avancée-du-projet"></a>
 ## ✅ Avancée du projet
 <a id="ce-qui-a-été-réalisé"></a>
+
+### Journal de bord
+Voir [journal_de_bord.md](journal_de_bord.md).
+
 ### ✅ Ce qui a été réalisé
 
 * Prise en main du projet
