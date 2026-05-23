@@ -1,23 +1,31 @@
-# Hardware
+# 🔧 Hardware
  
-## Sommaire
-- [PCB_Khess_Cash_Drawer](#pcb_khess_cash_drawer)
-    - [Schéma](#sch%C3%A9ma)
-    - [Liste des composants du PCB](#liste-des-composants-du-pcb)
-    - [Liste des composants autres](#liste-des-composants-autres)
-    - [Ouverture du tiroir caisse (Raspberry Pi 4)](#ouverture-du-tiroir-caisse-raspberry-pi-4)
-    - [PCB](#pcb)
-- [PCB_Khess_Module_Payment](#pcb_khess_module_payment)
-    - [Schéma](#sch%C3%A9ma-1)
-    - [Liste des composants du PCB](#liste-des-composants-du-pcb-1)
-    - [Liste des composants autres](#liste-des-composants-autres-1)
-    - [PCB](#pcb-1)
+## 📋 Sommaire
+- [🧾 PCB_Khess_Cash_Drawer](#pcb_khess_cash_drawer)
+    - [🗺️ Schéma](#sch%C3%A9ma)
+    - [🔩 Liste des composants du PCB](#liste-des-composants-du-pcb)
+    - [📦 Liste des composants autres](#liste-des-composants-autres)
+    - [🚪 Ouverture du tiroir caisse (Raspberry Pi 4)](#ouverture-du-tiroir-caisse-raspberry-pi-4)
+    - [🧩 PCB](#pcb)
+- [🧾 PCB_Khess_Module_Payment](#pcb_khess_module_payment)
+    - [🗺️ Schéma](#sch%C3%A9ma-1)
+    - [🔩 Liste des composants du PCB](#liste-des-composants-du-pcb-1)
+    - [📦 Liste des composants autres](#liste-des-composants-autres-1)
+    - [🧩 PCB](#pcb-1)
 
-## PCB_Khess_Cash_Drawer
-### Schéma
+<a id="pcb_khess_cash_drawer"></a>
+## 🧾 PCB_Khess_Cash_Drawer
+<a id="schéma"></a>
+### 🗺️ Schéma
+<details>
+<summary>Afficher le schéma</summary>
+
 ![](/Hardware/PCB_Khess_Cash_Drawer/PCB_Khess_Cash_Drawer.png)
 
-### Liste des composants du PCB
+</details>
+
+<a id="liste-des-composants-du-pcb"></a>
+### 🔩 Liste des composants du PCB
 
 * Convertisseur 12V à 5V DC
     * 1 Convertisseur R-78B5.0-2.0 ([datasheet](/Datasheets/PCB_Khess_Cash_Drawer/R-78B-2.0.pdf))
@@ -46,15 +54,16 @@
     * 1 Bornier à vis 01x02
     * 1 Écran tactile
 
-### Liste des composants autres
+<a id="liste-des-composants-autres"></a>
+### 📦 Liste des composants autres
 
 * Tiroir caisse avec connecteur standard RJ11, remplacée par des connecteurs simples
 * Câble d'alimentation
-* Raspberry Pi 5
+* Raspberry Pi 4
 
-## Justification des choix techniques
+## ⚙️ Justification des choix techniques
 
-### Architecture d’alimentation
+### 🔌 Architecture d’alimentation
 
 L’alimentation du système est réalisée en deux étapes afin d’assurer une conversion efficace et stable :
 
@@ -70,7 +79,7 @@ Le convertisseur **R-78B5.0-2.0** a été préféré à un régulateur linéaire
 
 Les condensateurs et la bobine de filtrage permettent de réduire les parasites haute fréquence et d’améliorer la stabilité des tensions d’alimentation.
 
-### Protections électriques
+### 🛡️ Protections électriques
 
 Plusieurs composants de protection ont été ajoutés afin d’améliorer la robustesse du système :
 
@@ -81,7 +90,7 @@ Plusieurs composants de protection ont été ajoutés afin d’améliorer la rob
 
 Ces protections sont importantes car le système est directement relié au secteur et pilote une charge inductive.
 
-### Commande du tiroir caisse
+### ⚡ Commande du tiroir caisse
 
 Le tiroir caisse est commandé via un MOSFET de puissance **BUK9637-100E**. Ce composant a été choisi pour :
 - sa faible résistance à l’état passant ;
@@ -92,7 +101,8 @@ La diode **DST10100S** agit comme diode de roue libre afin d’absorber les surt
 
 La résistance de 220 Ω limite le courant de commande du MOSFET tandis que la résistance de 10 kΩ garantit son extinction au démarrage.
 
-### Ouverture du tiroir caisse (Raspberry Pi 4)
+<a id="ouverture-du-tiroir-caisse-raspberry-pi-4"></a>
+### 🚪 Ouverture du tiroir caisse (Raspberry Pi 4)
 
 L’ouverture du tiroir caisse se fait via le PCB :
 
@@ -104,17 +114,37 @@ L’ouverture du tiroir caisse se fait via le PCB :
 Nous n’avions pas de port **RJ11** disponible sur notre montage.  
 Nous avons donc remplacé les connecteurs RJ11 par des **pinheaders**.
 
-### PCB
+<a id="pcb"></a>
+### 🧩 PCB
+<details>
+<summary>Voir PCB (face côté avant)</summary>
+
 ![](/Hardware/PCB_Khess_Cash_Drawer/PCB_Khess_Cash_Drawer_F.png)
+
+</details>
+
+<details>
+<summary>Voir PCB (face arrière)</summary>
+
 ![](/Hardware/PCB_Khess_Cash_Drawer/PCB_Khess_Cash_Drawer_B.png)
+
+</details>
 
 ---
 
-## PCB_Khess_Module_Payment
-### Schéma
+<a id="pcb_khess_module_payment"></a>
+## 🧾 PCB_Khess_Module_Payment
+<a id="schéma-1"></a>
+### 🗺️ Schéma
+<details>
+<summary>Afficher le schéma</summary>
+
 ![](/Hardware/PCB_Khess_Module_Payment/PCB_Khess_Module_Payment.png)
 
-### Liste des composants du PCB
+</details>
+
+<a id="liste-des-composants-du-pcb-1"></a>
+### 🔩 Liste des composants du PCB
 
 * Raspberry Pi
     * 1 Connecteur 02x20
@@ -137,7 +167,8 @@ Nous avons donc remplacé les connecteurs RJ11 par des **pinheaders**.
     * 4 Résistances 330 Ohm
     * 1 Connecteurs 01x08
 
-### Liste des composants autres
+<a id="liste-des-composants-autres-1"></a>
+### 📦 Liste des composants autres
 
 * 1 Raspberry Zero 2W
 * 1 Écran tactile
@@ -145,22 +176,22 @@ Nous avons donc remplacé les connecteurs RJ11 par des **pinheaders**.
 * 1 Capteur RFID
 * 1 Shield pour gérer une batterie
 
-## Justification des choix techniques
+## ⚙️ Justification des choix techniques
 
-### Raspberry Pi Zero 2W
+### 🖥️ Raspberry Pi Zero 2W
 
 Le Raspberry Pi Zero 2W a été choisi comme unité centrale du module de paiement pour plusieurs raisons :
 - faible consommation énergétique ;
 - connectivité Wi-Fi intégrée ;
 - puissance suffisante pour gérer l’interface utilisateur et les périphériques.
 
-### Interface RFID
+### 🛰️ Interface RFID
 
 Le module RFID permet l’identification sans contact des utilisateurs.
 
 Le connecteur 01x08 qui permet la comminication via le bus SPI, facilite le remplacement ou la maintenance du module RFID. Le condensateur de 1 µF améliore la stabilité de son alimentation et limite les perturbations lors des communications.
 
-### Interface écran
+### 🖱️ Interface écran
 
 L’écran tactile est connecté via une interface dédiée afin de simplifier le montage.
 
@@ -168,7 +199,7 @@ Les résistances de pull-up de 4,7 kΩ servent de résistances de tirage pour le
 
 Le condensateur de 1 µF stabilise l’alimentation de l’écran et réduit les parasites.
 
-### Clavier numérique
+### 🔢 Clavier numérique
 
 Le clavier numérique permet une interaction simple avec l’utilisateur et sert dans le cas où l'utilisateur ne possède pas sa carte.
 
@@ -176,15 +207,39 @@ Les résistances de 10 kΩ sont utilisées comme résistances de rappel afin d�
 
 Les résistances de 330 Ω limitent le courant dans certaines lignes d’interface et protègent les GPIO du Raspberry Pi.
 
-### Protection et fiabilité
+### 🛡️ Protection et fiabilité
 
 La diode TVS protège les circuits contre les surtensions et les décharges électrostatiques.
 
 Le condensateur de 100 nF placé près du Raspberry Pi assure un découplage haute fréquence.
 Les LED servent d’indicateurs visuels.
 
-### PCB
+<a id="pcb-1"></a>
+### 🧩 PCB
+<details>
+<summary>Voir PCB (face avant)</summary>
+
 ![](/Hardware/PCB_Khess_Module_Payment/PCB_Khess_Module_Payment_F.png)
+
+</details>
+
+<details>
+<summary>Voir PCB (détails couche intérieur 1)</summary>
+
 ![](/Hardware/PCB_Khess_Module_Payment/PCB_Khess_Module_Payment_In1.png)
+
+</details>
+
+<details>
+<summary>Voir PCB (détails couche intérieur 2)</summary>
+
 ![](/Hardware/PCB_Khess_Module_Payment/PCB_Khess_Module_Payment_In2.png)
+
+</details>
+
+<details>
+<summary>Voir PCB (face arrière)</summary>
+
 ![](/Hardware/PCB_Khess_Module_Payment/PCB_Khess_Module_Payment_B.png)
+
+</details>
