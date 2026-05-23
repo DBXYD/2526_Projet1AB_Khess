@@ -84,7 +84,7 @@ Le système s'appuie sur une base de données relationnelle structurée pour gé
 <a id="ce-qui-a-été-réalisé"></a>
 
 ### Journal de bord
-Voir [Journal de bord.md](https://github.com/DBXYD/2526_Projet1AB_Khess/blob/master/Journal_de_bord.md).
+Voir [Journal_de_bord.md](Journal_de_bord.md).
 
 ### ✅ Ce qui a été réalisé
 
