@@ -128,4 +128,4 @@ On a du imprimer plusieurs fois le support pour trouver la taille adéquate.
 
 <a id="licence"></a>
 ## 📄 Licence
-Projet académique ENSEA — usage pédagogique.
+Ce projet est distribué sous la licence MIT — voir [LICENSE](LICENSE).
