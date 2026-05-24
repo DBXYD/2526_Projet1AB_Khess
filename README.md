@@ -2,6 +2,8 @@
 > [!Note]
 > Projet de 1ère année ENSEA sur une caisse enregistreuse pour la K-Fet.
 
+Remarque : Ce projet reprend en partie le travail de Matis Garbez, disponible sur [2425_Maker_CashRegister](https://github.com/Volcanite/2425_Maker_CashRegister/).
+
 [![Contributors](https://img.shields.io/github/contributors/DBXYD/2526_Projet1AB_Khess)](https://github.com/DBXYD/2526_Projet1AB_Khess/graphs/contributors)
 [![Issues](https://img.shields.io/github/issues/DBXYD/2526_Projet1AB_Khess)](https://github.com/DBXYD/2526_Projet1AB_Khess/issues")
 [![License](https://img.shields.io/github/license/DBXYD/2526_Projet1AB_Khess)](LICENSE)
