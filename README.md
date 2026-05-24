@@ -2,7 +2,7 @@
 > [!Note]
 > Projet de 1ère année ENSEA sur une caisse enregistreuse pour la K-Fet.
 
-![](Docs/'hess.png)
+![](Docs/k'hess.png)
 
 ## 📋 Sommaire
 - [Cahier des charges](#cahier-des-charges)
