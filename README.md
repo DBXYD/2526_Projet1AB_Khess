@@ -2,7 +2,12 @@
 > [!Note]
 > Projet de 1ère année ENSEA sur une caisse enregistreuse pour la K-Fet.
 
-![](Docs/k'hess.png)
+[![Contributors](https://img.shields.io/github/contributors/DBXYD/2526_Projet1AB_Khess)](https://github.com/DBXYD/2526_Projet1AB_Khess/graphs/contributors)
+[![Issues](https://img.shields.io/github/issues/DBXYD/2526_Projet1AB_Khess)](https://github.com/DBXYD/2526_Projet1AB_Khess/issues")
+[![License](https://img.shields.io/github/license/DBXYD/2526_Projet1AB_Khess)](LICENSE)
+[![Repo Size](https://img.shields.io/github/repo-size/DBXYD/2526_Projet1AB_Khess)]()
+
+![Illustration](Docs/k'hess.png)
 
 ## 📋 Sommaire
 - [Cahier des charges](#cahier-des-charges)

@@ -1,6 +1,6 @@
 # 🔧 Hardware
-[![PCB Version](https://img.shields.io/badge/PCB-v1.0-green.svg)](#versions)
-[![KiCad](https://img.shields.io/badge/KiCad-9.x-blue?logo=kicad)](#outils)
+[![PCB Version](https://img.shields.io/badge/PCB-v1.0-green.svg)]()
+[![KiCad](https://img.shields.io/badge/KiCad-9.x-blue?logo=kicad)]()
  
 ## 📋 Sommaire
 - [Schéma d'architecture](#schema-architecture)
