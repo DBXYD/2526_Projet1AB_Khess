@@ -1,4 +1,4 @@
-# 2526_Projet1AB_Khess
+# 🎓 2526_Projet1AB_Khess
 > [!Note]
 > Projet de 1ère année ENSEA sur une caisse enregistreuse pour la K-Fet.
 
@@ -11,8 +11,11 @@
 - [Hardware](#hardware)
 - [Modèle 3D de la caisse](#mod%C3%A8le-3d-de-la-caisse)
 - [Partie Logicielle (Software)](#partie-logicielle-software)
+	- [Accès au Code Source et Déploiement](#acc%C3%A8s-au-code-source-et-d%C3%A9ploiement)
+	- [Architecture de la Base de Données](#architecture-de-la-base-de-donn%C3%A9es)
 - [Technologies utilisées](#technologies-utilis%C3%A9es)
 - [Avancée du projet](#avanc%C3%A9e-du-projet)
+	- [Journal de bord](#journal-de-bord)
 	- [Ce qui a été réalisé](#ce-qui-a-%C3%A9t%C3%A9-r%C3%A9alis%C3%A9)
 	- [Ce qui n'a pas (encore) été réalisé](#ce-qui-na-pas-encore-ete-r%C3%A9alis%C3%A9)
 	- [Problèmes rencontrés et solutions trouvées](#probl%C3%A8mes-rencontr%C3%A9s-et-solutions-trouv%C3%A9es)
@@ -20,26 +23,22 @@
 - [Membres du projet](#membres-du-projet)
 - [Licence](#licence)
 
-<a id="cahier-des-charges"></a>
-## 📝 Cahier des charges
-<a id="caisse-enregistreuse-portable-avec-écran-tactile"></a>
-### 📱 Caisse enregistreuse portable avec écran tactile
+## 📝 Cahier des charges <a id="cahier-des-charges"></a>
+
+### 📱 Caisse enregistreuse portable avec écran tactile <a id="caisse-enregistreuse-portable-avec-écran-tactile"></a>
 * Interface utilisateur intuitive
 * Gestion des produits et des prix
 * Paiement avec carte étudiante
 
-<a id="contraintes"></a>
-### ⚠️ Contraintes
+### ⚠️ Contraintes <a id="contraintes"></a>
 * Portabilité (batterie) : terminal de paiement
 * Fiabilité des transactions
 * Sécurité des données
 
-<a id="hardware"></a>
-## 🔧 Hardware
+## 🔧 Hardware <a id="hardware"></a>
 Voir [Hardware/README.md](Hardware/README.md).
 
-<a id="modèle-3d-de-la-caisse"></a>
-## 🖨️ Modèle 3D de la caisse
+## 🖨️ Modèle 3D de la caisse <a id="modèle-3d-de-la-caisse"></a>
 La caisse automatique est consituée de 3 éléments :
 - la caisse entière avec le socle
 - le module de paiement
@@ -51,27 +50,25 @@ La modélisation 3D de ces différentes pièces à été réaliser avec le logic
 * [Support tablette final](3D/Support%20tablette%20final.stl)
 
   
-<a id="partie-logicielle-software"></a>
-## 💻 Partie Logicielle (Software)
 
+## 💻 Partie Logicielle (Software) <a id="partie-logicielle-software"></a>
 Cette section regroupe l'ensemble du code source de l'application web de la caisse connectée, développée avec le framework **Django** (Python).
 
-### 🔗 Accès au Code Source et Déploiement
+### 🔗 Accès au Code Source et Déploiement <a id="accès-au-code-source-et-déploiement"></a>
 
 > **Note sur le dépôt :** Suite à des difficultés techniques lors de la synchronisation et de l'envoi du code sur le dépôt partagé de l'équipe, la version la plus récente et totalement à jour de l'application a été temporairement hébergée sur mon espace personnel.
 
 * **Code source à jour :** Vous pouvez consulter et récupérer l'intégralité du projet en [cliquant directement sur ce lien vers mon dépôt personnel](https://github.com/zhang-estelle/DatabaseCashRegister).
 * **Guide d'installation :** Pour faire fonctionner le code facilement sur votre machine, j'ai rédigé un guide pas-à-pas. Ce tutoriel recense également l'ensemble des blocages et des problèmes techniques que j'ai rencontrés durant le développement ainsi que leurs solutions. [Consulter le tutoriel de configuration Django](https://github.com/DBXYD/2526_Projet1AB_Khess/blob/master/TutoDjango.md).
 
-### 🗄️ Architecture de la Base de Données
+### 🗄️ Architecture de la Base de Données <a id="architecture-de-la-base-de-données"></a>
 
 Le système s'appuie sur une base de données relationnelle structurée pour gérer les profils des étudiants, leurs soldes (cotisants ou non), le catalogue de la K-FET et l'historique des ventes.
 
 * **Modèle Conceptuel :** Pour comprendre l'organisation de nos tables, vous pouvez [accéder au schéma graphique dbdiagram](https://github.com/DBXYD/2526_Projet1AB_Khess/blob/master/dbdiagram.pdf).
 
-<a id="technologies-utilisées"></a>
-## ⚙️ Technologies utilisées
 
+## ⚙️ Technologies utilisées <a id="technologies-utilisées"></a>
 - Python
 - Django
 - Raspberry Pi
@@ -79,15 +76,13 @@ Le système s'appuie sur une base de données relationnelle structurée pour gé
 - Onshape
 - Impression 3D
   
-<a id="avancée-du-projet"></a>
-## ✅ Avancée du projet
-<a id="ce-qui-a-été-réalisé"></a>
 
-### Journal de bord
+## ✅ Avancée du projet <a id="avancée-du-projet"></a>
+
+### 📓 Journal de bord <a id="journal-de-bord"></a>
 Voir [Journal_de_bord.md](Journal_de_bord.md).
 
-### ✅ Ce qui a été réalisé
-
+### ✅ Ce qui a été réalisé <a id="ce-qui-a-été-réalisé"></a>
 * Prise en main du projet
 * Création des PCB
 * Soudure des PCB
@@ -99,33 +94,24 @@ Voir [Journal_de_bord.md](Journal_de_bord.md).
 * Test du PCB
 
 
-<a id="ce-qui-na-pas-encore-ete-réalisé"></a>
-### ❌ Ce qui n'a pas (encore) été réalisé
-
+### ❌ Ce qui n'a pas (encore) été réalisé <a id="ce-qui-na-pas-encore-ete-réalisé"></a>
 * Assemblage de l'ensemble
 
-<a id="problèmes-rencontrés-et-solutions-trouvées"></a>
-### 🛠️ Problèmes rencontrés et solutions trouvées
-
+### 🛠️ Problèmes rencontrés et solutions trouvées <a id="problèmes-rencontrés-et-solutions-trouvées"></a>
 Modélisation 3D:
 - La taille du support de tablette était trop petite ( impossibilité de passer les câbles HDMI et USB vers la caisse automatique ). 
 On a du imprimer plusieurs fois le support pour trouver la taille adéquate.
 - Les trous pour fixer le support de tablette à son support n'étaient pas au bonne endroit après l'impression, on a du percer avec une perceuse les trous pour fixer le support correctement. 
 - Problèmes usuels d'impression 3D.
 
-<a id="améliorations-possibles"></a>
-### 💡 Améliorations possibles
-
+### 💡 Améliorations possibles <a id="améliorations-possibles"></a>
 * Revoir le design de la caisse
 * Améliorer le site internet
 
-<a id="membres-du-projet"></a>
-## 👥 Membres du projet
-
+## 👥 Membres du projet <a id="membres-du-projet"></a>
 | <img src="https://images.weserv.nl/?url=github.com/Ahhj93.png&mask=circle" width="100"> | <img src="https://images.weserv.nl/?url=github.com/NKRIMAT.png&mask=circle" width="100"> | <img src="https://images.weserv.nl/?url=github.com/Margaux-Lapl.png&mask=circle" width="100"> | <img src="https://images.weserv.nl/?url=github.com/StrangeKobe.png&mask=circle" width="100"> | <img src="https://images.weserv.nl/?url=github.com/zhang-estelle.png&mask=circle" width="100"> | <img src="https://images.weserv.nl/?url=github.com/ClementJ493.png&mask=circle" width="100"> | <img src="https://images.weserv.nl/?url=github.com/rim-05-mma.png&mask=circle" width="100"> |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | [@Ahhj93](https://github.com/Ahhj93)<br>Bryan-Sowanna Ing | [@NKRIMAT](https://github.com/NKRIMAT)<br>Naïm Krimat | [@Margaux-Lapl](https://github.com/Margaux-Lapl)<br>Margaux Laplante | [@StrangeKobe](https://github.com/StrangeKobe)<br>Rayan Laghouane | [@zhang-estelle](https://github.com/zhang-estelle)<br>Estelle Zhang | [@ClementJ493](https://github.com/ClementJ493)<br>Clément Jouneau | [@rim-05-mma](https://github.com/rim-05-mma)<br>Rim Bouchikhi |
 
-<a id="licence"></a>
-## 📄 Licence
+## 📄 Licence <a id="licence"></a>
 Ce projet est distribué sous la licence MIT — voir [LICENSE](LICENSE).
